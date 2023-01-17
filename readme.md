@@ -1,11 +1,10 @@
 # Fjöl 4-Voice Midi synth
 
-<p align="center"><img src="/Fjöl/Documentation/frontpanel.png"  width="543" height="761"></p>
-<p align="center"><img src="/Fjöl/Documentation/IMG_6093.jpeg"  width="543" height="761"></p>
+<p align="center"><img src="/Documentation/frontpanel.png"  width="543" height="761"></p>
+<p align="center"><img src="/Documentation/IMG_6093.jpeg"  width="543" height="761"></p>
 
 Small demo video with non working LED's: https://www.youtube.com/watch?v=nTqA_WNiwQo
-
-Current hardware uses a high quality DAC(PCM5100) with 16bit/44.1kHz quality.
+Current hardware uses the Daiy platform from Electrosmith.
 
 Fjöl is a 
 4 voice polyphonic Phase modulation synthesizer. Using only sine waves you can get the same sounds as an FM synthesizer.
@@ -68,9 +67,8 @@ Hopefully I'll have some beta testing units ready before summer 2023 :)
 ## Designed With
 
 * KiCAD
-* Arduino IDE 
 * Visual Studio Code
-* Audio System Design Tool for Teensy Audio Library
+* Inkscape
 
 ## Versioning
 * 1.0 - [Hardware] Original PCB
