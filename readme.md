@@ -4,6 +4,7 @@
 <p align="center"><img src="/Documentation/IMG_6093.jpeg"  width="543" height="761"></p>
 
 Small demo video with non working LED's: https://www.youtube.com/watch?v=nTqA_WNiwQo
+
 Current hardware uses the Daiy platform from Electrosmith.
 
 Fjöl is a 
