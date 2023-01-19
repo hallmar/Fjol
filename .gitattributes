@@ -4,3 +4,4 @@
 *.c linguist-detectable=false
 *.py linguist-detectable=false
 *.h linguist-detectable=false
+*.s linguist-detectable=false
