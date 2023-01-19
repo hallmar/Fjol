@@ -1,0 +1,636 @@
+ARM GAS  /tmp/ccr1TA9I.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"variables.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.startup._GLOBAL__sub_I_calibration_val,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	_GLOBAL__sub_I_calibration_val:
+  26              	.LFB5348:
+  27              		.file 1 "variables.cpp"
+   1:variables.cpp **** #include "settings.h"
+   2:variables.cpp **** #include "variables.h"
+   3:variables.cpp **** #include "daisysp.h"
+   4:variables.cpp **** #include "daisy_seed.h"
+   5:variables.cpp **** 
+   6:variables.cpp **** using namespace daisysp;
+   7:variables.cpp **** using namespace daisy;
+   8:variables.cpp **** 
+   9:variables.cpp **** 
+  10:variables.cpp **** 
+  11:variables.cpp **** //-------Calibration values------
+  12:variables.cpp **** 
+  13:variables.cpp **** uint16_t calibration_val[20] = {0, 4095 , 0, 4095 ,0, 4095 ,0, 4095 ,0, 4095 ,0, 4095 ,0, 4095 ,0, 
+  14:variables.cpp **** 
+  15:variables.cpp **** //gate out status, maybe move to struct or class?
+  16:variables.cpp **** uint8_t gate_out = 0;
+  17:variables.cpp **** uint8_t gate_out_n = 1;
+  18:variables.cpp **** 
+  19:variables.cpp **** //-------led menu variables-----
+  20:variables.cpp **** bool led_takeover = 0;
+  21:variables.cpp **** 
+  22:variables.cpp **** 
+  23:variables.cpp **** //------analog variables-----
+  24:variables.cpp **** 
+  25:variables.cpp **** float knob_value[8] = {0,0,0,0,0,0,0,0};
+  26:variables.cpp **** 
+  27:variables.cpp **** float param[8] = {0,0,0,0,0,0,0,0};
+  28:variables.cpp **** float param_sum[8] = {0,0,0,0,0,0,0,0};
+  29:variables.cpp **** bool params_changed[8] = {0,0,0,0,0,0,0,0};
+  30:variables.cpp **** float cv_mod[8] = {0,0,0,0,0,0,0,0};
+  31:variables.cpp **** //-----constant variables------
+ARM GAS  /tmp/ccr1TA9I.s 			page 2
+
+
+  32:variables.cpp **** const float ratioindex[18] = { 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5,
+  33:variables.cpp **** const float octaveindex[5] = {0.25,0.5,1,2,3}; //might be useful
+  34:variables.cpp **** const int releasemult = 3000; //move this to local function
+  35:variables.cpp **** const int attackmult = 2000; //move this to local function
+  36:variables.cpp **** const float pm1amp = 0.75; //move this to local function to save space
+  37:variables.cpp **** 
+  38:variables.cpp **** //-----Midi notes variables-----
+  39:variables.cpp **** uint8_t voicenote[4] = { 0, 0, 0, 0};
+  40:variables.cpp **** bool voicetrig[4] = { 0, 0, 0, 0};
+  41:variables.cpp **** uint8_t voicehist[4] = {4, 3, 2, 1}; //0th place is the oldest voice 3rd place is newest voice
+  42:variables.cpp **** uint8_t midichannel;
+  43:variables.cpp **** float voicefreq[4] = {};
+  44:variables.cpp **** float voicefreqtarget[4] = {};
+  45:variables.cpp **** float pbend = 1;
+  46:variables.cpp **** int glide = 1;
+  47:variables.cpp **** float glidetime = 0;
+  48:variables.cpp **** uint8_t glideon = 0;
+  49:variables.cpp **** bool midi_received = 0;
+  50:variables.cpp **** bool learn_active = 0;
+  51:variables.cpp **** uint8_t incoming_note = 0;
+  52:variables.cpp **** uint8_t incoming_velocity = 0;
+  53:variables.cpp **** uint8_t incoming_channel = 0;
+  54:variables.cpp **** 
+  55:variables.cpp **** //-----Voice settings variables----
+  56:variables.cpp **** 
+  57:variables.cpp **** float phasemod = 1; //1 = 2*pi = 360°, move to local function to save space!!
+  58:variables.cpp **** uint8_t octave = 2;
+  59:variables.cpp **** 
+  60:variables.cpp **** uint8_t algo_select = 1;
+  61:variables.cpp **** uint8_t detunemult = 30;
+  62:variables.cpp **** 
+  63:variables.cpp **** //encoder variables
+  64:variables.cpp **** uint8_t velocity_low = 15;
+  65:variables.cpp **** uint8_t velocity_mid = 10; //ms
+  66:variables.cpp **** uint8_t velocity_mid_high = 5;
+  67:variables.cpp **** uint8_t velocity_high = 1; //ms
+  68:variables.cpp **** 
+  69:variables.cpp **** 
+  70:variables.cpp **** unsigned long ledlastmillis = System::GetNow();
+  71:variables.cpp **** unsigned long lastMillis = ledlastmillis;
+  72:variables.cpp **** unsigned long savelastMillis = ledlastmillis;
+  73:variables.cpp **** unsigned long calibration_lastmillis = ledlastmillis;
+  74:variables.cpp **** unsigned long lastmillis1 = ledlastmillis;
+  75:variables.cpp **** unsigned long lastmillis2 = ledlastmillis;
+  76:variables.cpp **** 
+  77:variables.cpp **** float brightness = 1;
+  78:variables.cpp **** int pwm_resolution = 255;
+  79:variables.cpp **** 
+  80:variables.cpp **** float samplerate = 0;...
+  28              		.loc 1 80 21 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LBB4:
+  33              	.LBI4:
+  34              		.loc 1 80 21 view .LVU1
+  35              	.LVL0:
+ARM GAS  /tmp/ccr1TA9I.s 			page 3
+
+
+  36              		.loc 1 80 21 is_stmt 0 view .LVU2
+  37              	.LBE4:
+  38 0000 10B5     		push	{r4, lr}
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 4, -8
+  41              		.cfi_offset 14, -4
+  42              	.LBB6:
+  43              	.LBB5:
+  70:variables.cpp **** unsigned long ledlastmillis = System::GetNow();
+  44              		.loc 1 70 45 view .LVU3
+  45 0002 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+  46              	.LVL1:
+  70:variables.cpp **** unsigned long ledlastmillis = System::GetNow();
+  47              		.loc 1 70 15 view .LVU4
+  48 0006 064A     		ldr	r2, .L4
+  71:variables.cpp **** unsigned long lastMillis = ledlastmillis;
+  49              		.loc 1 71 15 view .LVU5
+  50 0008 064B     		ldr	r3, .L4+4
+  70:variables.cpp **** unsigned long ledlastmillis = System::GetNow();
+  51              		.loc 1 70 15 view .LVU6
+  52 000a 1060     		str	r0, [r2]
+  71:variables.cpp **** unsigned long lastMillis = ledlastmillis;
+  53              		.loc 1 71 15 view .LVU7
+  54 000c 1860     		str	r0, [r3]
+  72:variables.cpp **** unsigned long savelastMillis = ledlastmillis;
+  55              		.loc 1 72 15 view .LVU8
+  56 000e 064C     		ldr	r4, .L4+8
+  73:variables.cpp **** unsigned long calibration_lastmillis = ledlastmillis;
+  57              		.loc 1 73 15 view .LVU9
+  58 0010 0649     		ldr	r1, .L4+12
+  74:variables.cpp **** unsigned long lastmillis1 = ledlastmillis;
+  59              		.loc 1 74 15 view .LVU10
+  60 0012 074A     		ldr	r2, .L4+16
+  75:variables.cpp **** unsigned long lastmillis2 = ledlastmillis;
+  61              		.loc 1 75 15 view .LVU11
+  62 0014 074B     		ldr	r3, .L4+20
+  72:variables.cpp **** unsigned long savelastMillis = ledlastmillis;
+  63              		.loc 1 72 15 view .LVU12
+  64 0016 2060     		str	r0, [r4]
+  73:variables.cpp **** unsigned long calibration_lastmillis = ledlastmillis;
+  65              		.loc 1 73 15 view .LVU13
+  66 0018 0860     		str	r0, [r1]
+  74:variables.cpp **** unsigned long lastmillis1 = ledlastmillis;
+  67              		.loc 1 74 15 view .LVU14
+  68 001a 1060     		str	r0, [r2]
+  75:variables.cpp **** unsigned long lastmillis2 = ledlastmillis;
+  69              		.loc 1 75 15 view .LVU15
+  70 001c 1860     		str	r0, [r3]
+  71              	.LVL2:
+  75:variables.cpp **** unsigned long lastmillis2 = ledlastmillis;
+  72              		.loc 1 75 15 view .LVU16
+  73              	.LBE5:
+  74              	.LBE6:
+  75              		.loc 1 80 21 view .LVU17
+  76 001e 10BD     		pop	{r4, pc}
+  77              	.L5:
+  78              		.align	2
+ARM GAS  /tmp/ccr1TA9I.s 			page 4
+
+
+  79              	.L4:
+  80 0020 00000000 		.word	.LANCHOR0
+  81 0024 00000000 		.word	.LANCHOR1
+  82 0028 00000000 		.word	.LANCHOR2
+  83 002c 00000000 		.word	.LANCHOR3
+  84 0030 00000000 		.word	.LANCHOR4
+  85 0034 00000000 		.word	.LANCHOR5
+  86              		.cfi_endproc
+  87              	.LFE5348:
+  89              		.section	.init_array,"aw",%init_array
+  90              		.align	2
+  91 0000 00000000 		.word	_GLOBAL__sub_I_calibration_val(target1)
+  92              		.global	samplerate
+  93              		.global	pwm_resolution
+  94              		.global	brightness
+  95              		.global	lastmillis2
+  96              		.global	lastmillis1
+  97              		.global	calibration_lastmillis
+  98              		.global	savelastMillis
+  99              		.global	lastMillis
+ 100              		.global	ledlastmillis
+ 101              		.global	velocity_high
+ 102              		.global	velocity_mid_high
+ 103              		.global	velocity_mid
+ 104              		.global	velocity_low
+ 105              		.global	detunemult
+ 106              		.global	algo_select
+ 107              		.global	octave
+ 108              		.global	phasemod
+ 109              		.global	incoming_channel
+ 110              		.global	incoming_velocity
+ 111              		.global	incoming_note
+ 112              		.global	learn_active
+ 113              		.global	midi_received
+ 114              		.global	glideon
+ 115              		.global	glidetime
+ 116              		.global	glide
+ 117              		.global	pbend
+ 118              		.global	voicefreqtarget
+ 119              		.global	voicefreq
+ 120              		.global	midichannel
+ 121              		.global	voicehist
+ 122              		.global	voicetrig
+ 123              		.global	voicenote
+ 124              		.global	pm1amp
+ 125              		.global	attackmult
+ 126              		.global	releasemult
+ 127              		.global	octaveindex
+ 128              		.global	ratioindex
+ 129              		.global	cv_mod
+ 130              		.global	params_changed
+ 131              		.global	param_sum
+ 132              		.global	param
+ 133              		.global	knob_value
+ 134              		.global	led_takeover
+ 135              		.global	gate_out_n
+ 136              		.global	gate_out
+ARM GAS  /tmp/ccr1TA9I.s 			page 5
+
+
+ 137              		.global	calibration_val
+ 138              		.section	.bss.calibration_lastmillis,"aw",%nobits
+ 139              		.align	2
+ 140              		.set	.LANCHOR3,. + 0
+ 143              	calibration_lastmillis:
+ 144 0000 00000000 		.space	4
+ 145              		.section	.bss.cv_mod,"aw",%nobits
+ 146              		.align	2
+ 149              	cv_mod:
+ 150 0000 00000000 		.space	32
+ 150      00000000 
+ 150      00000000 
+ 150      00000000 
+ 150      00000000 
+ 151              		.section	.bss.gate_out,"aw",%nobits
+ 154              	gate_out:
+ 155 0000 00       		.space	1
+ 156              		.section	.bss.glideon,"aw",%nobits
+ 159              	glideon:
+ 160 0000 00       		.space	1
+ 161              		.section	.bss.glidetime,"aw",%nobits
+ 162              		.align	2
+ 165              	glidetime:
+ 166 0000 00000000 		.space	4
+ 167              		.section	.bss.incoming_channel,"aw",%nobits
+ 170              	incoming_channel:
+ 171 0000 00       		.space	1
+ 172              		.section	.bss.incoming_note,"aw",%nobits
+ 175              	incoming_note:
+ 176 0000 00       		.space	1
+ 177              		.section	.bss.incoming_velocity,"aw",%nobits
+ 180              	incoming_velocity:
+ 181 0000 00       		.space	1
+ 182              		.section	.bss.knob_value,"aw",%nobits
+ 183              		.align	2
+ 186              	knob_value:
+ 187 0000 00000000 		.space	32
+ 187      00000000 
+ 187      00000000 
+ 187      00000000 
+ 187      00000000 
+ 188              		.section	.bss.lastMillis,"aw",%nobits
+ 189              		.align	2
+ 190              		.set	.LANCHOR1,. + 0
+ 193              	lastMillis:
+ 194 0000 00000000 		.space	4
+ 195              		.section	.bss.lastmillis1,"aw",%nobits
+ 196              		.align	2
+ 197              		.set	.LANCHOR4,. + 0
+ 200              	lastmillis1:
+ 201 0000 00000000 		.space	4
+ 202              		.section	.bss.lastmillis2,"aw",%nobits
+ 203              		.align	2
+ 204              		.set	.LANCHOR5,. + 0
+ 207              	lastmillis2:
+ 208 0000 00000000 		.space	4
+ 209              		.section	.bss.learn_active,"aw",%nobits
+ARM GAS  /tmp/ccr1TA9I.s 			page 6
+
+
+ 212              	learn_active:
+ 213 0000 00       		.space	1
+ 214              		.section	.bss.led_takeover,"aw",%nobits
+ 217              	led_takeover:
+ 218 0000 00       		.space	1
+ 219              		.section	.bss.ledlastmillis,"aw",%nobits
+ 220              		.align	2
+ 221              		.set	.LANCHOR0,. + 0
+ 224              	ledlastmillis:
+ 225 0000 00000000 		.space	4
+ 226              		.section	.bss.midi_received,"aw",%nobits
+ 229              	midi_received:
+ 230 0000 00       		.space	1
+ 231              		.section	.bss.midichannel,"aw",%nobits
+ 234              	midichannel:
+ 235 0000 00       		.space	1
+ 236              		.section	.bss.param,"aw",%nobits
+ 237              		.align	2
+ 240              	param:
+ 241 0000 00000000 		.space	32
+ 241      00000000 
+ 241      00000000 
+ 241      00000000 
+ 241      00000000 
+ 242              		.section	.bss.param_sum,"aw",%nobits
+ 243              		.align	2
+ 246              	param_sum:
+ 247 0000 00000000 		.space	32
+ 247      00000000 
+ 247      00000000 
+ 247      00000000 
+ 247      00000000 
+ 248              		.section	.bss.params_changed,"aw",%nobits
+ 249              		.align	2
+ 252              	params_changed:
+ 253 0000 00000000 		.space	8
+ 253      00000000 
+ 254              		.section	.bss.samplerate,"aw",%nobits
+ 255              		.align	2
+ 258              	samplerate:
+ 259 0000 00000000 		.space	4
+ 260              		.section	.bss.savelastMillis,"aw",%nobits
+ 261              		.align	2
+ 262              		.set	.LANCHOR2,. + 0
+ 265              	savelastMillis:
+ 266 0000 00000000 		.space	4
+ 267              		.section	.bss.voicefreq,"aw",%nobits
+ 268              		.align	2
+ 271              	voicefreq:
+ 272 0000 00000000 		.space	16
+ 272      00000000 
+ 272      00000000 
+ 272      00000000 
+ 273              		.section	.bss.voicefreqtarget,"aw",%nobits
+ 274              		.align	2
+ 277              	voicefreqtarget:
+ 278 0000 00000000 		.space	16
+ARM GAS  /tmp/ccr1TA9I.s 			page 7
+
+
+ 278      00000000 
+ 278      00000000 
+ 278      00000000 
+ 279              		.section	.bss.voicenote,"aw",%nobits
+ 280              		.align	2
+ 283              	voicenote:
+ 284 0000 00000000 		.space	4
+ 285              		.section	.bss.voicetrig,"aw",%nobits
+ 286              		.align	2
+ 289              	voicetrig:
+ 290 0000 00000000 		.space	4
+ 291              		.section	.data.algo_select,"aw"
+ 294              	algo_select:
+ 295 0000 01       		.byte	1
+ 296              		.section	.data.brightness,"aw"
+ 297              		.align	2
+ 300              	brightness:
+ 301 0000 0000803F 		.word	1065353216
+ 302              		.section	.data.calibration_val,"aw"
+ 303              		.align	2
+ 306              	calibration_val:
+ 307 0000 0000     		.short	0
+ 308 0002 FF0F     		.short	4095
+ 309 0004 0000     		.short	0
+ 310 0006 FF0F     		.short	4095
+ 311 0008 0000     		.short	0
+ 312 000a FF0F     		.short	4095
+ 313 000c 0000     		.short	0
+ 314 000e FF0F     		.short	4095
+ 315 0010 0000     		.short	0
+ 316 0012 FF0F     		.short	4095
+ 317 0014 0000     		.short	0
+ 318 0016 FF0F     		.short	4095
+ 319 0018 0000     		.short	0
+ 320 001a FF0F     		.short	4095
+ 321 001c 0000     		.short	0
+ 322 001e FF0F     		.short	4095
+ 323 0020 00000000 		.space	8
+ 323      00000000 
+ 324              		.section	.data.detunemult,"aw"
+ 327              	detunemult:
+ 328 0000 1E       		.byte	30
+ 329              		.section	.data.gate_out_n,"aw"
+ 332              	gate_out_n:
+ 333 0000 01       		.byte	1
+ 334              		.section	.data.glide,"aw"
+ 335              		.align	2
+ 338              	glide:
+ 339 0000 01000000 		.word	1
+ 340              		.section	.data.octave,"aw"
+ 343              	octave:
+ 344 0000 02       		.byte	2
+ 345              		.section	.data.pbend,"aw"
+ 346              		.align	2
+ 349              	pbend:
+ 350 0000 0000803F 		.word	1065353216
+ 351              		.section	.data.phasemod,"aw"
+ARM GAS  /tmp/ccr1TA9I.s 			page 8
+
+
+ 352              		.align	2
+ 355              	phasemod:
+ 356 0000 0000803F 		.word	1065353216
+ 357              		.section	.data.pwm_resolution,"aw"
+ 358              		.align	2
+ 361              	pwm_resolution:
+ 362 0000 FF000000 		.word	255
+ 363              		.section	.data.velocity_high,"aw"
+ 366              	velocity_high:
+ 367 0000 01       		.byte	1
+ 368              		.section	.data.velocity_low,"aw"
+ 371              	velocity_low:
+ 372 0000 0F       		.byte	15
+ 373              		.section	.data.velocity_mid,"aw"
+ 376              	velocity_mid:
+ 377 0000 0A       		.byte	10
+ 378              		.section	.data.velocity_mid_high,"aw"
+ 381              	velocity_mid_high:
+ 382 0000 05       		.byte	5
+ 383              		.section	.data.voicehist,"aw"
+ 384              		.align	2
+ 387              	voicehist:
+ 388 0000 04030201 		.ascii	"\004\003\002\001"
+ 389              		.section	.rodata.attackmult,"a"
+ 390              		.align	2
+ 393              	attackmult:
+ 394 0000 D0070000 		.word	2000
+ 395              		.section	.rodata.octaveindex,"a"
+ 396              		.align	2
+ 399              	octaveindex:
+ 400 0000 0000803E 		.word	1048576000
+ 401 0004 0000003F 		.word	1056964608
+ 402 0008 0000803F 		.word	1065353216
+ 403 000c 00000040 		.word	1073741824
+ 404 0010 00004040 		.word	1077936128
+ 405              		.section	.rodata.pm1amp,"a"
+ 406              		.align	2
+ 409              	pm1amp:
+ 410 0000 0000403F 		.word	1061158912
+ 411              		.section	.rodata.ratioindex,"a"
+ 412              		.align	2
+ 415              	ratioindex:
+ 416 0000 0000003F 		.word	1056964608
+ 417 0004 0000803F 		.word	1065353216
+ 418 0008 0000C03F 		.word	1069547520
+ 419 000c 00000040 		.word	1073741824
+ 420 0010 00002040 		.word	1075838976
+ 421 0014 00004040 		.word	1077936128
+ 422 0018 00006040 		.word	1080033280
+ 423 001c 00008040 		.word	1082130432
+ 424 0020 00009040 		.word	1083179008
+ 425 0024 0000A040 		.word	1084227584
+ 426 0028 0000B040 		.word	1085276160
+ 427 002c 0000C040 		.word	1086324736
+ 428 0030 0000D040 		.word	1087373312
+ 429 0034 0000E040 		.word	1088421888
+ 430 0038 0000F040 		.word	1089470464
+ARM GAS  /tmp/ccr1TA9I.s 			page 9
+
+
+ 431 003c 00000041 		.word	1090519040
+ 432 0040 00000841 		.word	1091043328
+ 433 0044 00001041 		.word	1091567616
+ 434              		.section	.rodata.releasemult,"a"
+ 435              		.align	2
+ 438              	releasemult:
+ 439 0000 B80B0000 		.word	3000
+ 440              		.text
+ 441              	.Letext0:
+ 442              		.file 2 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
+ 443              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
+ 444              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
+ 445              		.file 5 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/inclu
+ 446              		.file 6 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 447              		.file 7 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/b
+ 448              		.file 8 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 449              		.file 9 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 450              		.file 10 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 451              		.file 11 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 452              		.file 12 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 453              		.file 13 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 454              		.file 14 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 455              		.file 15 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 456              		.file 16 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 457              		.file 17 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 458              		.file 18 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 459              		.file 19 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 460              		.file 20 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 461              		.file 21 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 462              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 463              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 464              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
+ 465              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h
+ 466              		.file 26 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h"
+ 467              		.file 27 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h"
+ 468              		.file 28 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
+ 469              		.file 29 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 470              		.file 30 "DaisySP/Source/Control/adenv.h"
+ 471              		.file 31 "DaisySP/Source/Utility/dsp.h"
+ 472              		.file 32 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/incl
+ 473              		.file 33 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/wchar.h"
+ 474              		.file 34 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/locale.h"
+ 475              		.file 35 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
+ 476              		.file 36 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 477              		.file 37 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+ 478              		.file 38 "libDaisy/src/daisy_core.h"
+ 479              		.file 39 "libDaisy/src/per/tim.h"
+ 480              		.file 40 "libDaisy/src/sys/system.h"
+ 481              		.file 41 "libDaisy/src/util/wav_format.h"
+ 482              		.file 42 "libDaisy/src/dev/max11300.h"
+ 483              		.file 43 "libDaisy/src/daisy_seed.h"
+ 484              		.file 44 "variables.h"
+ 485              		.file 45 "<built-in>"
+ 486              		.file 46 "libDaisy/src/dev/sr_595.h"
+ARM GAS  /tmp/ccr1TA9I.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 variables.cpp
+     /tmp/ccr1TA9I.s:19     .text.startup._GLOBAL__sub_I_calibration_val:0000000000000000 $t
+     /tmp/ccr1TA9I.s:25     .text.startup._GLOBAL__sub_I_calibration_val:0000000000000000 _GLOBAL__sub_I_calibration_val
+     /tmp/ccr1TA9I.s:80     .text.startup._GLOBAL__sub_I_calibration_val:0000000000000020 $d
+     /tmp/ccr1TA9I.s:90     .init_array:0000000000000000 $d
+     /tmp/ccr1TA9I.s:258    .bss.samplerate:0000000000000000 samplerate
+     /tmp/ccr1TA9I.s:361    .data.pwm_resolution:0000000000000000 pwm_resolution
+     /tmp/ccr1TA9I.s:300    .data.brightness:0000000000000000 brightness
+     /tmp/ccr1TA9I.s:207    .bss.lastmillis2:0000000000000000 lastmillis2
+     /tmp/ccr1TA9I.s:200    .bss.lastmillis1:0000000000000000 lastmillis1
+     /tmp/ccr1TA9I.s:143    .bss.calibration_lastmillis:0000000000000000 calibration_lastmillis
+     /tmp/ccr1TA9I.s:265    .bss.savelastMillis:0000000000000000 savelastMillis
+     /tmp/ccr1TA9I.s:193    .bss.lastMillis:0000000000000000 lastMillis
+     /tmp/ccr1TA9I.s:224    .bss.ledlastmillis:0000000000000000 ledlastmillis
+     /tmp/ccr1TA9I.s:366    .data.velocity_high:0000000000000000 velocity_high
+     /tmp/ccr1TA9I.s:381    .data.velocity_mid_high:0000000000000000 velocity_mid_high
+     /tmp/ccr1TA9I.s:376    .data.velocity_mid:0000000000000000 velocity_mid
+     /tmp/ccr1TA9I.s:371    .data.velocity_low:0000000000000000 velocity_low
+     /tmp/ccr1TA9I.s:327    .data.detunemult:0000000000000000 detunemult
+     /tmp/ccr1TA9I.s:294    .data.algo_select:0000000000000000 algo_select
+     /tmp/ccr1TA9I.s:343    .data.octave:0000000000000000 octave
+     /tmp/ccr1TA9I.s:355    .data.phasemod:0000000000000000 phasemod
+     /tmp/ccr1TA9I.s:170    .bss.incoming_channel:0000000000000000 incoming_channel
+     /tmp/ccr1TA9I.s:180    .bss.incoming_velocity:0000000000000000 incoming_velocity
+     /tmp/ccr1TA9I.s:175    .bss.incoming_note:0000000000000000 incoming_note
+     /tmp/ccr1TA9I.s:212    .bss.learn_active:0000000000000000 learn_active
+     /tmp/ccr1TA9I.s:229    .bss.midi_received:0000000000000000 midi_received
+     /tmp/ccr1TA9I.s:159    .bss.glideon:0000000000000000 glideon
+     /tmp/ccr1TA9I.s:165    .bss.glidetime:0000000000000000 glidetime
+     /tmp/ccr1TA9I.s:338    .data.glide:0000000000000000 glide
+     /tmp/ccr1TA9I.s:349    .data.pbend:0000000000000000 pbend
+     /tmp/ccr1TA9I.s:277    .bss.voicefreqtarget:0000000000000000 voicefreqtarget
+     /tmp/ccr1TA9I.s:271    .bss.voicefreq:0000000000000000 voicefreq
+     /tmp/ccr1TA9I.s:234    .bss.midichannel:0000000000000000 midichannel
+     /tmp/ccr1TA9I.s:387    .data.voicehist:0000000000000000 voicehist
+     /tmp/ccr1TA9I.s:289    .bss.voicetrig:0000000000000000 voicetrig
+     /tmp/ccr1TA9I.s:283    .bss.voicenote:0000000000000000 voicenote
+     /tmp/ccr1TA9I.s:409    .rodata.pm1amp:0000000000000000 pm1amp
+     /tmp/ccr1TA9I.s:393    .rodata.attackmult:0000000000000000 attackmult
+     /tmp/ccr1TA9I.s:438    .rodata.releasemult:0000000000000000 releasemult
+     /tmp/ccr1TA9I.s:399    .rodata.octaveindex:0000000000000000 octaveindex
+     /tmp/ccr1TA9I.s:415    .rodata.ratioindex:0000000000000000 ratioindex
+     /tmp/ccr1TA9I.s:149    .bss.cv_mod:0000000000000000 cv_mod
+     /tmp/ccr1TA9I.s:252    .bss.params_changed:0000000000000000 params_changed
+     /tmp/ccr1TA9I.s:246    .bss.param_sum:0000000000000000 param_sum
+     /tmp/ccr1TA9I.s:240    .bss.param:0000000000000000 param
+     /tmp/ccr1TA9I.s:186    .bss.knob_value:0000000000000000 knob_value
+     /tmp/ccr1TA9I.s:217    .bss.led_takeover:0000000000000000 led_takeover
+     /tmp/ccr1TA9I.s:332    .data.gate_out_n:0000000000000000 gate_out_n
+     /tmp/ccr1TA9I.s:154    .bss.gate_out:0000000000000000 gate_out
+     /tmp/ccr1TA9I.s:306    .data.calibration_val:0000000000000000 calibration_val
+     /tmp/ccr1TA9I.s:139    .bss.calibration_lastmillis:0000000000000000 $d
+     /tmp/ccr1TA9I.s:146    .bss.cv_mod:0000000000000000 $d
+     /tmp/ccr1TA9I.s:155    .bss.gate_out:0000000000000000 $d
+     /tmp/ccr1TA9I.s:160    .bss.glideon:0000000000000000 $d
+     /tmp/ccr1TA9I.s:162    .bss.glidetime:0000000000000000 $d
+ARM GAS  /tmp/ccr1TA9I.s 			page 11
+
+
+     /tmp/ccr1TA9I.s:171    .bss.incoming_channel:0000000000000000 $d
+     /tmp/ccr1TA9I.s:176    .bss.incoming_note:0000000000000000 $d
+     /tmp/ccr1TA9I.s:181    .bss.incoming_velocity:0000000000000000 $d
+     /tmp/ccr1TA9I.s:183    .bss.knob_value:0000000000000000 $d
+     /tmp/ccr1TA9I.s:189    .bss.lastMillis:0000000000000000 $d
+     /tmp/ccr1TA9I.s:196    .bss.lastmillis1:0000000000000000 $d
+     /tmp/ccr1TA9I.s:203    .bss.lastmillis2:0000000000000000 $d
+     /tmp/ccr1TA9I.s:213    .bss.learn_active:0000000000000000 $d
+     /tmp/ccr1TA9I.s:218    .bss.led_takeover:0000000000000000 $d
+     /tmp/ccr1TA9I.s:220    .bss.ledlastmillis:0000000000000000 $d
+     /tmp/ccr1TA9I.s:230    .bss.midi_received:0000000000000000 $d
+     /tmp/ccr1TA9I.s:235    .bss.midichannel:0000000000000000 $d
+     /tmp/ccr1TA9I.s:237    .bss.param:0000000000000000 $d
+     /tmp/ccr1TA9I.s:243    .bss.param_sum:0000000000000000 $d
+     /tmp/ccr1TA9I.s:249    .bss.params_changed:0000000000000000 $d
+     /tmp/ccr1TA9I.s:255    .bss.samplerate:0000000000000000 $d
+     /tmp/ccr1TA9I.s:261    .bss.savelastMillis:0000000000000000 $d
+     /tmp/ccr1TA9I.s:268    .bss.voicefreq:0000000000000000 $d
+     /tmp/ccr1TA9I.s:274    .bss.voicefreqtarget:0000000000000000 $d
+     /tmp/ccr1TA9I.s:280    .bss.voicenote:0000000000000000 $d
+     /tmp/ccr1TA9I.s:286    .bss.voicetrig:0000000000000000 $d
+     /tmp/ccr1TA9I.s:297    .data.brightness:0000000000000000 $d
+     /tmp/ccr1TA9I.s:303    .data.calibration_val:0000000000000000 $d
+     /tmp/ccr1TA9I.s:335    .data.glide:0000000000000000 $d
+     /tmp/ccr1TA9I.s:346    .data.pbend:0000000000000000 $d
+     /tmp/ccr1TA9I.s:352    .data.phasemod:0000000000000000 $d
+     /tmp/ccr1TA9I.s:358    .data.pwm_resolution:0000000000000000 $d
+     /tmp/ccr1TA9I.s:384    .data.voicehist:0000000000000000 $d
+     /tmp/ccr1TA9I.s:390    .rodata.attackmult:0000000000000000 $d
+     /tmp/ccr1TA9I.s:396    .rodata.octaveindex:0000000000000000 $d
+     /tmp/ccr1TA9I.s:406    .rodata.pm1amp:0000000000000000 $d
+     /tmp/ccr1TA9I.s:412    .rodata.ratioindex:0000000000000000 $d
+     /tmp/ccr1TA9I.s:435    .rodata.releasemult:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+_ZN5daisy6System6GetNowEv

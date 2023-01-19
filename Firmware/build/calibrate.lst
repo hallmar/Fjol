@@ -1,0 +1,165 @@
+ARM GAS  /tmp/ccbYLK8a.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"calibrate.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._Z9calibratev,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_Z9calibratev
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_Z9calibratev:
+  27              	.LFB4789:
+  28              		.file 1 "calibrate.cpp"
+   1:calibrate.cpp **** #include "settings.h"
+   2:calibrate.cpp **** #include "variables.h"
+   3:calibrate.cpp **** #include "daisysp.h"
+   4:calibrate.cpp **** #include "daisy_seed.h"
+   5:calibrate.cpp **** using namespace daisysp;
+   6:calibrate.cpp **** using namespace daisy;
+   7:calibrate.cpp **** 
+   8:calibrate.cpp **** void calibrate()
+   9:calibrate.cpp **** {
+  29              		.loc 1 9 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  10:calibrate.cpp ****   // bool next = 0;
+  11:calibrate.cpp ****   // float enc1 = 0;
+  12:calibrate.cpp ****   // float enc2 = 0;
+  13:calibrate.cpp ****   // return;
+  14:calibrate.cpp ****   // while(next == 0)
+  15:calibrate.cpp ****   // {
+  16:calibrate.cpp ****   //   enc1 = (encoder1_read()*100);
+  17:calibrate.cpp ****   //   if(enc1 != 0)
+  18:calibrate.cpp ****   //   {
+  19:calibrate.cpp ****   //     lowerpm1 = lowerpm1 + enc1;
+  20:calibrate.cpp ****   //     //Serial.println(String("LowerPM1:") + lowerpm1);
+  21:calibrate.cpp ****   //   }
+  22:calibrate.cpp ****   //   for(int i = 0; i<= 15;i++)
+  23:calibrate.cpp ****   //   {
+  24:calibrate.cpp ****   //     if(i == 0)
+  25:calibrate.cpp ****   //     {
+ARM GAS  /tmp/ccbYLK8a.s 			page 2
+
+
+  26:calibrate.cpp ****   //       setpwm(i,(upperpm1 - lowerpm1) - pm1.getValue());
+  27:calibrate.cpp ****   //     }
+  28:calibrate.cpp ****   //     else
+  29:calibrate.cpp ****   //     {
+  30:calibrate.cpp ****   //       setpwm(i,0);
+  31:calibrate.cpp ****   //     }
+  32:calibrate.cpp ****   //   }
+  33:calibrate.cpp ****   //   switch2.update();
+  34:calibrate.cpp ****   //   if(switch2.fell())
+  35:calibrate.cpp ****   //   {
+  36:calibrate.cpp ****   //     next = 1;
+  37:calibrate.cpp ****   //   }
+  38:calibrate.cpp ****   // } //calibrate lower pm1 
+  39:calibrate.cpp ****   // next = 0;
+  40:calibrate.cpp ****   // while(next == 0)
+  41:calibrate.cpp ****   // {
+  42:calibrate.cpp ****   //   enc2 = (encoder2_read()*100);
+  43:calibrate.cpp ****   //   if(enc2 != 0)
+  44:calibrate.cpp ****   //   {
+  45:calibrate.cpp ****   //     upperpm1 = upperpm1 + enc2; 
+  46:calibrate.cpp ****   //     //Serial.println(String("UpperPM1:") + upperpm1);
+  47:calibrate.cpp ****   //   }
+  48:calibrate.cpp ****   //   for(int i = 0; i<= 15;i++)
+  49:calibrate.cpp ****   //   {
+  50:calibrate.cpp ****   //     if(i == 1)
+  51:calibrate.cpp ****   //     {
+  52:calibrate.cpp ****   //       setpwm(i,(upperpm1 - lowerpm1) - pm1.getValue());
+  53:calibrate.cpp ****   //     }
+  54:calibrate.cpp ****   //     else
+  55:calibrate.cpp ****   //     {
+  56:calibrate.cpp ****   //       setpwm(i,0);
+  57:calibrate.cpp ****   //     }
+  58:calibrate.cpp ****   //   }
+  59:calibrate.cpp ****   //   switch2.update();
+  60:calibrate.cpp ****   //   if(switch2.fell())
+  61:calibrate.cpp ****   //   {
+  62:calibrate.cpp ****   //     next = 1;
+  63:calibrate.cpp ****   //   }
+  64:calibrate.cpp ****   // } //calibrate upper pm1 
+  65:calibrate.cpp ****   // next = 0;
+  66:calibrate.cpp ****   // return;
+  67:calibrate.cpp **** }...
+  34              		.loc 1 67 1 is_stmt 0 view .LVU1
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE4789:
+  39 0002 00BF     		.text
+  40              	.Letext0:
+  41              		.file 2 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
+  42              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
+  43              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
+  44              		.file 5 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/inclu
+  45              		.file 6 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+  46              		.file 7 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/b
+  47              		.file 8 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+  48              		.file 9 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+  49              		.file 10 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ARM GAS  /tmp/ccbYLK8a.s 			page 3
+
+
+  50              		.file 11 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  51              		.file 12 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  52              		.file 13 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  53              		.file 14 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  54              		.file 15 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  55              		.file 16 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  56              		.file 17 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  57              		.file 18 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  58              		.file 19 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  59              		.file 20 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  60              		.file 21 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  61              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  62              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  63              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
+  64              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h
+  65              		.file 26 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h"
+  66              		.file 27 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h"
+  67              		.file 28 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
+  68              		.file 29 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  69              		.file 30 "DaisySP/Source/Control/adenv.h"
+  70              		.file 31 "DaisySP/Source/Utility/dsp.h"
+  71              		.file 32 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/incl
+  72              		.file 33 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/wchar.h"
+  73              		.file 34 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/locale.h"
+  74              		.file 35 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
+  75              		.file 36 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+  76              		.file 37 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+  77              		.file 38 "libDaisy/src/daisy_core.h"
+  78              		.file 39 "libDaisy/src/util/wav_format.h"
+  79              		.file 40 "libDaisy/src/dev/max11300.h"
+  80              		.file 41 "libDaisy/src/daisy_seed.h"
+  81              		.file 42 "<built-in>"
+  82              		.file 43 "libDaisy/src/dev/sr_595.h"
+ARM GAS  /tmp/ccbYLK8a.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 calibrate.cpp
+     /tmp/ccbYLK8a.s:19     .text._Z9calibratev:0000000000000000 $t
+     /tmp/ccbYLK8a.s:26     .text._Z9calibratev:0000000000000000 _Z9calibratev
+
+NO UNDEFINED SYMBOLS

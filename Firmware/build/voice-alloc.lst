@@ -1,0 +1,730 @@
+ARM GAS  /tmp/ccCtAMPU.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"voice-alloc.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._Z11shiftvoicesv,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_Z11shiftvoicesv
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_Z11shiftvoicesv:
+  27              	.LFB4789:
+  28              		.file 1 "voice-alloc.cpp"
+   1:voice-alloc.cpp **** #include "settings.h"
+   2:voice-alloc.cpp **** #include "variables.h"
+   3:voice-alloc.cpp **** #include "daisysp.h"
+   4:voice-alloc.cpp **** #include "daisy_seed.h"
+   5:voice-alloc.cpp **** using namespace daisysp;
+   6:voice-alloc.cpp **** using namespace daisy;
+   7:voice-alloc.cpp **** 
+   8:voice-alloc.cpp **** void shiftvoices()
+   9:voice-alloc.cpp **** {
+  29              		.loc 1 9 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  10:voice-alloc.cpp ****   uint8_t temp;
+  34              		.loc 1 10 3 view .LVU1
+  11:voice-alloc.cpp ****   temp = voicehist[3];
+  35              		.loc 1 11 3 view .LVU2
+  36              		.loc 1 11 8 is_stmt 0 view .LVU3
+  37 0000 054B     		ldr	r3, .L3
+  38 0002 D878     		ldrb	r0, [r3, #3]	@ zero_extendqisi2
+  39              	.LVL0:
+  12:voice-alloc.cpp ****   voicehist[3] = voicehist[2];
+  40              		.loc 1 12 3 is_stmt 1 view .LVU4
+  41              		.loc 1 12 16 is_stmt 0 view .LVU5
+  42 0004 93F802C0 		ldrb	ip, [r3, #2]	@ zero_extendqisi2
+  13:voice-alloc.cpp ****   voicehist[2] = voicehist[1];
+  43              		.loc 1 13 16 view .LVU6
+  44 0008 5978     		ldrb	r1, [r3, #1]	@ zero_extendqisi2
+  14:voice-alloc.cpp ****   voicehist[1] = voicehist[0];
+ARM GAS  /tmp/ccCtAMPU.s 			page 2
+
+
+  45              		.loc 1 14 16 view .LVU7
+  46 000a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+  12:voice-alloc.cpp ****   voicehist[3] = voicehist[2];
+  47              		.loc 1 12 16 view .LVU8
+  48 000c 83F803C0 		strb	ip, [r3, #3]
+  13:voice-alloc.cpp ****   voicehist[2] = voicehist[1];
+  49              		.loc 1 13 3 is_stmt 1 view .LVU9
+  15:voice-alloc.cpp ****   voicehist[0] = temp;
+  50              		.loc 1 15 16 is_stmt 0 view .LVU10
+  51 0010 1870     		strb	r0, [r3]
+  13:voice-alloc.cpp ****   voicehist[2] = voicehist[1];
+  52              		.loc 1 13 16 view .LVU11
+  53 0012 9970     		strb	r1, [r3, #2]
+  14:voice-alloc.cpp ****   voicehist[1] = voicehist[0];
+  54              		.loc 1 14 3 is_stmt 1 view .LVU12
+  14:voice-alloc.cpp ****   voicehist[1] = voicehist[0];
+  55              		.loc 1 14 16 is_stmt 0 view .LVU13
+  56 0014 5A70     		strb	r2, [r3, #1]
+  57              		.loc 1 15 3 is_stmt 1 view .LVU14
+  16:voice-alloc.cpp **** }
+  58              		.loc 1 16 1 is_stmt 0 view .LVU15
+  59 0016 7047     		bx	lr
+  60              	.L4:
+  61              		.align	2
+  62              	.L3:
+  63 0018 00000000 		.word	voicehist
+  64              		.cfi_endproc
+  65              	.LFE4789:
+  67              		.section	.text._Z7noteOFFh,"ax",%progbits
+  68              		.align	1
+  69              		.p2align 2,,3
+  70              		.global	_Z7noteOFFh
+  71              		.syntax unified
+  72              		.thumb
+  73              		.thumb_func
+  75              	_Z7noteOFFh:
+  76              	.LVL1:
+  77              	.LFB4790:
+  17:voice-alloc.cpp **** 
+  18:voice-alloc.cpp **** void noteOFF(uint8_t note)
+  19:voice-alloc.cpp **** {
+  78              		.loc 1 19 1 is_stmt 1 view -0
+  79              		.cfi_startproc
+  80              		@ args = 0, pretend = 0, frame = 0
+  81              		@ frame_needed = 0, uses_anonymous_args = 0
+  82              		@ link register save eliminated.
+  20:voice-alloc.cpp ****   for(int i = 0; i<4; i++)
+  83              		.loc 1 20 3 view .LVU17
+  84              	.LBB2:
+  85              		.loc 1 20 19 view .LVU18
+  86              	.LBE2:
+  19:voice-alloc.cpp ****   for(int i = 0; i<4; i++)
+  87              		.loc 1 19 1 is_stmt 0 view .LVU19
+  88 0000 10B4     		push	{r4}
+  89              		.cfi_def_cfa_offset 4
+  90              		.cfi_offset 4, -4
+  91 0002 114C     		ldr	r4, .L17
+ARM GAS  /tmp/ccCtAMPU.s 			page 3
+
+
+  92 0004 114A     		ldr	r2, .L17+4
+  93 0006 2346     		mov	r3, r4
+  94 0008 04F1040C 		add	ip, r4, #4
+  95              	.LVL2:
+  96              	.L7:
+  97              	.LBB3:
+  21:voice-alloc.cpp ****   {
+  22:voice-alloc.cpp ****     if((voicetrig[i] == 1) && (note == voicenote[i]))
+  98              		.loc 1 22 5 is_stmt 1 view .LVU20
+  20:voice-alloc.cpp ****   {
+  99              		.loc 1 20 3 view .LVU21
+ 100              		.loc 1 22 20 is_stmt 0 view .LVU22
+ 101 000c 13F8011B 		ldrb	r1, [r3], #1	@ zero_extendqisi2
+ 102              	.LVL3:
+  20:voice-alloc.cpp ****   {
+ 103              		.loc 1 20 19 is_stmt 1 view .LVU23
+ 104              		.loc 1 22 5 is_stmt 0 view .LVU24
+ 105 0010 29B1     		cbz	r1, .L6
+ 106              		.loc 1 22 28 discriminator 1 view .LVU25
+ 107 0012 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
+ 108 0014 8142     		cmp	r1, r0
+ 109 0016 02D1     		bne	.L6
+  23:voice-alloc.cpp ****     {
+  24:voice-alloc.cpp ****       voicetrig[i] = 0;
+ 110              		.loc 1 24 7 is_stmt 1 view .LVU26
+ 111              		.loc 1 24 20 is_stmt 0 view .LVU27
+ 112 0018 0021     		movs	r1, #0
+ 113 001a 03F8011C 		strb	r1, [r3, #-1]
+ 114              	.L6:
+  20:voice-alloc.cpp ****   {
+ 115              		.loc 1 20 19 discriminator 2 view .LVU28
+ 116 001e 6345     		cmp	r3, ip
+ 117 0020 02F10102 		add	r2, r2, #1
+ 118 0024 F2D1     		bne	.L7
+ 119              	.LBE3:
+  25:voice-alloc.cpp ****     }
+  26:voice-alloc.cpp ****   }
+  27:voice-alloc.cpp ****   if (gate_out && voicetrig[0] == 0 && voicetrig[1] == 0 && voicetrig[2] == 0 && voicetrig[3] == 0 
+ 120              		.loc 1 27 3 is_stmt 1 view .LVU29
+ 121              		.loc 1 27 7 is_stmt 0 view .LVU30
+ 122 0026 0A4B     		ldr	r3, .L17+8
+ 123              	.LVL4:
+ 124              		.loc 1 27 3 view .LVU31
+ 125 0028 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 126 002a 52B1     		cbz	r2, .L5
+ 127              		.loc 1 27 16 discriminator 1 view .LVU32
+ 128 002c 2278     		ldrb	r2, [r4]	@ zero_extendqisi2
+ 129 002e 42B9     		cbnz	r2, .L5
+ 130              		.loc 1 27 37 discriminator 2 view .LVU33
+ 131 0030 6278     		ldrb	r2, [r4, #1]	@ zero_extendqisi2
+ 132 0032 32B9     		cbnz	r2, .L5
+ 133              		.loc 1 27 58 discriminator 3 view .LVU34
+ 134 0034 A278     		ldrb	r2, [r4, #2]	@ zero_extendqisi2
+ 135 0036 22B9     		cbnz	r2, .L5
+ 136              		.loc 1 27 79 discriminator 4 view .LVU35
+ 137 0038 E278     		ldrb	r2, [r4, #3]	@ zero_extendqisi2
+ 138 003a 12B9     		cbnz	r2, .L5
+ARM GAS  /tmp/ccCtAMPU.s 			page 4
+
+
+  28:voice-alloc.cpp ****   {
+  29:voice-alloc.cpp ****     gate_out = 0;
+ 139              		.loc 1 29 5 is_stmt 1 view .LVU36
+  30:voice-alloc.cpp ****     filtenv_trig = 0;
+ 140              		.loc 1 30 18 is_stmt 0 view .LVU37
+ 141 003c 0549     		ldr	r1, .L17+12
+  29:voice-alloc.cpp ****     filtenv_trig = 0;
+ 142              		.loc 1 29 14 view .LVU38
+ 143 003e 1A70     		strb	r2, [r3]
+ 144              		.loc 1 30 5 is_stmt 1 view .LVU39
+ 145              		.loc 1 30 18 is_stmt 0 view .LVU40
+ 146 0040 0A70     		strb	r2, [r1]
+ 147              	.L5:
+  31:voice-alloc.cpp ****   }
+  32:voice-alloc.cpp **** 
+  33:voice-alloc.cpp **** }
+ 148              		.loc 1 33 1 view .LVU41
+ 149 0042 5DF8044B 		ldr	r4, [sp], #4
+ 150              		.cfi_restore 4
+ 151              		.cfi_def_cfa_offset 0
+ 152 0046 7047     		bx	lr
+ 153              	.L18:
+ 154              		.align	2
+ 155              	.L17:
+ 156 0048 00000000 		.word	voicetrig
+ 157 004c 00000000 		.word	voicenote
+ 158 0050 00000000 		.word	gate_out
+ 159 0054 00000000 		.word	filtenv_trig
+ 160              		.cfi_endproc
+ 161              	.LFE4790:
+ 163              		.section	.text._Z6noteONh,"ax",%progbits
+ 164              		.align	1
+ 165              		.p2align 2,,3
+ 166              		.global	_Z6noteONh
+ 167              		.syntax unified
+ 168              		.thumb
+ 169              		.thumb_func
+ 171              	_Z6noteONh:
+ 172              	.LVL5:
+ 173              	.LFB4791:
+  34:voice-alloc.cpp **** 
+  35:voice-alloc.cpp **** 
+  36:voice-alloc.cpp **** void noteON(uint8_t note)
+  37:voice-alloc.cpp **** {
+ 174              		.loc 1 37 1 is_stmt 1 view -0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+  38:voice-alloc.cpp ****   float freq_note = mtof(note - 1) * pbend * octaveindex[octave];
+ 178              		.loc 1 38 3 view .LVU43
+  37:voice-alloc.cpp ****   float freq_note = mtof(note - 1) * pbend * octaveindex[octave];
+ 179              		.loc 1 37 1 is_stmt 0 view .LVU44
+ 180 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 181              		.cfi_def_cfa_offset 24
+ 182              		.cfi_offset 3, -24
+ 183              		.cfi_offset 4, -20
+ 184              		.cfi_offset 5, -16
+ARM GAS  /tmp/ccCtAMPU.s 			page 5
+
+
+ 185              		.cfi_offset 6, -12
+ 186              		.cfi_offset 7, -8
+ 187              		.cfi_offset 14, -4
+ 188              		.loc 1 38 31 view .LVU45
+ 189 0002 431E     		subs	r3, r0, #1
+ 190              	.LBB9:
+ 191              	.LBB10:
+ 192              		.file 2 "DaisySP/Source/Utility/dsp.h"
+   1:DaisySP/Source/Utility/dsp.h **** /** Helpful defines, functions, and other utilities for use in/with daisysp modules.
+   2:DaisySP/Source/Utility/dsp.h **** */
+   3:DaisySP/Source/Utility/dsp.h **** #pragma once
+   4:DaisySP/Source/Utility/dsp.h **** #ifndef DSY_CORE_DSP
+   5:DaisySP/Source/Utility/dsp.h **** #define DSY_CORE_DSP
+   6:DaisySP/Source/Utility/dsp.h **** #include <cassert>
+   7:DaisySP/Source/Utility/dsp.h **** #include <cstdint>
+   8:DaisySP/Source/Utility/dsp.h **** #include <random>
+   9:DaisySP/Source/Utility/dsp.h **** #include <cmath>
+  10:DaisySP/Source/Utility/dsp.h **** 
+  11:DaisySP/Source/Utility/dsp.h **** /** PIs
+  12:DaisySP/Source/Utility/dsp.h **** */
+  13:DaisySP/Source/Utility/dsp.h **** #define PI_F 3.1415927410125732421875f
+  14:DaisySP/Source/Utility/dsp.h **** #define TWOPI_F (2.0f * PI_F)
+  15:DaisySP/Source/Utility/dsp.h **** #define HALFPI_F (PI_F * 0.5f)
+  16:DaisySP/Source/Utility/dsp.h **** #define DSY_MIN(in, mn) (in < mn ? in : mn)
+  17:DaisySP/Source/Utility/dsp.h **** #define DSY_MAX(in, mx) (in > mx ? in : mx)
+  18:DaisySP/Source/Utility/dsp.h **** #define DSY_CLAMP(in, mn, mx) (DSY_MIN(DSY_MAX(in, mn), mx))
+  19:DaisySP/Source/Utility/dsp.h **** #define DSY_COUNTOF(_arr) (sizeof(_arr) / sizeof(_arr[0]))
+  20:DaisySP/Source/Utility/dsp.h **** 
+  21:DaisySP/Source/Utility/dsp.h **** namespace daisysp
+  22:DaisySP/Source/Utility/dsp.h **** {
+  23:DaisySP/Source/Utility/dsp.h **** //Avoids division for random floats. e.g. rand() * kRandFrac
+  24:DaisySP/Source/Utility/dsp.h **** static constexpr float kRandFrac = 1.f / (float)RAND_MAX;
+  25:DaisySP/Source/Utility/dsp.h **** 
+  26:DaisySP/Source/Utility/dsp.h **** //Convert from semitones to other units. e.g. 2 ^ (kOneTwelfth * x)
+  27:DaisySP/Source/Utility/dsp.h **** static constexpr float kOneTwelfth = 1.f / 12.f;
+  28:DaisySP/Source/Utility/dsp.h **** 
+  29:DaisySP/Source/Utility/dsp.h **** /** efficient floating point min/max
+  30:DaisySP/Source/Utility/dsp.h **** c/o stephen mccaul
+  31:DaisySP/Source/Utility/dsp.h **** */
+  32:DaisySP/Source/Utility/dsp.h **** inline float fmax(float a, float b)
+  33:DaisySP/Source/Utility/dsp.h **** {
+  34:DaisySP/Source/Utility/dsp.h ****     float r;
+  35:DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+  36:DaisySP/Source/Utility/dsp.h ****     asm("vmaxnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
+  37:DaisySP/Source/Utility/dsp.h **** #else
+  38:DaisySP/Source/Utility/dsp.h ****     r = (a > b) ? a : b;
+  39:DaisySP/Source/Utility/dsp.h **** #endif // __arm__
+  40:DaisySP/Source/Utility/dsp.h ****     return r;
+  41:DaisySP/Source/Utility/dsp.h **** }
+  42:DaisySP/Source/Utility/dsp.h **** 
+  43:DaisySP/Source/Utility/dsp.h **** inline float fmin(float a, float b)
+  44:DaisySP/Source/Utility/dsp.h **** {
+  45:DaisySP/Source/Utility/dsp.h ****     float r;
+  46:DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
+  47:DaisySP/Source/Utility/dsp.h ****     asm("vminnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
+  48:DaisySP/Source/Utility/dsp.h **** #else
+  49:DaisySP/Source/Utility/dsp.h ****     r = (a < b) ? a : b;
+ARM GAS  /tmp/ccCtAMPU.s 			page 6
+
+
+  50:DaisySP/Source/Utility/dsp.h **** #endif // __arm__
+  51:DaisySP/Source/Utility/dsp.h ****     return r;
+  52:DaisySP/Source/Utility/dsp.h **** }
+  53:DaisySP/Source/Utility/dsp.h **** 
+  54:DaisySP/Source/Utility/dsp.h **** /** quick fp clamp
+  55:DaisySP/Source/Utility/dsp.h **** */
+  56:DaisySP/Source/Utility/dsp.h **** inline float fclamp(float in, float min, float max)
+  57:DaisySP/Source/Utility/dsp.h **** {
+  58:DaisySP/Source/Utility/dsp.h ****     return fmin(fmax(in, min), max);
+  59:DaisySP/Source/Utility/dsp.h **** }
+  60:DaisySP/Source/Utility/dsp.h **** 
+  61:DaisySP/Source/Utility/dsp.h **** /** From Musicdsp.org "Fast power and root estimates for 32bit floats)
+  62:DaisySP/Source/Utility/dsp.h **** Original code by Stefan Stenzel
+  63:DaisySP/Source/Utility/dsp.h **** These are approximations
+  64:DaisySP/Source/Utility/dsp.h **** */
+  65:DaisySP/Source/Utility/dsp.h **** inline float fastpower(float f, int n)
+  66:DaisySP/Source/Utility/dsp.h **** {
+  67:DaisySP/Source/Utility/dsp.h ****     long *lp, l;
+  68:DaisySP/Source/Utility/dsp.h ****     lp = (long *)(&f);
+  69:DaisySP/Source/Utility/dsp.h ****     l  = *lp;
+  70:DaisySP/Source/Utility/dsp.h ****     l -= 0x3F800000;
+  71:DaisySP/Source/Utility/dsp.h ****     l <<= (n - 1);
+  72:DaisySP/Source/Utility/dsp.h ****     l += 0x3F800000;
+  73:DaisySP/Source/Utility/dsp.h ****     *lp = l;
+  74:DaisySP/Source/Utility/dsp.h ****     return f;
+  75:DaisySP/Source/Utility/dsp.h **** }
+  76:DaisySP/Source/Utility/dsp.h **** 
+  77:DaisySP/Source/Utility/dsp.h **** inline float fastroot(float f, int n)
+  78:DaisySP/Source/Utility/dsp.h **** {
+  79:DaisySP/Source/Utility/dsp.h ****     long *lp, l;
+  80:DaisySP/Source/Utility/dsp.h ****     lp = (long *)(&f);
+  81:DaisySP/Source/Utility/dsp.h ****     l  = *lp;
+  82:DaisySP/Source/Utility/dsp.h ****     l -= 0x3F800000;
+  83:DaisySP/Source/Utility/dsp.h ****     l >>= (n = 1);
+  84:DaisySP/Source/Utility/dsp.h ****     l += 0x3F800000;
+  85:DaisySP/Source/Utility/dsp.h ****     *lp = l;
+  86:DaisySP/Source/Utility/dsp.h ****     return f;
+  87:DaisySP/Source/Utility/dsp.h **** }
+  88:DaisySP/Source/Utility/dsp.h **** 
+  89:DaisySP/Source/Utility/dsp.h **** /** From http://openaudio.blogspot.com/2017/02/faster-log10-and-pow.html
+  90:DaisySP/Source/Utility/dsp.h **** No approximation, pow10f(x) gives a 90% speed increase over powf(10.f, x)
+  91:DaisySP/Source/Utility/dsp.h **** */
+  92:DaisySP/Source/Utility/dsp.h **** inline float pow10f(float f)
+  93:DaisySP/Source/Utility/dsp.h **** {
+  94:DaisySP/Source/Utility/dsp.h ****     return expf(2.302585092994046f * f);
+  95:DaisySP/Source/Utility/dsp.h **** }
+  96:DaisySP/Source/Utility/dsp.h **** 
+  97:DaisySP/Source/Utility/dsp.h **** /* Original code for fastlog2f by Dr. Paul Beckmann from the ARM community forum, adapted from the 
+  98:DaisySP/Source/Utility/dsp.h **** About 25% performance increase over std::log10f
+  99:DaisySP/Source/Utility/dsp.h **** */
+ 100:DaisySP/Source/Utility/dsp.h **** inline float fastlog2f(float f)
+ 101:DaisySP/Source/Utility/dsp.h **** {
+ 102:DaisySP/Source/Utility/dsp.h ****     float frac;
+ 103:DaisySP/Source/Utility/dsp.h ****     int   exp;
+ 104:DaisySP/Source/Utility/dsp.h ****     frac = frexpf(fabsf(f), &exp);
+ 105:DaisySP/Source/Utility/dsp.h ****     f    = 1.23149591368684f;
+ 106:DaisySP/Source/Utility/dsp.h ****     f *= frac;
+ARM GAS  /tmp/ccCtAMPU.s 			page 7
+
+
+ 107:DaisySP/Source/Utility/dsp.h ****     f += -4.11852516267426f;
+ 108:DaisySP/Source/Utility/dsp.h ****     f *= frac;
+ 109:DaisySP/Source/Utility/dsp.h ****     f += 6.02197014179219f;
+ 110:DaisySP/Source/Utility/dsp.h ****     f *= frac;
+ 111:DaisySP/Source/Utility/dsp.h ****     f += -3.13396450166353f;
+ 112:DaisySP/Source/Utility/dsp.h ****     f += exp;
+ 113:DaisySP/Source/Utility/dsp.h ****     return (f);
+ 114:DaisySP/Source/Utility/dsp.h **** }
+ 115:DaisySP/Source/Utility/dsp.h **** 
+ 116:DaisySP/Source/Utility/dsp.h **** inline float fastlog10f(float f)
+ 117:DaisySP/Source/Utility/dsp.h **** {
+ 118:DaisySP/Source/Utility/dsp.h ****     return fastlog2f(f) * 0.3010299956639812f;
+ 119:DaisySP/Source/Utility/dsp.h **** }
+ 120:DaisySP/Source/Utility/dsp.h **** 
+ 121:DaisySP/Source/Utility/dsp.h **** /** Midi to frequency helper
+ 122:DaisySP/Source/Utility/dsp.h **** */
+ 123:DaisySP/Source/Utility/dsp.h **** inline float mtof(float m)
+ 124:DaisySP/Source/Utility/dsp.h **** {
+ 125:DaisySP/Source/Utility/dsp.h ****     return powf(2, (m - 69.0f) / 12.0f) * 440.0f;
+ 193              		.loc 2 125 23 view .LVU46
+ 194 0004 9FED257A 		vldr.32	s14, .L30
+ 195              		.loc 2 125 16 view .LVU47
+ 196 0008 F2EE080A 		vmov.f32	s1, #1.2e+1
+ 197              	.LBE10:
+ 198              	.LBE9:
+  37:voice-alloc.cpp ****   float freq_note = mtof(note - 1) * pbend * octaveindex[octave];
+ 199              		.loc 1 37 1 view .LVU48
+ 200 000c 0446     		mov	r4, r0
+ 201              	.LVL6:
+ 202              	.LBB16:
+ 203              	.LBI9:
+ 123:DaisySP/Source/Utility/dsp.h **** {
+ 204              		.loc 2 123 14 is_stmt 1 view .LVU49
+ 205              	.LBB11:
+ 206              		.loc 2 125 5 view .LVU50
+ 207              	.LBE11:
+ 208              	.LBE16:
+ 209              		.loc 1 38 31 is_stmt 0 view .LVU51
+ 210 000e 07EE903A 		vmov	s15, r3	@ int
+ 211              	.LBB17:
+ 212              	.LBB12:
+ 213              		.loc 2 125 16 view .LVU52
+ 214 0012 B0EE000A 		vmov.f32	s0, #2.0e+0
+ 215              	.LBE12:
+ 216              	.LBE17:
+ 217              		.loc 1 38 25 view .LVU53
+ 218 0016 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 219              	.LBB18:
+ 220              	.LBB13:
+ 221              		.loc 2 125 23 view .LVU54
+ 222 001a 77EEC77A 		vsub.f32	s15, s15, s14
+ 223              		.loc 2 125 16 view .LVU55
+ 224 001e C7EEA00A 		vdiv.f32	s1, s15, s1
+ 225 0022 FFF7FEFF 		bl	powf
+ 226              	.LVL7:
+ 227              		.loc 2 125 16 view .LVU56
+ 228              	.LBE13:
+ARM GAS  /tmp/ccCtAMPU.s 			page 8
+
+
+ 229              	.LBE18:
+ 230              		.loc 1 38 58 view .LVU57
+ 231 0026 1E49     		ldr	r1, .L30+4
+ 232              		.loc 1 38 64 view .LVU58
+ 233 0028 1E4B     		ldr	r3, .L30+8
+ 234              		.loc 1 38 58 view .LVU59
+ 235 002a 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 236              	.LVL8:
+  39:voice-alloc.cpp ****   
+  40:voice-alloc.cpp ****   if (!gate_out)
+ 237              		.loc 1 40 7 view .LVU60
+ 238 002c 1E4A     		ldr	r2, .L30+12
+  38:voice-alloc.cpp ****   
+ 239              		.loc 1 38 64 view .LVU61
+ 240 002e 03EB8103 		add	r3, r3, r1, lsl #2
+  38:voice-alloc.cpp ****   
+ 241              		.loc 1 38 36 view .LVU62
+ 242 0032 1E48     		ldr	r0, .L30+16
+ 243              		.loc 1 40 3 view .LVU63
+ 244 0034 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
+  38:voice-alloc.cpp ****   
+ 245              		.loc 1 38 36 view .LVU64
+ 246 0036 D0ED006A 		vldr.32	s13, [r0]
+  38:voice-alloc.cpp ****   
+ 247              		.loc 1 38 64 view .LVU65
+ 248 003a 93ED007A 		vldr.32	s14, [r3]
+ 249              	.LVL9:
+ 250              		.loc 1 40 3 is_stmt 1 view .LVU66
+ 251 003e 19B9     		cbnz	r1, .L20
+  41:voice-alloc.cpp ****   {
+  42:voice-alloc.cpp ****     gate_out = 1;
+ 252              		.loc 1 42 5 view .LVU67
+ 253              		.loc 1 42 14 is_stmt 0 view .LVU68
+ 254 0040 0123     		movs	r3, #1
+  43:voice-alloc.cpp ****     filtenv_trig = 1;
+ 255              		.loc 1 43 18 view .LVU69
+ 256 0042 1B49     		ldr	r1, .L30+20
+  42:voice-alloc.cpp ****     filtenv_trig = 1;
+ 257              		.loc 1 42 14 view .LVU70
+ 258 0044 1370     		strb	r3, [r2]
+ 259              		.loc 1 43 5 is_stmt 1 view .LVU71
+ 260              		.loc 1 43 18 is_stmt 0 view .LVU72
+ 261 0046 0B70     		strb	r3, [r1]
+ 262              	.L20:
+  44:voice-alloc.cpp ****   }
+  45:voice-alloc.cpp ****   for(int i = 0; i<4; i++)
+ 263              		.loc 1 45 3 is_stmt 1 view .LVU73
+ 264              	.LVL10:
+ 265              	.LBB19:
+ 266              		.loc 1 45 19 view .LVU74
+  46:voice-alloc.cpp ****   {
+  47:voice-alloc.cpp ****     if(voicehist[0] == i+1 && !voicetrig[i])
+ 267              		.loc 1 47 19 is_stmt 0 view .LVU75
+ 268 0048 1A4E     		ldr	r6, .L30+24
+  45:voice-alloc.cpp ****   {
+ 269              		.loc 1 45 11 view .LVU76
+ 270 004a 0023     		movs	r3, #0
+ARM GAS  /tmp/ccCtAMPU.s 			page 9
+
+
+ 271 004c 1A4F     		ldr	r7, .L30+28
+ 272              		.loc 1 47 19 view .LVU77
+ 273 004e 3178     		ldrb	r1, [r6]	@ zero_extendqisi2
+ 274 0050 3A46     		mov	r2, r7
+ 275              	.LVL11:
+ 276              	.L21:
+ 277              		.loc 1 47 5 is_stmt 1 view .LVU78
+ 278 0052 1846     		mov	r0, r3
+ 279              		.loc 1 47 25 is_stmt 0 view .LVU79
+ 280 0054 0133     		adds	r3, r3, #1
+ 281              	.LVL12:
+  45:voice-alloc.cpp ****   {
+ 282              		.loc 1 45 19 is_stmt 1 view .LVU80
+ 283              		.loc 1 47 5 is_stmt 0 view .LVU81
+ 284 0056 9942     		cmp	r1, r3
+ 285 0058 04D0     		beq	.L29
+ 286              	.L23:
+  45:voice-alloc.cpp ****   {
+ 287              		.loc 1 45 19 discriminator 1 view .LVU82
+ 288 005a 042B     		cmp	r3, #4
+ 289 005c 02F10102 		add	r2, r2, #1
+ 290 0060 F7D1     		bne	.L21
+ 291              	.LBE19:
+  48:voice-alloc.cpp ****     {
+  49:voice-alloc.cpp ****       voicenote[i] = note;
+  50:voice-alloc.cpp ****       voicetrig[i] = 1;
+  51:voice-alloc.cpp ****       shiftvoices();
+  52:voice-alloc.cpp ****       voicefreqtarget[i] = freq_note;
+  53:voice-alloc.cpp ****       
+  54:voice-alloc.cpp ****       return;
+  55:voice-alloc.cpp ****      }
+  56:voice-alloc.cpp ****   }
+  57:voice-alloc.cpp ****  
+  58:voice-alloc.cpp **** }
+ 292              		.loc 1 58 1 view .LVU83
+ 293 0062 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 294              	.LVL13:
+ 295              	.L29:
+ 296              	.LBB26:
+  47:voice-alloc.cpp ****     {
+ 297              		.loc 1 47 28 discriminator 1 view .LVU84
+ 298 0064 1578     		ldrb	r5, [r2]	@ zero_extendqisi2
+ 299 0066 002D     		cmp	r5, #0
+ 300 0068 F7D1     		bne	.L23
+  49:voice-alloc.cpp ****       voicetrig[i] = 1;
+ 301              		.loc 1 49 7 is_stmt 1 view .LVU85
+ 302              	.LBE26:
+ 303              	.LBB27:
+ 304              	.LBB14:
+ 305              		.loc 2 125 43 is_stmt 0 view .LVU86
+ 306 006a DFED147A 		vldr.32	s15, .L30+32
+ 307              	.LBE14:
+ 308              	.LBE27:
+ 309              	.LBB28:
+  52:voice-alloc.cpp ****       
+ 310              		.loc 1 52 26 view .LVU87
+ 311 006e 144B     		ldr	r3, .L30+36
+ARM GAS  /tmp/ccCtAMPU.s 			page 10
+
+
+ 312              	.LVL14:
+  52:voice-alloc.cpp ****       
+ 313              		.loc 1 52 26 view .LVU88
+ 314              	.LBE28:
+ 315              	.LBB29:
+ 316              	.LBB15:
+ 317              		.loc 2 125 43 view .LVU89
+ 318 0070 60EE277A 		vmul.f32	s15, s0, s15
+ 319              	.LBE15:
+ 320              	.LBE29:
+ 321              	.LBB30:
+  49:voice-alloc.cpp ****       voicetrig[i] = 1;
+ 322              		.loc 1 49 20 view .LVU90
+ 323 0074 134A     		ldr	r2, .L30+40
+  52:voice-alloc.cpp ****       
+ 324              		.loc 1 52 26 view .LVU91
+ 325 0076 03EB8003 		add	r3, r3, r0, lsl #2
+  49:voice-alloc.cpp ****       voicetrig[i] = 1;
+ 326              		.loc 1 49 20 view .LVU92
+ 327 007a 1454     		strb	r4, [r2, r0]
+ 328              	.LBE30:
+  38:voice-alloc.cpp ****   
+ 329              		.loc 1 38 36 view .LVU93
+ 330 007c 67EEA67A 		vmul.f32	s15, s15, s13
+  38:voice-alloc.cpp ****   
+ 331              		.loc 1 38 64 view .LVU94
+ 332 0080 67EE877A 		vmul.f32	s15, s15, s14
+ 333              	.LBB31:
+  52:voice-alloc.cpp ****       
+ 334              		.loc 1 52 26 view .LVU95
+ 335 0084 C3ED007A 		vstr.32	s15, [r3]
+ 336              	.LBB20:
+ 337              	.LBB21:
+  11:voice-alloc.cpp ****   voicehist[3] = voicehist[2];
+ 338              		.loc 1 11 8 view .LVU96
+ 339 0088 F378     		ldrb	r3, [r6, #3]	@ zero_extendqisi2
+ 340              	.LBE21:
+ 341              	.LBE20:
+  50:voice-alloc.cpp ****       shiftvoices();
+ 342              		.loc 1 50 7 is_stmt 1 view .LVU97
+ 343              	.LBB24:
+ 344              	.LBB22:
+  15:voice-alloc.cpp **** }
+ 345              		.loc 1 15 16 is_stmt 0 view .LVU98
+ 346 008a 3370     		strb	r3, [r6]
+  12:voice-alloc.cpp ****   voicehist[2] = voicehist[1];
+ 347              		.loc 1 12 16 view .LVU99
+ 348 008c B378     		ldrb	r3, [r6, #2]	@ zero_extendqisi2
+ 349 008e F370     		strb	r3, [r6, #3]
+  13:voice-alloc.cpp ****   voicehist[1] = voicehist[0];
+ 350              		.loc 1 13 16 view .LVU100
+ 351 0090 7378     		ldrb	r3, [r6, #1]	@ zero_extendqisi2
+  14:voice-alloc.cpp ****   voicehist[0] = temp;
+ 352              		.loc 1 14 16 view .LVU101
+ 353 0092 7170     		strb	r1, [r6, #1]
+  13:voice-alloc.cpp ****   voicehist[1] = voicehist[0];
+ 354              		.loc 1 13 16 view .LVU102
+ARM GAS  /tmp/ccCtAMPU.s 			page 11
+
+
+ 355 0094 B370     		strb	r3, [r6, #2]
+ 356              	.LBE22:
+ 357              	.LBE24:
+  50:voice-alloc.cpp ****       shiftvoices();
+ 358              		.loc 1 50 20 view .LVU103
+ 359 0096 0123     		movs	r3, #1
+ 360 0098 3B54     		strb	r3, [r7, r0]
+  51:voice-alloc.cpp ****       voicefreqtarget[i] = freq_note;
+ 361              		.loc 1 51 7 is_stmt 1 view .LVU104
+ 362              	.LBB25:
+ 363              	.LBI20:
+   8:voice-alloc.cpp **** {
+ 364              		.loc 1 8 6 view .LVU105
+ 365              	.LBB23:
+  10:voice-alloc.cpp ****   temp = voicehist[3];
+ 366              		.loc 1 10 3 view .LVU106
+  11:voice-alloc.cpp ****   voicehist[3] = voicehist[2];
+ 367              		.loc 1 11 3 view .LVU107
+ 368              	.LVL15:
+  12:voice-alloc.cpp ****   voicehist[2] = voicehist[1];
+ 369              		.loc 1 12 3 view .LVU108
+  13:voice-alloc.cpp ****   voicehist[1] = voicehist[0];
+ 370              		.loc 1 13 3 view .LVU109
+  14:voice-alloc.cpp ****   voicehist[0] = temp;
+ 371              		.loc 1 14 3 view .LVU110
+  15:voice-alloc.cpp **** }
+ 372              		.loc 1 15 3 view .LVU111
+  15:voice-alloc.cpp **** }
+ 373              		.loc 1 15 3 is_stmt 0 view .LVU112
+ 374              	.LBE23:
+ 375              	.LBE25:
+  52:voice-alloc.cpp ****       
+ 376              		.loc 1 52 7 is_stmt 1 view .LVU113
+  54:voice-alloc.cpp ****      }
+ 377              		.loc 1 54 7 view .LVU114
+ 378              	.LBE31:
+ 379              		.loc 1 58 1 is_stmt 0 view .LVU115
+ 380 009a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 381              	.L31:
+ 382              		.align	2
+ 383              	.L30:
+ 384 009c 00008A42 		.word	1116340224
+ 385 00a0 00000000 		.word	octave
+ 386 00a4 00000000 		.word	octaveindex
+ 387 00a8 00000000 		.word	gate_out
+ 388 00ac 00000000 		.word	pbend
+ 389 00b0 00000000 		.word	filtenv_trig
+ 390 00b4 00000000 		.word	voicehist
+ 391 00b8 00000000 		.word	voicetrig
+ 392 00bc 0000DC43 		.word	1138491392
+ 393 00c0 00000000 		.word	voicefreqtarget
+ 394 00c4 00000000 		.word	voicenote
+ 395              		.cfi_endproc
+ 396              	.LFE4791:
+ 398              		.text
+ 399              	.Letext0:
+ 400              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
+ARM GAS  /tmp/ccCtAMPU.s 			page 12
+
+
+ 401              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
+ 402              		.file 5 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
+ 403              		.file 6 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/inclu
+ 404              		.file 7 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 405              		.file 8 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/b
+ 406              		.file 9 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 407              		.file 10 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 408              		.file 11 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 409              		.file 12 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 410              		.file 13 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 411              		.file 14 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 412              		.file 15 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 413              		.file 16 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 414              		.file 17 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 415              		.file 18 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 416              		.file 19 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 417              		.file 20 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 418              		.file 21 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 419              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 420              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 421              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 422              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
+ 423              		.file 26 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h
+ 424              		.file 27 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h"
+ 425              		.file 28 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h"
+ 426              		.file 29 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
+ 427              		.file 30 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 428              		.file 31 "DaisySP/Source/Control/adenv.h"
+ 429              		.file 32 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/incl
+ 430              		.file 33 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/wchar.h"
+ 431              		.file 34 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/locale.h"
+ 432              		.file 35 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
+ 433              		.file 36 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 434              		.file 37 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+ 435              		.file 38 "libDaisy/src/daisy_core.h"
+ 436              		.file 39 "libDaisy/src/util/wav_format.h"
+ 437              		.file 40 "libDaisy/src/dev/max11300.h"
+ 438              		.file 41 "libDaisy/src/daisy_seed.h"
+ 439              		.file 42 "variables.h"
+ 440              		.file 43 "<built-in>"
+ 441              		.file 44 "libDaisy/src/dev/sr_595.h"
+ARM GAS  /tmp/ccCtAMPU.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 voice-alloc.cpp
+     /tmp/ccCtAMPU.s:19     .text._Z11shiftvoicesv:0000000000000000 $t
+     /tmp/ccCtAMPU.s:26     .text._Z11shiftvoicesv:0000000000000000 _Z11shiftvoicesv
+     /tmp/ccCtAMPU.s:63     .text._Z11shiftvoicesv:0000000000000018 $d
+     /tmp/ccCtAMPU.s:68     .text._Z7noteOFFh:0000000000000000 $t
+     /tmp/ccCtAMPU.s:75     .text._Z7noteOFFh:0000000000000000 _Z7noteOFFh
+     /tmp/ccCtAMPU.s:156    .text._Z7noteOFFh:0000000000000048 $d
+     /tmp/ccCtAMPU.s:164    .text._Z6noteONh:0000000000000000 $t
+     /tmp/ccCtAMPU.s:171    .text._Z6noteONh:0000000000000000 _Z6noteONh
+     /tmp/ccCtAMPU.s:384    .text._Z6noteONh:000000000000009c $d
+
+UNDEFINED SYMBOLS
+voicehist
+voicetrig
+voicenote
+gate_out
+filtenv_trig
+powf
+octave
+octaveindex
+pbend
+voicefreqtarget

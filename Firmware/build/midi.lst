@@ -1,0 +1,434 @@
+ARM GAS  /tmp/cc9gnRKZ.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"midi.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._Z17HandleMidiMessageN5daisy9MidiEventE,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_Z17HandleMidiMessageN5daisy9MidiEventE
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_Z17HandleMidiMessageN5daisy9MidiEventE:
+  27              	.LFB4789:
+  28              		.file 1 "midi.cpp"
+   1:midi.cpp      **** #include "settings.h"
+   2:midi.cpp      **** #include "variables.h"
+   3:midi.cpp      **** #include "daisysp.h"
+   4:midi.cpp      **** #include "daisy_seed.h"
+   5:midi.cpp      **** using namespace daisysp;
+   6:midi.cpp      **** using namespace daisy;
+   7:midi.cpp      **** 
+   8:midi.cpp      **** // Typical Switch case for Message Type.
+   9:midi.cpp      **** void HandleMidiMessage(MidiEvent m)
+  10:midi.cpp      **** {
+  29              		.loc 1 10 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 144, pretend = 16, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 84B0     		sub	sp, sp, #16
+  35              		.cfi_def_cfa_offset 16
+  36 0002 10B4     		push	{r4}
+  37              		.cfi_def_cfa_offset 20
+  38              		.cfi_offset 4, -20
+  39              	.LVL0:
+  11:midi.cpp      ****   if(learn_active)
+  40              		.loc 1 11 3 view .LVU1
+  41 0004 074C     		ldr	r4, .L8
+  10:midi.cpp      ****   if(learn_active)
+  42              		.loc 1 10 1 is_stmt 0 view .LVU2
+  43 0006 0DF1040C 		add	ip, sp, #4
+  44 000a 8CE80F00 		stm	ip, {r0, r1, r2, r3}
+  45              	.LVL1:
+  46              		.loc 1 11 3 view .LVU3
+ARM GAS  /tmp/cc9gnRKZ.s 			page 2
+
+
+  47 000e 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  48 0010 1BB1     		cbz	r3, .L1
+  12:midi.cpp      ****   {
+  13:midi.cpp      ****     midichannel = m.channel;
+  49              		.loc 1 13 5 is_stmt 1 view .LVU4
+  50              		.loc 1 13 17 is_stmt 0 view .LVU5
+  51 0012 054A     		ldr	r2, .L8+4
+  14:midi.cpp      ****     learn_active = 0;
+  52              		.loc 1 14 18 view .LVU6
+  53 0014 0023     		movs	r3, #0
+  13:midi.cpp      ****     learn_active = 0;
+  54              		.loc 1 13 17 view .LVU7
+  55 0016 1170     		strb	r1, [r2]
+  56              		.loc 1 14 5 is_stmt 1 view .LVU8
+  57              		.loc 1 14 18 is_stmt 0 view .LVU9
+  58 0018 2370     		strb	r3, [r4]
+  15:midi.cpp      ****     // ledlastMillis = 0;
+  16:midi.cpp      ****     // led_menu_step(midichannel,3,0);
+  17:midi.cpp      ****     // getorsetsettings(1,0);
+  18:midi.cpp      ****     
+  19:midi.cpp      ****   }
+  20:midi.cpp      **** 
+  21:midi.cpp      ****   if(m.channel == midichannel)
+  59              		.loc 1 21 3 is_stmt 1 view .LVU10
+  60              	.L1:
+  22:midi.cpp      ****   {
+  23:midi.cpp      ****     switch(m.type)
+  24:midi.cpp      ****     {
+  25:midi.cpp      ****         case NoteOn:
+  26:midi.cpp      ****         {
+  27:midi.cpp      ****             NoteOnEvent p = m.AsNoteOn();
+  28:midi.cpp      ****             // This is to avoid Max/MSP Note outs for now..
+  29:midi.cpp      ****             if(m.data[1] != 0)
+  30:midi.cpp      ****             {
+  31:midi.cpp      ****                 p = m.AsNoteOn();
+  32:midi.cpp      ****                 //osc.SetFreq(mtof(p.note));
+  33:midi.cpp      ****                 
+  34:midi.cpp      ****             }
+  35:midi.cpp      ****         }
+  36:midi.cpp      ****         break;
+  37:midi.cpp      ****         case NoteOff:
+  38:midi.cpp      ****         {
+  39:midi.cpp      ****             NoteOffEvent p = m.AsNoteOff();
+  40:midi.cpp      ****             // This is to avoid Max/MSP Note outs for now..
+  41:midi.cpp      ****             if(m.data[1] != 0)
+  42:midi.cpp      ****             {
+  43:midi.cpp      ****                 p = m.AsNoteOff();
+  44:midi.cpp      ****                 //osc.SetFreq(mtof(p.note));
+  45:midi.cpp      ****                 
+  46:midi.cpp      ****             }
+  47:midi.cpp      ****         }
+  48:midi.cpp      ****         break;
+  49:midi.cpp      ****         case ControlChange:
+  50:midi.cpp      ****         {
+  51:midi.cpp      ****             ControlChangeEvent p = m.AsControlChange();
+  52:midi.cpp      ****             switch(p.control_number)
+  53:midi.cpp      ****             {
+ARM GAS  /tmp/cc9gnRKZ.s 			page 3
+
+
+  54:midi.cpp      ****                 case 1:
+  55:midi.cpp      ****                 
+  56:midi.cpp      ****                 default: break;
+  57:midi.cpp      ****             }
+  58:midi.cpp      ****             break;
+  59:midi.cpp      ****         } //case control change ends
+  60:midi.cpp      ****         case PitchBend:
+  61:midi.cpp      ****         {
+  62:midi.cpp      ****             PitchBendEvent p = m.AsPitchBend();
+  63:midi.cpp      ****             
+  64:midi.cpp      ****         } //case pitchbend ends
+  65:midi.cpp      ****         default: break;
+  66:midi.cpp      ****     } //switch ends
+  67:midi.cpp      ****   }//if midi channel ends
+  68:midi.cpp      **** }
+  61              		.loc 1 68 1 is_stmt 0 view .LVU11
+  62 001a 5DF8044B 		ldr	r4, [sp], #4
+  63              		.cfi_restore 4
+  64              		.cfi_def_cfa_offset 16
+  65 001e 04B0     		add	sp, sp, #16
+  66              		.cfi_def_cfa_offset 0
+  67 0020 7047     		bx	lr
+  68              	.L9:
+  69 0022 00BF     		.align	2
+  70              	.L8:
+  71 0024 00000000 		.word	learn_active
+  72 0028 00000000 		.word	midichannel
+  73              		.cfi_endproc
+  74              	.LFE4789:
+  76              		.section	.text._Z9pitchbendhi,"ax",%progbits
+  77              		.align	1
+  78              		.p2align 2,,3
+  79              		.global	_Z9pitchbendhi
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  84              	_Z9pitchbendhi:
+  85              	.LVL2:
+  86              	.LFB4790:
+  69:midi.cpp      **** 
+  70:midi.cpp      **** 
+  71:midi.cpp      **** void pitchbend(uint8_t channel, int bend)
+  72:midi.cpp      **** {
+  87              		.loc 1 72 1 is_stmt 1 view -0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+  73:midi.cpp      ****   float bended;
+  92              		.loc 1 73 3 view .LVU13
+  74:midi.cpp      ****   if (bend >= 0)
+  93              		.loc 1 74 3 view .LVU14
+  94 0000 0029     		cmp	r1, #0
+  95              		.loc 1 74 3 is_stmt 0 view .LVU15
+  96 0002 0FDB     		blt	.L11
+  75:midi.cpp      ****   {
+  76:midi.cpp      ****     bended = (float)bend / 8191;
+ARM GAS  /tmp/cc9gnRKZ.s 			page 4
+
+
+  97              		.loc 1 76 5 is_stmt 1 view .LVU16
+  98              	.LVL3:
+  77:midi.cpp      ****     pbend = 1 + bended;
+  99              		.loc 1 77 5 view .LVU17
+  76:midi.cpp      ****     pbend = 1 + bended;
+ 100              		.loc 1 76 14 is_stmt 0 view .LVU18
+ 101 0004 07EE901A 		vmov	s15, r1	@ int
+  76:midi.cpp      ****     pbend = 1 + bended;
+ 102              		.loc 1 76 12 view .LVU19
+ 103 0008 DFED0F6A 		vldr.32	s13, .L14
+ 104 000c 0F4B     		ldr	r3, .L14+4
+  76:midi.cpp      ****     pbend = 1 + bended;
+ 105              		.loc 1 76 14 view .LVU20
+ 106 000e B8EEE77A 		vcvt.f32.s32	s14, s15
+ 107              		.loc 1 77 15 view .LVU21
+ 108 0012 F7EE007A 		vmov.f32	s15, #1.0e+0
+  76:midi.cpp      ****     pbend = 1 + bended;
+ 109              		.loc 1 76 12 view .LVU22
+ 110 0016 87EE266A 		vdiv.f32	s12, s14, s13
+ 111              	.LVL4:
+ 112              		.loc 1 77 15 view .LVU23
+ 113 001a 36EE276A 		vadd.f32	s12, s12, s15
+ 114              	.LVL5:
+  78:midi.cpp      ****   }
+  79:midi.cpp      ****   if (bend < 0)
+ 115              		.loc 1 79 3 is_stmt 1 view .LVU24
+ 116 001e 83ED006A 		vstr.32	s12, [r3]
+  80:midi.cpp      ****   {
+  81:midi.cpp      ****     bended = (float)bend / 8192;
+  82:midi.cpp      ****     pbend = 1 + 0.5 * bended;
+  83:midi.cpp      ****   }
+  84:midi.cpp      **** 
+  85:midi.cpp      ****   if (channel == (midichannel))
+ 117              		.loc 1 85 3 view .LVU25
+  86:midi.cpp      ****   {
+  87:midi.cpp      ****     
+  88:midi.cpp      ****   }
+  89:midi.cpp      ****   //midi_read = 0;
+  90:midi.cpp      **** } //pitchbend ends
+ 118              		.loc 1 90 1 is_stmt 0 view .LVU26
+ 119 0022 7047     		bx	lr
+ 120              	.LVL6:
+ 121              	.L11:
+  79:midi.cpp      ****   {
+ 122              		.loc 1 79 3 is_stmt 1 view .LVU27
+  81:midi.cpp      ****     pbend = 1 + 0.5 * bended;
+ 123              		.loc 1 81 5 view .LVU28
+  82:midi.cpp      ****   }
+ 124              		.loc 1 82 5 view .LVU29
+  81:midi.cpp      ****     pbend = 1 + 0.5 * bended;
+ 125              		.loc 1 81 12 is_stmt 0 view .LVU30
+ 126 0024 07EE101A 		vmov	s14, r1	@ int
+  82:midi.cpp      ****   }
+ 127              		.loc 1 82 15 view .LVU31
+ 128 0028 B6EE005B 		vmov.f64	d5, #5.0e-1
+ 129 002c B7EE006B 		vmov.f64	d6, #1.0e+0
+ 130 0030 064B     		ldr	r3, .L14+4
+ARM GAS  /tmp/cc9gnRKZ.s 			page 5
+
+
+  81:midi.cpp      ****     pbend = 1 + 0.5 * bended;
+ 131              		.loc 1 81 12 view .LVU32
+ 132 0032 BAEEE97A 		vcvt.f32.s32	s14, s14, #13
+ 133              	.LVL7:
+  82:midi.cpp      ****   }
+ 134              		.loc 1 82 23 view .LVU33
+ 135 0036 B7EEC77A 		vcvt.f64.f32	d7, s14
+ 136              	.LVL8:
+  82:midi.cpp      ****   }
+ 137              		.loc 1 82 15 view .LVU34
+ 138 003a A7EE056B 		vfma.f64	d6, d7, d5
+ 139 003e B7EEC66B 		vcvt.f32.f64	s12, d6
+ 140 0042 83ED006A 		vstr.32	s12, [r3]
+  85:midi.cpp      ****   {
+ 141              		.loc 1 85 3 is_stmt 1 view .LVU35
+ 142              		.loc 1 90 1 is_stmt 0 view .LVU36
+ 143 0046 7047     		bx	lr
+ 144              	.L15:
+ 145              		.align	2
+ 146              	.L14:
+ 147 0048 00F8FF45 		.word	1174403072
+ 148 004c 00000000 		.word	pbend
+ 149              		.cfi_endproc
+ 150              	.LFE4790:
+ 152              		.section	.text._Z13controlchangehhh,"ax",%progbits
+ 153              		.align	1
+ 154              		.p2align 2,,3
+ 155              		.global	_Z13controlchangehhh
+ 156              		.syntax unified
+ 157              		.thumb
+ 158              		.thumb_func
+ 160              	_Z13controlchangehhh:
+ 161              	.LVL9:
+ 162              	.LFB4791:
+  91:midi.cpp      **** 
+  92:midi.cpp      **** void controlchange(uint8_t channel, uint8_t number, uint8_t value)
+  93:midi.cpp      **** {
+ 163              		.loc 1 93 1 is_stmt 1 view -0
+ 164              		.cfi_startproc
+ 165              		@ args = 0, pretend = 0, frame = 0
+ 166              		@ frame_needed = 0, uses_anonymous_args = 0
+ 167              		@ link register save eliminated.
+  94:midi.cpp      **** 
+  95:midi.cpp      ****   float fvalue = value;
+ 168              		.loc 1 95 3 view .LVU38
+  96:midi.cpp      ****   if (channel == midichannel)
+ 169              		.loc 1 96 15 is_stmt 0 view .LVU39
+ 170 0000 0A4B     		ldr	r3, .L25
+ 171              		.loc 1 96 3 view .LVU40
+ 172 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 173              	.LVL10:
+ 174              		.loc 1 96 3 is_stmt 1 view .LVU41
+  97:midi.cpp      ****   {
+  98:midi.cpp      ****     switch (number)
+ 175              		.loc 1 98 5 view .LVU42
+ 176 0004 8342     		cmp	r3, r0
+ 177 0006 01D1     		bne	.L16
+ARM GAS  /tmp/cc9gnRKZ.s 			page 6
+
+
+ 178 0008 0529     		cmp	r1, #5
+ 179 000a 00D0     		beq	.L24
+ 180              	.L16:
+  99:midi.cpp      ****     {
+ 100:midi.cpp      ****     case 5:
+ 101:midi.cpp      ****       glidetime = 2 * (fvalue / 127);
+ 102:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 103:midi.cpp      ****       
+ 104:midi.cpp      ****       break;
+ 105:midi.cpp      ****     // case 20:
+ 106:midi.cpp      ****     //   osc2lvl = (fvalue/127)*100;
+ 107:midi.cpp      ****     //   AudioNoInterrupts();
+ 108:midi.cpp      ****     //   osc2v1.amplitude((osc2lvl/100)*waveampmult);
+ 109:midi.cpp      ****     //   osc2v2.amplitude((osc2lvl/100)*waveampmult);
+ 110:midi.cpp      ****     //   osc2v3.amplitude((osc2lvl/100)*waveampmult);
+ 111:midi.cpp      ****     //   osc2v4.amplitude((osc2lvl/100)*waveampmult);
+ 112:midi.cpp      ****     //   AudioInterrupts();
+ 113:midi.cpp      ****     // break;
+ 114:midi.cpp      ****     }
+ 115:midi.cpp      ****   }
+ 116:midi.cpp      ****   //midi_read = 0;
+ 117:midi.cpp      **** }
+ 181              		.loc 1 117 1 is_stmt 0 view .LVU43
+ 182 000c 7047     		bx	lr
+ 183              	.L24:
+ 100:midi.cpp      ****       glidetime = 2 * (fvalue / 127);
+ 184              		.loc 1 100 5 is_stmt 1 view .LVU44
+ 101:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 185              		.loc 1 101 7 view .LVU45
+  95:midi.cpp      ****   if (channel == midichannel)
+ 186              		.loc 1 95 9 is_stmt 0 view .LVU46
+ 187 000e 07EE902A 		vmov	s15, r2	@ int
+ 101:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 188              		.loc 1 101 31 view .LVU47
+ 189 0012 DFED076A 		vldr.32	s13, .L25+4
+ 101:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 190              		.loc 1 101 17 view .LVU48
+ 191 0016 074B     		ldr	r3, .L25+8
+  95:midi.cpp      ****   if (channel == midichannel)
+ 192              		.loc 1 95 9 view .LVU49
+ 193 0018 F8EE677A 		vcvt.f32.u32	s15, s15
+ 101:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 194              		.loc 1 101 31 view .LVU50
+ 195 001c 87EEA67A 		vdiv.f32	s14, s15, s13
+ 101:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 196              		.loc 1 101 21 view .LVU51
+ 197 0020 37EE077A 		vadd.f32	s14, s14, s14
+ 101:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 198              		.loc 1 101 17 view .LVU52
+ 199 0024 83ED007A 		vstr.32	s14, [r3]
+ 104:midi.cpp      ****     // case 20:
+ 200              		.loc 1 104 7 is_stmt 1 view .LVU53
+ 201              		.loc 1 117 1 is_stmt 0 view .LVU54
+ 202 0028 7047     		bx	lr
+ 203              	.L26:
+ 204 002a 00BF     		.align	2
+ 205              	.L25:
+ARM GAS  /tmp/cc9gnRKZ.s 			page 7
+
+
+ 206 002c 00000000 		.word	midichannel
+ 207 0030 0000FE42 		.word	1123942400
+ 208 0034 00000000 		.word	glidetime
+ 209              		.cfi_endproc
+ 210              	.LFE4791:
+ 212              		.text
+ 213              	.Letext0:
+ 214              		.file 2 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
+ 215              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
+ 216              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
+ 217              		.file 5 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/inclu
+ 218              		.file 6 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 219              		.file 7 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/b
+ 220              		.file 8 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 221              		.file 9 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
+ 222              		.file 10 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 223              		.file 11 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 224              		.file 12 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 225              		.file 13 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 226              		.file 14 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 227              		.file 15 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 228              		.file 16 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 229              		.file 17 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 230              		.file 18 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 231              		.file 19 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 232              		.file 20 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 233              		.file 21 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 234              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 235              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 236              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
+ 237              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h
+ 238              		.file 26 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h"
+ 239              		.file 27 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h"
+ 240              		.file 28 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
+ 241              		.file 29 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 242              		.file 30 "DaisySP/Source/Control/adenv.h"
+ 243              		.file 31 "DaisySP/Source/Utility/dsp.h"
+ 244              		.file 32 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/incl
+ 245              		.file 33 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/wchar.h"
+ 246              		.file 34 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/locale.h"
+ 247              		.file 35 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
+ 248              		.file 36 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 249              		.file 37 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+ 250              		.file 38 "libDaisy/src/daisy_core.h"
+ 251              		.file 39 "libDaisy/src/hid/MidiEvent.h"
+ 252              		.file 40 "libDaisy/src/util/wav_format.h"
+ 253              		.file 41 "libDaisy/src/dev/max11300.h"
+ 254              		.file 42 "libDaisy/src/daisy_seed.h"
+ 255              		.file 43 "variables.h"
+ 256              		.file 44 "<built-in>"
+ 257              		.file 45 "libDaisy/src/dev/sr_595.h"
+ARM GAS  /tmp/cc9gnRKZ.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 midi.cpp
+     /tmp/cc9gnRKZ.s:19     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 $t
+     /tmp/cc9gnRKZ.s:26     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 _Z17HandleMidiMessageN5daisy9MidiEventE
+     /tmp/cc9gnRKZ.s:71     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000024 $d
+     /tmp/cc9gnRKZ.s:77     .text._Z9pitchbendhi:0000000000000000 $t
+     /tmp/cc9gnRKZ.s:84     .text._Z9pitchbendhi:0000000000000000 _Z9pitchbendhi
+     /tmp/cc9gnRKZ.s:147    .text._Z9pitchbendhi:0000000000000048 $d
+     /tmp/cc9gnRKZ.s:153    .text._Z13controlchangehhh:0000000000000000 $t
+     /tmp/cc9gnRKZ.s:160    .text._Z13controlchangehhh:0000000000000000 _Z13controlchangehhh
+     /tmp/cc9gnRKZ.s:206    .text._Z13controlchangehhh:000000000000002c $d
+
+UNDEFINED SYMBOLS
+learn_active
+midichannel
+pbend
+glidetime
