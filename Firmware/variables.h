@@ -79,7 +79,7 @@ extern bool led_takeover;
 
 //------analog variables-----
 extern float knob_value[8];
-float cv_value[2];
+extern float cv_value[2];
 extern float param[8];
 extern float param_sum[8];
 extern bool params_changed[8];
