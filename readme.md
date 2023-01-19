@@ -5,7 +5,7 @@
 
 Small demo video with non working LED's: https://www.youtube.com/watch?v=nTqA_WNiwQo
 
-Current hardware uses the [Daisy](https://www.electro-smith.com/daisy) platform from Electrosmith. 
+Current hardware uses the [Daisy Seed](https://www.electro-smith.com/daisy) platform from Electrosmith. 
 
 Fjöl is a 
 4 voice polyphonic Phase modulation synthesizer. Using only sine waves you can get the same sounds as an FM synthesizer.
