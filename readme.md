@@ -68,7 +68,7 @@ Hopefully I'll have some beta testing units ready before summer 2023 :)
 ## Designed With
 
 * KiCAD
-* Visual Studio Code
+* Visual Studio Code(C++)
 * Inkscape
 
 ## Versioning
