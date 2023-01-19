@@ -2,3 +2,4 @@
 *.d linguist-detectable=false
 *.html linguist-detectable=false
 *.c linguist-detectable=false
+*.py linguist-detectable=false
