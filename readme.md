@@ -77,7 +77,8 @@ Hopefully I'll have some beta testing units ready before summer 2023 :)
 * 1.0 - [Software] Original software 
 ## Authors
 
-* **Hallmar Gauti Halldórsson** (hardware and firmware)
+* **Hallmar Gauti Halldórsson** - Fjöl Hardware and Firmware
+* **Electrosmith** - libDaisy and DaisySP libraries
 
 ## License
 Hardware: CC BY-SA 4.0
