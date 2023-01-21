@@ -1,4 +1,5 @@
 # Fjöl 4-Voice Midi synth
+# FIRMWARE AND HARDWARE STILL A WORK IN PROGRESS
 
 <p align="center"><img src="/Documentation/frontpanel.png"  width="543" height="761"></p>
 <p align="center"><img src="/Documentation/IMG_6093.jpeg"  width="543" height="761"></p>
@@ -76,7 +77,8 @@ Hopefully I'll have some beta testing units ready before summer 2023 :)
 * 1.0 - [Software] Original software 
 ## Authors
 
-* **Hallmar Gauti Halldórsson** (hardware and firmware)
+* **Hallmar Gauti Halldórsson** - Fjöl Hardware and Firmware
+* **Electrosmith** - libDaisy and DaisySP libraries
 
 ## License
 Hardware: CC BY-SA 4.0
