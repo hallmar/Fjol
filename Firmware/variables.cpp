@@ -37,6 +37,7 @@ const float pm1amp = 0.75; //move this to local function to save space
 //-----Midi notes variables-----
 uint8_t voicenote[4] = { 0, 0, 0, 0};
 bool voicetrig[4] = { 0, 0, 0, 0};
+bool filtenv_trig = 0;
 uint8_t voicehist[4] = {4, 3, 2, 1}; //0th place is the oldest voice 3rd place is newest voice
 uint8_t midichannel;
 float voicefreq[4] = {};

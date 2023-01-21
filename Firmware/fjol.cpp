@@ -7,7 +7,6 @@ using namespace daisy;
 
 static DaisySeed  hw;
 I2CHandle i2c;
-
 //struct for saving and loading data between restarts
 struct data
   {
@@ -15,7 +14,7 @@ struct data
     //ctl1dest,ctl1cvdest,ctl2dest,ctl2cvdest,algorithm,midi_channel
     uint8_t d_states[6] = {0,0,4,4,0,1}; //
   };
-float DSY_QSPI_BSS qspi_buffer[sizeof(data)];
+PersistentStorage<data> storage(hw.qspi);
 
 static constexpr I2CHandle::Config i2c_config
     = {I2CHandle::Config::Peripheral::I2C_1,
@@ -126,7 +125,7 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer  in,
       voice[i].op3.SetFreq(voicefreq[i]*ratioindex[(int)knob_value[3]]*(1+voice[i].op3_detune*0.2));
     }
 
-    float left,right,temp1,temp2;
+    float left,right,temp1,temp2,temp3;
 
     for(size_t i = 0; i < size; i += 2)
     {
@@ -138,16 +137,24 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer  in,
         voice[k].op2.SetAmp(envelope[k].envSig*controls[0].value);
         voice[k].op3.SetAmp(envelope[k].envSig*controls[1].value);
 
-        //figure out order of operations in regards to PM feedback!!
+        //operator 3 processing
         temp1 = voice[k].op3.Process();
+        //operator 2 processing
         voice[k].op2.PhaseAdd(temp1*voice[k].op32);
         temp2 = voice[k].op2.Process();
-
+        voice[k].op2.PhaseAdd(param[7]*temp2); //operator 2 feedback
+        temp2 = voice[k].op2.Process(); 
+        //operator 1 processing
         voice[k].op1.PhaseAdd(temp1*voice[k].op31 + temp2*voice[k].op21);
+        temp3 = voice[k].op1.Process();
+        voice[k].op1.PhaseAdd(temp3*param[6]); //operator 1 feedback
+
+        //stereo mix
         left+=voice[k].op1.Process()*voice[k].panL;
         left+=(temp2*voice[k].op2out*voice[k].panL)*pm1amp;
         right+=voice[k].op1.Process()*voice[k].panR;
         right+=(temp2*voice[k].op2out*voice[k].panR)*pm1amp;
+
       }
 
       //stereo filter with envelope

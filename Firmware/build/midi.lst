@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccisr3rO.s 			page 1
+ARM GAS  /tmp/ccIkzlOm.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
   10:midi.cpp      ****   if(learn_active)
   45              		.loc 1 10 1 view .LVU2
   46 0008 06AC     		add	r4, sp, #24
-ARM GAS  /tmp/ccisr3rO.s 			page 2
+ARM GAS  /tmp/ccIkzlOm.s 			page 2
 
 
   47 000a 84E80F00 		stm	r4, {r0, r1, r2, r3}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
   40:midi.cpp      ****             
   41:midi.cpp      ****             voiceOFF(p.note);        
   42:midi.cpp      ****         }
-ARM GAS  /tmp/ccisr3rO.s 			page 3
+ARM GAS  /tmp/ccIkzlOm.s 			page 3
 
 
   43:midi.cpp      ****       }
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
   21:midi.cpp      ****     {
   94              		.loc 1 21 14 is_stmt 0 view .LVU14
   95 002c 9DF81830 		ldrb	r3, [sp, #24]	@ zero_extendqisi2
-ARM GAS  /tmp/ccisr3rO.s 			page 4
+ARM GAS  /tmp/ccIkzlOm.s 			page 4
 
 
   21:midi.cpp      ****     {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
   32:libDaisy/src/hid/MidiEvent.h **** enum SystemCommonType
   33:libDaisy/src/hid/MidiEvent.h **** {
   34:libDaisy/src/hid/MidiEvent.h ****     SystemExclusive,     /**< & */
-ARM GAS  /tmp/ccisr3rO.s 			page 5
+ARM GAS  /tmp/ccIkzlOm.s 			page 5
 
 
   35:libDaisy/src/hid/MidiEvent.h ****     MTCQuarterFrame,     /**< & */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
   89:libDaisy/src/hid/MidiEvent.h ****     uint8_t velocity; /**< & */
   90:libDaisy/src/hid/MidiEvent.h **** };
   91:libDaisy/src/hid/MidiEvent.h **** /** Struct containing note, and pressure data for a given channel.
-ARM GAS  /tmp/ccisr3rO.s 			page 6
+ARM GAS  /tmp/ccIkzlOm.s 			page 6
 
 
   92:libDaisy/src/hid/MidiEvent.h **** Can be made from MidiEvent
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  146:libDaisy/src/hid/MidiEvent.h **** {
  147:libDaisy/src/hid/MidiEvent.h ****     int     length;
  148:libDaisy/src/hid/MidiEvent.h ****     uint8_t data[SYSEX_BUFFER_LEN]; /**< & */
-ARM GAS  /tmp/ccisr3rO.s 			page 7
+ARM GAS  /tmp/ccIkzlOm.s 			page 7
 
 
  149:libDaisy/src/hid/MidiEvent.h **** };
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  203:libDaisy/src/hid/MidiEvent.h **** /** Struct containing OmniModeOffEvent data. 
  204:libDaisy/src/hid/MidiEvent.h ****  * Can be made from MidiEvent
  205:libDaisy/src/hid/MidiEvent.h **** */
-ARM GAS  /tmp/ccisr3rO.s 			page 8
+ARM GAS  /tmp/ccIkzlOm.s 			page 8
 
 
  206:libDaisy/src/hid/MidiEvent.h **** struct OmniModeOffEvent
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  120              		.loc 2 254 9 view .LVU23
  255:libDaisy/src/hid/MidiEvent.h ****         return m;
  121              		.loc 2 255 9 view .LVU24
-ARM GAS  /tmp/ccisr3rO.s 			page 9
+ARM GAS  /tmp/ccIkzlOm.s 			page 9
 
 
  122              		.loc 2 255 9 is_stmt 0 view .LVU25
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  166 004a FFF7FEBF 		b	_Z8voiceOFFh
  167              	.LVL9:
  168              	.L16:
-ARM GAS  /tmp/ccisr3rO.s 			page 10
+ARM GAS  /tmp/ccIkzlOm.s 			page 10
 
 
  169              		.cfi_restore_state
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  207              	.LBI30:
  256:libDaisy/src/hid/MidiEvent.h ****     }
  257:libDaisy/src/hid/MidiEvent.h **** 
-ARM GAS  /tmp/ccisr3rO.s 			page 11
+ARM GAS  /tmp/ccIkzlOm.s 			page 11
 
 
  258:libDaisy/src/hid/MidiEvent.h ****     /** Returns the data within the MidiEvent as a NoteOnEvent struct */
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  210              		.loc 2 309 9 view .LVU57
  310:libDaisy/src/hid/MidiEvent.h ****         m.channel = channel;
  211              		.loc 2 310 9 view .LVU58
-ARM GAS  /tmp/ccisr3rO.s 			page 12
+ARM GAS  /tmp/ccIkzlOm.s 			page 12
 
 
  311:libDaisy/src/hid/MidiEvent.h ****         m.value   = ((uint16_t)data[1] << 7) + (data[0] - 8192);
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  251              	.LBE41:
  252              	.LBE47:
  253              		.loc 1 74 1 is_stmt 0 view .LVU78
-ARM GAS  /tmp/ccisr3rO.s 			page 13
+ARM GAS  /tmp/ccIkzlOm.s 			page 13
 
 
  254 0092 C7E7     		b	.L1
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  289              		.loc 2 265 9 is_stmt 0 view .LVU97
  290              	.LBE36:
  291              	.LBE35:
-ARM GAS  /tmp/ccisr3rO.s 			page 14
+ARM GAS  /tmp/ccIkzlOm.s 			page 14
 
 
   30:midi.cpp      ****         }
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
   68:midi.cpp      ****         }
  335              		.loc 1 68 29 view .LVU111
  336 00b8 B7EEC77A 		vcvt.f64.f32	d7, s14
-ARM GAS  /tmp/ccisr3rO.s 			page 15
+ARM GAS  /tmp/ccIkzlOm.s 			page 15
 
 
   68:midi.cpp      ****         }
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  380              		.p2align 2,,3
  381              		.global	_Z13controlchangehhh
  382              		.syntax unified
-ARM GAS  /tmp/ccisr3rO.s 			page 16
+ARM GAS  /tmp/ccIkzlOm.s 			page 16
 
 
  383              		.thumb
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  410              		.loc 1 97 5 is_stmt 1 view .LVU124
   98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
  411              		.loc 1 98 7 view .LVU125
-ARM GAS  /tmp/ccisr3rO.s 			page 17
+ARM GAS  /tmp/ccIkzlOm.s 			page 17
 
 
   92:midi.cpp      ****   if (channel == midichannel)
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  459              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
  460              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
  461              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
-ARM GAS  /tmp/ccisr3rO.s 			page 18
+ARM GAS  /tmp/ccIkzlOm.s 			page 18
 
 
  462              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
@@ -1043,19 +1043,19 @@ ARM GAS  /tmp/ccisr3rO.s 			page 1
  481              		.file 44 "settings.h"
  482              		.file 45 "<built-in>"
  483              		.file 46 "libDaisy/src/dev/sr_595.h"
-ARM GAS  /tmp/ccisr3rO.s 			page 19
+ARM GAS  /tmp/ccIkzlOm.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 midi.cpp
-     /tmp/ccisr3rO.s:19     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 $t
-     /tmp/ccisr3rO.s:26     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 _Z17HandleMidiMessageN5daisy9MidiEventE
-     /tmp/ccisr3rO.s:345    .text._Z17HandleMidiMessageN5daisy9MidiEventE:00000000000000cc $d
-     /tmp/ccisr3rO.s:356    .text._Z9pitchbendhi:0000000000000000 $t
-     /tmp/ccisr3rO.s:363    .text._Z9pitchbendhi:0000000000000000 _Z9pitchbendhi
-     /tmp/ccisr3rO.s:379    .text._Z13controlchangehhh:0000000000000000 $t
-     /tmp/ccisr3rO.s:386    .text._Z13controlchangehhh:0000000000000000 _Z13controlchangehhh
-     /tmp/ccisr3rO.s:432    .text._Z13controlchangehhh:000000000000002c $d
+     /tmp/ccIkzlOm.s:19     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 $t
+     /tmp/ccIkzlOm.s:26     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 _Z17HandleMidiMessageN5daisy9MidiEventE
+     /tmp/ccIkzlOm.s:345    .text._Z17HandleMidiMessageN5daisy9MidiEventE:00000000000000cc $d
+     /tmp/ccIkzlOm.s:356    .text._Z9pitchbendhi:0000000000000000 $t
+     /tmp/ccIkzlOm.s:363    .text._Z9pitchbendhi:0000000000000000 _Z9pitchbendhi
+     /tmp/ccIkzlOm.s:379    .text._Z13controlchangehhh:0000000000000000 $t
+     /tmp/ccIkzlOm.s:386    .text._Z13controlchangehhh:0000000000000000 _Z13controlchangehhh
+     /tmp/ccIkzlOm.s:432    .text._Z13controlchangehhh:000000000000002c $d
 
 UNDEFINED SYMBOLS
 _Z8voiceOFFh
