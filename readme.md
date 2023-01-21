@@ -12,7 +12,7 @@ Fjöl is a
 4 voice polyphonic Phase modulation synthesizer. Using only sine waves you can get the same sounds as an FM synthesizer.
 
 * digital ladder LPF with resonance
-* usb A host
+* usb A on the back to update firmware
 * 3 operator Phase modulation with 3 algorithms(so far)
 * two endless encoders with CV input for adjusting 8 different parameters 
 * MIDI IN and MIDI THRU with type A midi minijacks as per MIDI standard.
