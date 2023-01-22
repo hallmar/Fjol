@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccmLkKGG.s 			page 1
+ARM GAS  /tmp/ccNJiG34.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
   44              		.loc 1 11 3 view .LVU4
   45 0006 05D0     		beq	.L13
   12:led-enc.cpp   ****   {
-ARM GAS  /tmp/ccmLkKGG.s 			page 2
+ARM GAS  /tmp/ccNJiG34.s 			page 2
 
 
   13:led-enc.cpp   ****   
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
   14:led-enc.cpp   ****       {
   62              		.loc 1 14 7 is_stmt 1 view .LVU9
   14:led-enc.cpp   ****       {
-ARM GAS  /tmp/ccmLkKGG.s 			page 3
+ARM GAS  /tmp/ccNJiG34.s 			page 3
 
 
   63              		.loc 1 14 26 is_stmt 0 view .LVU10
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
   34:led-enc.cpp   ****       {
  104              		.loc 1 34 26 is_stmt 0 view .LVU25
  105 003c 154C     		ldr	r4, .L17+4
-ARM GAS  /tmp/ccmLkKGG.s 			page 4
+ARM GAS  /tmp/ccNJiG34.s 			page 4
 
 
   34:led-enc.cpp   ****       {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
   38:led-enc.cpp   ****       {
  145              		.loc 1 38 12 is_stmt 1 view .LVU41
   38:led-enc.cpp   ****       {
-ARM GAS  /tmp/ccmLkKGG.s 			page 5
+ARM GAS  /tmp/ccNJiG34.s 			page 5
 
 
  146              		.loc 1 38 29 is_stmt 0 view .LVU42
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  194              	.LVL11:
  195              	.LFB4791:
   51:led-enc.cpp   **** 
-ARM GAS  /tmp/ccmLkKGG.s 			page 6
+ARM GAS  /tmp/ccNJiG34.s 			page 6
 
 
   52:led-enc.cpp   **** void led_update(uint8_t index)
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
   77:led-enc.cpp   **** 
  219              		.loc 1 77 11 view .LVU56
  220 000c 94E80300 		ldm	r4, {r0, r1}
-ARM GAS  /tmp/ccmLkKGG.s 			page 7
+ARM GAS  /tmp/ccNJiG34.s 			page 7
 
 
  221              	.LVL12:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  102:led-enc.cpp   ****       {
  103:led-enc.cpp   ****         setpwm(i,0);
  250              		.loc 1 103 15 view .LVU65
-ARM GAS  /tmp/ccmLkKGG.s 			page 8
+ARM GAS  /tmp/ccNJiG34.s 			page 8
 
 
  251 002c FFF7FEFF 		bl	_Z6setpwmhh
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  291 0066 102C     		cmp	r4, #16
  292 0068 E4D1     		bne	.L28
  293              	.LVL19:
-ARM GAS  /tmp/ccmLkKGG.s 			page 9
+ARM GAS  /tmp/ccNJiG34.s 			page 9
 
 
  294              	.L19:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  336              	.LVL22:
   81:led-enc.cpp   ****     {
  337              		.loc 1 81 21 discriminator 2 view .LVU90
-ARM GAS  /tmp/ccmLkKGG.s 			page 10
+ARM GAS  /tmp/ccNJiG34.s 			page 10
 
 
  338 0080 102C     		cmp	r4, #16
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  383              		.global	_Z3maplllll
  384              		.syntax unified
  385              		.thumb
-ARM GAS  /tmp/ccmLkKGG.s 			page 11
+ARM GAS  /tmp/ccNJiG34.s 			page 11
 
 
  386              		.thumb_func
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  436              	.LFB4793:
  113:led-enc.cpp   **** 
  114:led-enc.cpp   **** int led_fade (float value, uint8_t color) // 0 = grænn 1 = rauður
-ARM GAS  /tmp/ccmLkKGG.s 			page 12
+ARM GAS  /tmp/ccNJiG34.s 			page 12
 
 
  115:led-enc.cpp   **** {
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  463              		.loc 1 111 3 is_stmt 0 view .LVU122
  464              	.LBE54:
  465              	.LBE53:
-ARM GAS  /tmp/ccmLkKGG.s 			page 13
+ARM GAS  /tmp/ccNJiG34.s 			page 13
 
 
  140:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  507              	.LVL37:
  508              	.L58:
  509              	.LBB64:
-ARM GAS  /tmp/ccmLkKGG.s 			page 14
+ARM GAS  /tmp/ccNJiG34.s 			page 14
 
 
  510              	.LBB63:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  551              	.LVL42:
  135:led-enc.cpp   ****       }  
  552              		.loc 1 135 9 view .LVU147
-ARM GAS  /tmp/ccmLkKGG.s 			page 15
+ARM GAS  /tmp/ccNJiG34.s 			page 15
 
 
  135:led-enc.cpp   ****       }  
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  600              		.loc 1 55 13 view .LVU156
  601 0006 0024     		movs	r4, #0
  602              	.LBE76:
-ARM GAS  /tmp/ccmLkKGG.s 			page 16
+ARM GAS  /tmp/ccNJiG34.s 			page 16
 
 
   53:led-enc.cpp   ****     //only update one paramater led
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  644              		.loc 1 114 5 view .LVU169
  645              	.LBB67:
  117:led-enc.cpp   ****   int rd;
-ARM GAS  /tmp/ccmLkKGG.s 			page 17
+ARM GAS  /tmp/ccNJiG34.s 			page 17
 
 
  646              		.loc 1 117 3 view .LVU170
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  111:led-enc.cpp   **** }
  685              		.loc 1 111 23 view .LVU186
  686 0048 03FB01F1 		mul	r1, r3, r1
-ARM GAS  /tmp/ccmLkKGG.s 			page 18
+ARM GAS  /tmp/ccNJiG34.s 			page 18
 
 
  687              	.LBE70:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  730              		.loc 1 65 23 discriminator 2 view .LVU197
  731 0070 0437     		adds	r7, r7, #4
  732 0072 112C     		cmp	r4, #17
-ARM GAS  /tmp/ccmLkKGG.s 			page 19
+ARM GAS  /tmp/ccNJiG34.s 			page 19
 
 
  733 0074 F7D0     		beq	.L61
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  773              	.LVL61:
  774              	.LBB82:
  775              	.LBI82:
-ARM GAS  /tmp/ccmLkKGG.s 			page 20
+ARM GAS  /tmp/ccNJiG34.s 			page 20
 
 
  110:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  821              	.Letext0:
  822              		.file 2 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
  823              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
-ARM GAS  /tmp/ccmLkKGG.s 			page 21
+ARM GAS  /tmp/ccNJiG34.s 			page 21
 
 
  824              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
@@ -1245,26 +1245,26 @@ ARM GAS  /tmp/ccmLkKGG.s 			page 1
  865              		.file 45 "libDaisy/src/dev/sr_595.h"
  866              		.file 46 "<built-in>"
  867              		.file 47 "settings.h"
-ARM GAS  /tmp/ccmLkKGG.s 			page 22
+ARM GAS  /tmp/ccNJiG34.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 led-enc.cpp
-     /tmp/ccmLkKGG.s:19     .text._Z12encoder_reada:0000000000000000 $t
-     /tmp/ccmLkKGG.s:26     .text._Z12encoder_reada:0000000000000000 _Z12encoder_reada
-     /tmp/ccmLkKGG.s:168    .text._Z12encoder_reada:0000000000000090 $d
-     /tmp/ccmLkKGG.s:182    .rodata._Z13led_menu_stephh.str1.4:0000000000000000 $d
-     /tmp/ccmLkKGG.s:186    .text._Z13led_menu_stephh:0000000000000000 $t
-     /tmp/ccmLkKGG.s:193    .text._Z13led_menu_stephh:0000000000000000 _Z13led_menu_stephh
-     /tmp/ccmLkKGG.s:372    .text._Z13led_menu_stephh:00000000000000b8 $d
-     /tmp/ccmLkKGG.s:381    .text._Z3maplllll:0000000000000000 $t
-     /tmp/ccmLkKGG.s:388    .text._Z3maplllll:0000000000000000 _Z3maplllll
-     /tmp/ccmLkKGG.s:427    .text._Z8led_fadefh:0000000000000000 $t
-     /tmp/ccmLkKGG.s:434    .text._Z8led_fadefh:0000000000000000 _Z8led_fadefh
-     /tmp/ccmLkKGG.s:566    .text._Z8led_fadefh:0000000000000068 $d
-     /tmp/ccmLkKGG.s:571    .text._Z10led_updateh:0000000000000000 $t
-     /tmp/ccmLkKGG.s:578    .text._Z10led_updateh:0000000000000000 _Z10led_updateh
-     /tmp/ccmLkKGG.s:813    .text._Z10led_updateh:00000000000000b8 $d
+     /tmp/ccNJiG34.s:19     .text._Z12encoder_reada:0000000000000000 $t
+     /tmp/ccNJiG34.s:26     .text._Z12encoder_reada:0000000000000000 _Z12encoder_reada
+     /tmp/ccNJiG34.s:168    .text._Z12encoder_reada:0000000000000090 $d
+     /tmp/ccNJiG34.s:182    .rodata._Z13led_menu_stephh.str1.4:0000000000000000 $d
+     /tmp/ccNJiG34.s:186    .text._Z13led_menu_stephh:0000000000000000 $t
+     /tmp/ccNJiG34.s:193    .text._Z13led_menu_stephh:0000000000000000 _Z13led_menu_stephh
+     /tmp/ccNJiG34.s:372    .text._Z13led_menu_stephh:00000000000000b8 $d
+     /tmp/ccNJiG34.s:381    .text._Z3maplllll:0000000000000000 $t
+     /tmp/ccNJiG34.s:388    .text._Z3maplllll:0000000000000000 _Z3maplllll
+     /tmp/ccNJiG34.s:427    .text._Z8led_fadefh:0000000000000000 $t
+     /tmp/ccNJiG34.s:434    .text._Z8led_fadefh:0000000000000000 _Z8led_fadefh
+     /tmp/ccNJiG34.s:566    .text._Z8led_fadefh:0000000000000068 $d
+     /tmp/ccNJiG34.s:571    .text._Z10led_updateh:0000000000000000 $t
+     /tmp/ccNJiG34.s:578    .text._Z10led_updateh:0000000000000000 _Z10led_updateh
+     /tmp/ccNJiG34.s:813    .text._Z10led_updateh:00000000000000b8 $d
 
 UNDEFINED SYMBOLS
 _ZN5daisy6System6GetNowEv
