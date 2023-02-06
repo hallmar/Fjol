@@ -20,7 +20,7 @@ Fjöl is a
 
 Encoder parameters are:
 
-* stereo spread of voices
+* stereo spread of voices(constant power)
 * filter resonance
 * filter envelope decay
 * glide/portamento
