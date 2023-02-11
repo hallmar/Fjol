@@ -1,7 +1,7 @@
 # Fjöl 4-Voice Midi synth
 # FIRMWARE AND HARDWARE STILL A WORK IN PROGRESS
 
-<p align="center"><img src="/Documentation/frontpanel.png"  width="543" height="761"></p>
+<p align="center"><img src="/Documentation/frontpanel - Copy.png"  width="543" height="761"></p>
 <p align="center"><img src="/Documentation/IMG_6093.jpeg"  width="543" height="761"></p>
 
 Small demo video with non working LED's: https://www.youtube.com/watch?v=nTqA_WNiwQo
