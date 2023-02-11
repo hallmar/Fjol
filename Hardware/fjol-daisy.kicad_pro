@@ -33,9 +33,15 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_pro
           "drill": 0.9,
           "height": 1.8,
           "width": 1.8
+========
+          "drill": 0.45,
+          "height": 1.9,
+          "width": 1.05
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_pro
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -96,7 +102,7 @@
         "tracks_crossing": "error",
         "unconnected_items": "error",
         "unresolved_variable": "error",
-        "via_dangling": "warning",
+        "via_dangling": "error",
         "zone_has_empty_net": "error",
         "zones_intersect": "error"
       },
@@ -128,7 +134,12 @@
         0.3048,
         0.4064,
         0.508,
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_pro
         0.762
+========
+        0.762,
+        1.0
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_pro
       ],
       "via_dimensions": [
         {
@@ -439,7 +450,11 @@
     "pinned_symbol_libs": []
   },
   "meta": {
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_pro
     "filename": "fjol-daisy.kicad_pro",
+========
+    "filename": "fjol-desktop.kicad_pro",
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_pro
     "version": 1
   },
   "net_settings": {

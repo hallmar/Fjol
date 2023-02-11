@@ -1,7 +1,12 @@
 {
   "board": {
+<<<<<<< HEAD
     "active_layer": 44,
     "active_layer_preset": "All Layers",
+=======
+    "active_layer": 37,
+    "active_layer_preset": "",
+>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0
     "auto_track_width": true,
     "hidden_nets": [],
     "high_contrast_mode": 0,
@@ -60,9 +65,10 @@
       33,
       34,
       35,
-      36
+      36,
+      37
     ],
-    "visible_layers": "fffffff_ffffffff",
+    "visible_layers": "ffffeff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {

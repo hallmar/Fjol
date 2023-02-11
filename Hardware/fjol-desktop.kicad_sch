@@ -1,0 +1,1488 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 4ff00f38-573a-443b-ae7f-c2de638da1cf)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 54.61 39.37) (size 30.48 35.56) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-00005fece969)
+    (property "Sheet name" "DSP" (id 0) (at 54.61 38.6584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "DSP.kicad_sch" (id 1) (at 54.61 75.5146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 90.17 39.37) (size 41.91 35.56) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-00005fecf0c2)
+    (property "Sheet name" "IO" (id 0) (at 90.17 38.6584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "io.kicad_sch" (id 1) (at 90.17 75.5146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/00000000-0000-0000-0000-00005fece969" (page "2"))
+    (path "/00000000-0000-0000-0000-00005fecf0c2" (page "3"))
+  )
+
+  (symbol_instances
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060585b1f"
+      (reference "#LOGO1") (unit 1) (value "Logo_Open_Hardware_Small") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/31bd2307-cabc-4f1e-8d75-6f7482dcd8c4"
+      (reference "#PWR01") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/c8661646-1dcd-4f4b-9f8b-7457d632d562"
+      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/17f7b3d0-9f35-4166-af48-caed75cd3c63"
+      (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/e1f64e10-ea4a-4dfc-a56e-aa9021aa3823"
+      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/56f9d6f7-0707-4ced-9b0d-8ef2a2005bdd"
+      (reference "#PWR0104") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/080feb11-141b-491a-bdef-95c4dd52adbe"
+      (reference "#PWR0105") (unit 1) (value "GND") (footprint "")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/56f9d6f7-0707-4ced-9b0d-8ef2a2005bdd"
+      (reference "#PWR07") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000602723a5"
+      (reference "#PWR08") (unit 1) (value "+3.3VA") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061a6e85d"
+      (reference "#PWR09") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061b6b570"
+      (reference "#PWR010") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000608fe5b6"
+      (reference "#PWR011") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061a578d4"
+      (reference "#PWR012") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061b824de"
+      (reference "#PWR013") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/f264fadf-e7ad-4ac5-bf18-ab8b56016f1c"
+      (reference "#PWR014") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060acfb9e"
+      (reference "#PWR015") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/88eaa4ac-a6c4-4dae-b1fb-9a35b404779e"
+      (reference "#PWR016") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060bb3c65"
+      (reference "#PWR018") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/fde9003c-44a4-442d-a826-83e134e068b1"
+      (reference "#PWR019") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/8fe7a1fd-5e3b-4c78-a62f-2104df847391"
+      (reference "#PWR020") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/d2b71ceb-a1a6-40fb-8fa3-6320f616ac7e"
+      (reference "#PWR021") (unit 1) (value "GND1") (footprint "")
+========
+    (path "/00000000-0000-0000-0000-00005fece969/7c9b73d7-ba07-436b-8c01-80492ef9d1b0"
+      (reference "#PWR0106") (unit 1) (value "+3.3VA") (footprint "")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061cf17c5"
+      (reference "#PWR0107") (unit 1) (value "GND") (footprint "")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/1d434212-b7d4-479b-b129-8ca1cfb26f70"
+      (reference "#PWR025") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/2120456b-9d5f-4270-b4ba-c1ea3078df20"
+      (reference "#PWR026") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/695515f9-c235-4096-841a-a72bf899004f"
+      (reference "#PWR027") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/55990055-c868-4fed-b912-e5152a59bd08"
+      (reference "#PWR028") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/1df29177-348a-413d-8a35-c84dca9cc7cc"
+      (reference "#PWR029") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/ec6027ee-42e5-4e10-8657-0e3fbaf6a7f3"
+      (reference "#PWR030") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/03310c31-2e42-4a47-a6b0-2d171f5ff2e7"
+      (reference "#PWR031") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/4a488bd5-1fc9-4160-9083-f5d024a5a40d"
+      (reference "#PWR032") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/79391340-447c-4f77-8c0d-8e5dbebbb707"
+      (reference "#PWR033") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/9a0e43ae-c7ef-47a2-b199-f6627b5d23e8"
+      (reference "#PWR034") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/314fc054-720d-410a-950c-bbc37bcd5efb"
+      (reference "#PWR035") (unit 1) (value "+3.3VA") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062782d9b"
+      (reference "#PWR038") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060c35afc"
+      (reference "#PWR042") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060c35d86"
+      (reference "#PWR043") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24da"
+      (reference "#PWR044") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24e6"
+      (reference "#PWR045") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24e0"
+      (reference "#PWR046") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000614d8c15"
+      (reference "#PWR047") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000613e6cd5"
+      (reference "#PWR048") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061508f79"
+      (reference "#PWR049") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f1da9"
+      (reference "#PWR050") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000614a8376"
+      (reference "#PWR051") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f0d60"
+      (reference "#PWR052") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006153950e"
+      (reference "#PWR053") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000613b65ea"
+      (reference "#PWR054") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061477fb5"
+      (reference "#PWR055") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f115e"
+      (reference "#PWR056") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24ec"
+      (reference "#PWR057") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061569a53"
+      (reference "#PWR058") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24f2"
+      (reference "#PWR059") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000613861e5"
+      (reference "#PWR060") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24c3"
+      (reference "#PWR061") (unit 1) (value "+3.3VA") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24f8"
+      (reference "#PWR062") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006144797d"
+      (reference "#PWR063") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061599e6e"
+      (reference "#PWR064") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f094b"
+      (reference "#PWR065") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000614175fe"
+      (reference "#PWR066") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000617aefb6"
+      (reference "#PWR067") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006122fc8e"
+      (reference "#PWR068") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000615fa979"
+      (reference "#PWR069") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000612c2de6"
+      (reference "#PWR070") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006122f64e"
+      (reference "#PWR071") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f13f9"
+      (reference "#PWR072") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061292503"
+      (reference "#PWR073") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061355b4c"
+      (reference "#PWR074") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f1b92"
+      (reference "#PWR075") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061262108"
+      (reference "#PWR076") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061325778"
+      (reference "#PWR077") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061231c31"
+      (reference "#PWR078") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006122ffee"
+      (reference "#PWR079") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000615ca231"
+      (reference "#PWR080") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000612f527a"
+      (reference "#PWR081") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064930789"
+      (reference "#PWR082") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a3791"
+      (reference "#PWR084") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006171f1ba"
+      (reference "#PWR085") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006168d7e6"
+      (reference "#PWR086") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000616ee7c1"
+      (reference "#PWR088") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006165d460"
+      (reference "#PWR093") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000630882ac"
+      (reference "#PWR094") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060502827"
+      (reference "#PWR095") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006189fdde"
+      (reference "#PWR096") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006186fdb3"
+      (reference "#PWR097") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/67bcbee9-54ad-42b7-b355-4d267e9d8416"
+      (reference "#PWR0101") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/900e67f8-293e-49ae-adc6-fa6353348140"
+      (reference "#PWR0102") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/d011febb-a5be-4af5-8ddc-a2b905f1c5ce"
+      (reference "#PWR0103") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/75f9da91-bd0c-4fb7-a4da-c7ca3b712508"
+      (reference "#PWR0104") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/080feb11-141b-491a-bdef-95c4dd52adbe"
+      (reference "#PWR0105") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a378b"
+========
+    (path "/00000000-0000-0000-0000-00005fece969/6ccc8d7e-11e7-437a-9b06-f9ece5edb4e2"
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+      (reference "#PWR0108") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/67bcbee9-54ad-42b7-b355-4d267e9d8416"
+      (reference "#PWR0109") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/89237326-20c7-46c6-a4a8-589af01bd2e5"
+      (reference "#PWR0110") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/d011febb-a5be-4af5-8ddc-a2b905f1c5ce"
+      (reference "#PWR0111") (unit 1) (value "GND") (footprint "")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fecf0c2/06643d73-d645-4704-b018-681a5211d4a8"
+      (reference "#PWR0114") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/6a8c9cd3-dc61-4ee9-abc5-f2ecaac961fb"
+      (reference "#PWR0115") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/dcedd614-549c-4c78-838d-47f5d2814354"
+      (reference "#PWR0116") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006376012d"
+      (reference "#PWR0120") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062536232"
+      (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064930d6e"
+========
+    (path "/00000000-0000-0000-0000-00005fece969/900e67f8-293e-49ae-adc6-fa6353348140"
+      (reference "#PWR0112") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061a6e85d"
+      (reference "#PWR0113") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/6220a2c9-0ad0-4a5a-9d19-9b5045fb4302"
+      (reference "#PWR0114") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060bb3c65"
+      (reference "#PWR0115") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061a578d4"
+      (reference "#PWR0116") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000608fe5b6"
+      (reference "#PWR0117") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060acfb9e"
+      (reference "#PWR0118") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061b824de"
+      (reference "#PWR0119") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061b6b570"
+      (reference "#PWR0120") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/5b65aeed-23bb-42c7-a5d0-49f316d1b957"
+      (reference "#PWR0122") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e84"
+      (reference "#PWR0123") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064b32b7e"
+      (reference "#PWR0124") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060502827"
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+      (reference "#PWR0125") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006165d460"
+      (reference "#PWR0126") (unit 1) (value "GND") (footprint "")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e7c"
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000616ee7c1"
+      (reference "#PWR0127") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e76"
+      (reference "#PWR0128") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006376012d"
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+      (reference "#PWR0129") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062536232"
+      (reference "#PWR0130") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006171f1ba"
+      (reference "#PWR0131") (unit 1) (value "GND") (footprint "")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/07fc34b3-dcdc-4f5b-a685-2db4c0041019"
+      (reference "A1") (unit 1) (value "Device_Audio_Electrosmith_Daisy_Seed_Rev4") (footprint "Device_Audio_Electrosmith_Daisy_Seed:Device_Audio_Electrosmith_Daisy_Seed")
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e7c"
+      (reference "#PWR0132") (unit 1) (value "GND") (footprint "")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006168d7e6"
+      (reference "#PWR0133") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061599e6e"
+      (reference "#PWR0134") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000614a8376"
+      (reference "#PWR0135") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061477fb5"
+      (reference "#PWR0136") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/dcedd614-549c-4c78-838d-47f5d2814354"
+      (reference "#PWR0137") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000612f527a"
+      (reference "#PWR0138") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061355b4c"
+      (reference "#PWR0139") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061325778"
+      (reference "#PWR0140") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/68b326a2-6d44-4d27-971e-0581a1bbafe4"
+      (reference "#PWR0141") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/6a8c9cd3-dc61-4ee9-abc5-f2ecaac961fb"
+      (reference "#PWR0142") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062782d9b"
+      (reference "#PWR0143") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/06643d73-d645-4704-b018-681a5211d4a8"
+      (reference "#PWR0144") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/4ee6fb38-4659-4100-9997-36db1fcc96fc"
+      (reference "#PWR0145") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006355257a"
+      (reference "#PWR0146") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000630887a0"
+      (reference "#PWR0147") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000630882ac"
+      (reference "#PWR0148") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a3785"
+      (reference "#PWR0149") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a378b"
+      (reference "#PWR0150") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a3791"
+      (reference "#PWR0151") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f094b"
+      (reference "#PWR0152") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000614175fe"
+      (reference "#PWR0153") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000614d8c15"
+      (reference "#PWR0154") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000613b65ea"
+      (reference "#PWR0155") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000613861e5"
+      (reference "#PWR0156") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000613e6cd5"
+      (reference "#PWR0157") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006122ffee"
+      (reference "#PWR0158") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000615ca231"
+      (reference "#PWR0159") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006153950e"
+      (reference "#PWR0160") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061569a53"
+      (reference "#PWR0161") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006144797d"
+      (reference "#PWR0162") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061508f79"
+      (reference "#PWR0163") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006122f64e"
+      (reference "#PWR0164") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061262108"
+      (reference "#PWR0165") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061292503"
+      (reference "#PWR0166") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000612c2de6"
+      (reference "#PWR0167") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061231c31"
+      (reference "#PWR0168") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f115e"
+      (reference "#PWR0169") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f1da9"
+      (reference "#PWR0170") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f0d60"
+      (reference "#PWR0171") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/6ea0dd24-9129-4448-8ca9-6a346c36f618"
+      (reference "#PWR0172") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/a8910c87-4bc0-4757-b947-5b47a40680de"
+      (reference "#PWR0173") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006122fc8e"
+      (reference "#PWR0174") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f13f9"
+      (reference "#PWR0175") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000611f1b92"
+      (reference "#PWR0176") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000615fa979"
+      (reference "#PWR0177") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/329b8ff1-925e-4af1-bf69-f93ae668cd72"
+      (reference "#PWR0178") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000617aefb6"
+      (reference "#PWR0179") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064930d6e"
+      (reference "#PWR0180") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064b32fa0"
+      (reference "#PWR0181") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649365a2"
+      (reference "#PWR0182") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064930789"
+      (reference "#PWR0183") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/e8507469-d98b-4c32-9a06-29489a641724"
+      (reference "#PWR0184") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/3838c5d7-5f04-48fb-b962-48c8ea6e33ae"
+      (reference "#PWR0185") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/376232ac-aa26-4a14-a7cd-9ca23d101d79"
+      (reference "#PWR0186") (unit 1) (value "+3.3VA") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/ed907e56-3f30-47dd-b0b7-19b57b88e540"
+      (reference "#PWR0187") (unit 1) (value "+3.3VA") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/51f672f0-d82f-42ba-bebc-79a3e1f9caa2"
+      (reference "#PWR0188") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/e2d5a19c-70d2-4641-9e11-698d9ff03be6"
+      (reference "#PWR0189") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/0394073e-e6a2-4243-932f-6ded920138cd"
+      (reference "#PWR0190") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/28931db7-3122-4a76-bda2-f3ed066e53e7"
+      (reference "#PWR0191") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/9cca083c-a22e-474e-b95d-9d6291bc23fd"
+      (reference "#PWR0192") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/113d4988-eb11-451f-91d0-f2f7f4dfc408"
+      (reference "#PWR0193") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/21b6c0ee-f107-4c47-a1ad-869153329d92"
+      (reference "#PWR0194") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/836dc344-a7fe-49ac-95ee-0fc0cec1b92f"
+      (reference "#PWR0195") (unit 1) (value "+3.3VA") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/f184191e-0f6f-40d0-b196-051d306a9c6b"
+      (reference "#PWR0196") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/bce423b9-6bb6-4d1b-9d8a-8126e96ad19d"
+      (reference "#PWR0197") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/07fc34b3-dcdc-4f5b-a685-2db4c0041019"
+      (reference "A1") (unit 1) (value "Device_Audio_Electrosmith_Daisy_Seed_Rev4") (footprint "Device_Audio_Electrosmith_Daisy_Seed:Device_Audio_Electrosmith_Daisy_Seed")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/c1585b85-b04c-4d8f-8ba8-6a99c10ed3a5"
+      (reference "ATTACK1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/b782b9f0-a22e-45f9-a7f0-19e1b14cc0fc"
+      (reference "ATTACK2") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/17647234-ee54-4423-b3d1-d60ec5118501"
+      (reference "C1") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/66bad982-6a7e-4d85-8cf0-60e57b8f17a2"
+      (reference "C2") (unit 1) (value "22u") (footprint "Capacitor_SMD:C_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605c1216"
+      (reference "C3") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605bfbfb"
+      (reference "C4") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060d1c374"
+      (reference "C5") (unit 1) (value "100u") (footprint "Capacitor_SMD:C_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000603a14a5"
+      (reference "C6") (unit 1) (value "22u") (footprint "Capacitor_SMD:C_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000603a2b88"
+      (reference "C7") (unit 1) (value "22u") (footprint "Capacitor_SMD:C_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a376a"
+      (reference "C8") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006355255f"
+      (reference "C9") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060a9277d"
+      (reference "C10") (unit 1) (value "22u") (footprint "Capacitor_SMD:C_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000063ac1adf"
+      (reference "C11") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/f8622c2e-f125-4f54-a8ef-62fb153601c9"
+      (reference "C13") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/2599e8b2-f3d7-4ddb-b82c-ba0b89015169"
+      (reference "C12") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/f8622c2e-f125-4f54-a8ef-62fb153601c9"
+      (reference "C13") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/f9af1d52-f42c-44f4-9f8b-1e25c35d26a3"
+      (reference "C14") (unit 1) (value "470n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605bf151"
+      (reference "C15") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605be7e9"
+      (reference "C16") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060b55378"
+      (reference "C17") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605bf6aa"
+      (reference "C19") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/afd76e93-0aeb-47e3-8309-f05491c67367"
+      (reference "C20") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/c9c5d41b-6c00-4a26-99aa-866d79ef75ce"
+      (reference "C21") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/ea48ae4b-5b66-4a43-8d6c-5dd170198a50"
+      (reference "C22") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/3309be7f-6cd7-4559-84f3-0627cc09cb1a"
+      (reference "C23") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/b55a5995-7ed4-44a0-99cc-fef631025154"
+========
+    (path "/00000000-0000-0000-0000-00005fece969/440d5d6a-3519-487c-83aa-9368edc91d77"
+      (reference "C18") (unit 1) (value "470n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605bf6aa"
+      (reference "C19") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/1e704d8c-8996-4885-9c85-28a2eb9959c2"
+      (reference "C20") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/5201440d-ff6f-476d-b556-117bab945210"
+      (reference "C21") (unit 1) (value "220u") (footprint "Capacitor_SMD:CP_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/333acc0c-c8a8-41f9-9235-437fe602b24a"
+      (reference "C22") (unit 1) (value "220u") (footprint "Capacitor_SMD:CP_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/57714fd2-ab77-4c02-b411-678088093286"
+      (reference "C23") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/770fc11e-cc12-4f1f-9052-2f5a1104a141"
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+      (reference "C24") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605c21d4"
+      (reference "C30") (unit 1) (value "100p") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605c184c"
+      (reference "C31") (unit 1) (value "100p") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609833cb"
+      (reference "C32") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609a98f1"
+      (reference "C33") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609d2045"
+      (reference "C34") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006095fcb2"
+      (reference "C35") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006038a1e8"
+      (reference "C37") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060a5d4dd"
+      (reference "C38") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064853182"
+      (reference "C39") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060a2c023"
+      (reference "C40") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609fddd0"
+      (reference "C41") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000606eae51"
+      (reference "C42") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006489c7c0"
+      (reference "C43") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/8c0c3403-b016-404d-951a-0f75fa94471c"
+      (reference "C44") (unit 1) (value "100u") (footprint "Capacitor_SMD:C_Elec_5x5.8")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/8111dbeb-081c-4cff-bb99-bcd2d000e00a"
+      (reference "C45") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060f645e3"
+      (reference "C46") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e68"
+      (reference "C51") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e6f"
+      (reference "C52") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000621054dc"
+      (reference "CUTOFF1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006355259b"
+      (reference "CV-CTL1") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a37a6"
+      (reference "CV-CTL2") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061baa55f"
+      (reference "CV-FILTDEC1") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061bb611d"
+      (reference "CV-PM2") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061ba1c37"
+      (reference "CV-PM3") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061bad6bf"
+      (reference "CV-RAT2") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061ba61d7"
+      (reference "CV-RAT3") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/efd77273-2e4c-47cf-ac69-b058a30933b7"
+      (reference "CV-REL1") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061bb6b17"
+      (reference "CV-REL2") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000606a5458"
+      (reference "D3") (unit 1) (value "1N4148") (footprint "Diode_SMD:D_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/0dd38f5d-4253-47bd-b59d-d73398de007f"
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+      (reference "D4") (unit 1) (value "LED") (footprint "LED_THT:LED_D3.0mm")
+========
+      (reference "D4") (unit 1) (value "LED") (footprint "LED_THT:LED_D3.0mm_FlatTop")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/094249bb-da9b-47ca-9355-06a4014af938"
+      (reference "D5") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/47429b9a-fc7c-4dae-960f-18ce66975f9b"
+      (reference "D6") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/1d93851f-aaab-4371-844a-b19e06dc46de"
+      (reference "D7") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/6076b9f2-3bc9-4ab0-9d50-b4955c1809e3"
+      (reference "D8") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/f3463086-f6eb-4ece-93ac-aacf3094c2af"
+      (reference "D9") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/35e39a09-da59-43d0-a0fa-81c446f17e5e"
+      (reference "D10") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/1bb3d78b-c4c7-46b6-b838-e6c47a3cee43"
+      (reference "D11") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/b82d0865-5aff-42f0-a6e3-d755b6293e27"
+      (reference "D12") (unit 1) (value "LED_Dual_KAK") (footprint "LED_THT:LED_D3.0mm-3")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/6931570d-8667-4cea-9769-a8f470400a2e"
+      (reference "ENV2-AMP1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006240f039"
+      (reference "FILT-DEC1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000061b140c3"
+      (reference "IC1") (unit 1) (value "741G17DBV") (footprint "Package_TO_SOT_SMD:SOT-23-5_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000617811ca"
+      (reference "IC1") (unit 2) (value "741G17DBV") (footprint "Package_TO_SOT_SMD:SOT-23-5_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/cc1c810f-9812-4e66-8162-2abcbb4ce800"
+      (reference "J1") (unit 1) (value "USB_B") (footprint "Connector_USB:USB_Micro-B_GCT_USB3076-30-A")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/774b111f-cbd4-4af0-a18e-ca335da44780"
+      (reference "L2") (unit 1) (value "2.2u") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-00006397218f"
+      (reference "J5") (unit 1) (value "Conn_01x18_Male") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical_SMD")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb2504"
+      (reference "J6") (unit 1) (value "Conn_01x10_Male") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical_SMD")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb250c"
+      (reference "J7") (unit 1) (value "Conn_01x16_Male") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical_SMD")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb2512"
+      (reference "J8") (unit 1) (value "Conn_01x16_Female") (footprint "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical_SMD")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000639ab7ab"
+      (reference "J9") (unit 1) (value "Conn_01x18_Female") (footprint "Connector_PinSocket_2.54mm:PinSocket_2x09_P2.54mm_Vertical_SMD")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000062cb24fe"
+      (reference "J10") (unit 1) (value "Conn_01x10_Female") (footprint "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical_SMD")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-00006024b523"
+      (reference "L1") (unit 1) (value "33u") (footprint "Inductor_SMD:L_1206_3216Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-00006023e542"
+      (reference "L2") (unit 1) (value "33u") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-00006052236c"
+      (reference "L4") (unit 1) (value "BLM21PG221SN1D") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060522f2a"
+      (reference "L5") (unit 1) (value "BLM21PG221SN1D") (footprint "Inductor_SMD:L_0805_2012Metric")
+========
+    (path "/00000000-0000-0000-0000-00005fece969/62891d7e-7120-4269-9321-158eb8e82a89"
+      (reference "L3") (unit 1) (value "2.2u") (footprint "Inductor_SMD:L_0805_2012Metric")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-00006035ee04"
+      (reference "L6") (unit 1) (value "33u") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006203be5c"
+      (reference "L8") (unit 1) (value "BLM21AG102SN1D") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000620cc74e"
+      (reference "L9") (unit 1) (value "BLM21AG102SN1D") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061fdb909"
+      (reference "L10") (unit 1) (value "BLM21AG102SN1D") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006206c352"
+      (reference "L11") (unit 1) (value "BLM21AG102SN1D") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/2cb5db07-8a65-406f-a547-876e8eee810a"
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+      (reference "L12") (unit 1) (value "33u") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061c6b0a3"
+      (reference "LEFT-OUT1") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061ca80f0"
+      (reference "MIDI-IN1") (unit 1) (value "THONKI-STEREO") (footprint "VesturSynthesis:WQP-PJ366ST_JACK")
+========
+      (reference "L12") (unit 1) (value "2.2u") (footprint "Inductor_SMD:L_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/61d7156a-3526-4624-a880-7a41ab297db0"
+      (reference "LFO-AMP1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/fe0749ae-6243-4234-bcfe-0cf766441853"
+      (reference "LFO-FREQ1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/e9b689f6-869d-4720-86e7-aa882b18a1ef"
+      (reference "LFO-WAVE1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062104630"
+      (reference "PM2") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062104c32"
+      (reference "PM3") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000618d8b9b"
+      (reference "Q1") (unit 1) (value "BC847") (footprint "Package_TO_SOT_SMD:SOT-23")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/1ac8c740-a6ad-450d-81e9-dff07f1c0cc8"
+      (reference "Q2") (unit 1) (value "BC847") (footprint "Package_TO_SOT_SMD:SOT-23")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/b89de38b-5554-424a-b9f1-ec5d03d499b2"
+      (reference "Q3") (unit 1) (value "BC847") (footprint "Package_TO_SOT_SMD:SOT-23")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/621e80b3-9381-49f1-9537-9f1ae904d802"
+      (reference "Q4") (unit 1) (value "BC847") (footprint "Package_TO_SOT_SMD:SOT-23")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/6861c177-c1ed-4092-b675-01592664f3ac"
+      (reference "Q5") (unit 1) (value "BC847") (footprint "Package_TO_SOT_SMD:SOT-23")
+    )
+========
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605f921c"
+      (reference "R1") (unit 1) (value "220") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605c9633"
+      (reference "R2") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-000060629cc5"
+      (reference "R3") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605f9b8b"
+      (reference "R4") (unit 1) (value "470") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/334b6e9f-fa85-4808-8709-16294c9bf7c5"
+      (reference "R5") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/5d99bdef-8be4-40f7-8084-0b4b378f7448"
+      (reference "R7") (unit 1) (value "47k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/7b19b8e1-c083-4fe7-b2da-356befeda39f"
+      (reference "R8") (unit 1) (value "47k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/e63532cc-da4a-430a-9fda-1e1d24befba3"
+      (reference "R9") (unit 1) (value "140k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/0a31d65a-ac93-4021-800a-ccb2852c96e4"
+      (reference "R10") (unit 1) (value "100k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+========
+    (path "/00000000-0000-0000-0000-00005fece969/48f4f5e8-5652-4f6c-8400-89ecb7dee4a4"
+      (reference "R6") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/13afde68-79ee-42d1-be1a-c352c18752b1"
+      (reference "R7") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/8079a32f-3d0b-435b-b4c9-2887e83f3f9c"
+      (reference "R8") (unit 1) (value "22k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/50e61570-f048-4342-9686-98036a6c3d03"
+      (reference "R9") (unit 1) (value "22k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/f85c8bc3-bc1d-49fe-bdc0-01fdf1f48cda"
+      (reference "R10") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609833c5"
+      (reference "R11") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609833d1"
+      (reference "R12") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609a98eb"
+      (reference "R13") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609a98f7"
+      (reference "R14") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609d203f"
+      (reference "R15") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609d204b"
+      (reference "R16") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006095fcac"
+      (reference "R17") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006095fcb8"
+      (reference "R18") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609833d7"
+      (reference "R19") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609a98fd"
+      (reference "R20") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609d2051"
+      (reference "R21") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006095fcbe"
+      (reference "R22") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060a5d4d7"
+      (reference "R23") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060a5d4e3"
+      (reference "R24") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060a2c01d"
+      (reference "R25") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609fddca"
+      (reference "R26") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609fddd6"
+      (reference "R27") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000606e8f83"
+      (reference "R28") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000606eb838"
+      (reference "R29") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062a70904"
+      (reference "R30") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060a5d4e9"
+      (reference "R31") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060a2c02f"
+      (reference "R32") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000609fdddc"
+      (reference "R33") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000606ebc25"
+      (reference "R34") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062a71a84"
+      (reference "R35") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062e6e4d4"
+      (reference "R36") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062e6e4da"
+      (reference "R37") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060ec46a8"
+      (reference "R38") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/a77a719c-093e-4c69-80fa-0ccf897eb752"
+      (reference "R39") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060ef9403"
+      (reference "R40") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060e8f3cc"
+      (reference "R41") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/c07888e5-f2f1-42d9-8919-53f52ed86c12"
+      (reference "R42") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/4b065e1b-1eff-4464-aab7-f79636947a3c"
+      (reference "R43") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/77e3cddc-f18d-4e41-9b27-071c34df769d"
+      (reference "R44") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/fcc6787c-a8ae-4507-b484-8387ae79be23"
+      (reference "R45") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/aac2b28e-8d5f-45b3-9075-54429a50a3d6"
+      (reference "R46") (unit 1) (value "100k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/82ab5861-9a9c-41a8-a6f7-ab9e7ed4390e"
+      (reference "R47") (unit 1) (value "140k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/8a0c300f-fde3-4eb0-a0f8-2a03ef09245a"
+      (reference "R48") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/1a95fd42-c70c-4b67-8869-21e5b85c9c49"
+      (reference "R49") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/f30a637f-dac1-4240-be36-7c5606d3c9a1"
+      (reference "R44") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/2c6e4ba2-9f15-441e-b777-0b888e7c0f3c"
+      (reference "R45") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/0483eead-953e-43c4-ab02-1cfce0c6c8ce"
+      (reference "R46") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/e066c682-4e7d-4fda-bed7-aa1f3b34e871"
+      (reference "R47") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/45c54e4e-1105-407f-85ad-f49d0fbff4c8"
+      (reference "R48") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/361f6e26-f945-41f1-aa50-9208cc8148e6"
+      (reference "R49") (unit 1) (value "33k") (footprint "Resistor_SMD:R_0805_2012Metric")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060db90c5"
+      (reference "R50") (unit 1) (value "33") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060db9415"
+      (reference "R51") (unit 1) (value "10") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062ea58be"
+      (reference "R52") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062ea58c4"
+      (reference "R53") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/42544082-fc3a-42b2-bfee-e4e5760d8068"
+      (reference "R54") (unit 1) (value "33k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/710bc4dc-81db-456a-8a26-cfbafde29d6b"
+      (reference "R55") (unit 1) (value "140k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/74a83f96-8826-4d98-8397-7308e72b88d2"
+      (reference "R56") (unit 1) (value "33k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/87de406a-9afc-48fa-9939-831cf65f8475"
+      (reference "R57") (unit 1) (value "33k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/576dbadf-483a-4e01-820e-60ee2463d827"
+      (reference "R58") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/b95dffb9-d1ce-41e2-9afa-7643f7c214b5"
+      (reference "R59") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/8563ce11-c43b-470e-8328-3915ad22b0c1"
+      (reference "R60") (unit 1) (value "140k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/ab528923-c8ae-45ad-bec4-0896b457b4a4"
+      (reference "R61") (unit 1) (value "100k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/9d419f12-ef2f-4f23-be99-2c62116816f0"
+      (reference "R62") (unit 1) (value "140k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/5da31a1b-6f7c-41d8-b6a1-11845d9f87b2"
+      (reference "R63") (unit 1) (value "100k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/248a2dda-4ae4-414d-b484-585e14b58137"
+      (reference "R56") (unit 1) (value "100k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/8cf89a30-5204-4314-b60f-ace092e94f0e"
+      (reference "R57") (unit 1) (value "33k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062edf66d"
+      (reference "R64") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062edf673"
+      (reference "R65") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a3764"
+      (reference "R66") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a3770"
+      (reference "R67") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000063552559"
+      (reference "R68") (unit 1) (value "200k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000063552565"
+      (reference "R69") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000635a3776"
+      (reference "R70") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006355256b"
+      (reference "R71") (unit 1) (value "66.5k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062f1aaf7"
+      (reference "R72") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062f1aafd"
+      (reference "R73") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062f566c2"
+      (reference "R74") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062f566c8"
+      (reference "R75") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062f946e7"
+      (reference "R76") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062f946ed"
+      (reference "R77") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062fd41df"
+      (reference "R78") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062fd41e5"
+      (reference "R79") (unit 1) (value "100") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/d50b3563-7fce-4174-b63b-b820ee5b7104"
+      (reference "R80") (unit 1) (value "33k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/4d300e61-b47e-4138-9d64-c691c9e88b32"
+      (reference "R81") (unit 1) (value "33k 1%") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+========
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006472eca0"
+      (reference "R82") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006472f744"
+      (reference "R83") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006472fc51"
+      (reference "R84") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064730208"
+      (reference "R85") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e44"
+      (reference "R86") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e4a"
+      (reference "R87") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e50"
+      (reference "R88") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e56"
+      (reference "R89") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062105aa6"
+      (reference "RATIO2") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062104fee"
+      (reference "RATIO3") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062104059"
+      (reference "RELEASE1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062100c54"
+      (reference "RELEASE2") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+========
+    (path "/00000000-0000-0000-0000-00005fece969/b5b58a49-036f-4a40-8cbf-a92bf0c95968"
+      (reference "SW1") (unit 1) (value "SW_SPST") (footprint "Button_Switch_THT:SW_E-Switch_EG1224_SPDT_Angled")
+    )
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000064574036"
+      (reference "SW3") (unit 1) (value "ctl1") (footprint "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000649d0e3e"
+      (reference "SW4") (unit 1) (value "ctl2") (footprint "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/c3c9b494-b78b-4812-8b33-0fe40b143c42"
+      (reference "U1") (unit 1) (value "PESE1") (footprint "vestursynthesis:PESE1")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000603d8eb9"
+      (reference "U2") (unit 1) (value "NCP1117-3.3_SOT223") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+========
+    (path "/00000000-0000-0000-0000-00005fece969/78b851c7-dbf1-461d-8d26-1c3612044a9c"
+      (reference "U2") (unit 1) (value " PESE1-S5-D12-M-TR ") (footprint "vestursynthesis:PESE1")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000608e28e1"
+      (reference "U3") (unit 1) (value "6N138") (footprint "vestursynthesis:DIL8-SMD")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605c465f"
+      (reference "U4") (unit 1) (value "LM4040DBZ-10") (footprint "Package_TO_SOT_SMD:SOT-23")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+========
+    (path "/00000000-0000-0000-0000-00005fece969/22a827d3-bc41-41d1-866e-6afb319ca822"
+      (reference "U5") (unit 1) (value "LM4810") (footprint "Package_SO:TSSOP-8_3x3mm_P0.65mm")
+    )
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000602e6da6"
+      (reference "U6") (unit 1) (value "TL072") (footprint "Package_SO:SO-8_3.9x4.9mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000601554eb"
+      (reference "U6") (unit 2) (value "TL072") (footprint "Package_SO:SO-8_3.9x4.9mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/00000000-0000-0000-0000-0000605de940"
+      (reference "U6") (unit 3) (value "TL072") (footprint "Package_SO:SO-8_3.9x4.9mm_P1.27mm")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fece969/7a6ee27c-42a4-4be6-81fe-911c874a09e8"
+      (reference "U7") (unit 1) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/80252a4d-53b5-46ab-9a66-26763f8d2a1b"
+      (reference "U7") (unit 2) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/5b1b59fa-9000-4b5d-aaf4-bcffcd564622"
+      (reference "U7") (unit 3) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/42d6ba21-b19a-49b8-9244-1a45ad113e81"
+      (reference "U7") (unit 4) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/cbd17327-87fc-4337-bb4d-782ef967d43b"
+      (reference "U7") (unit 5) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/18b6851b-acda-46e6-b48b-f24ab8d845f7"
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/b6c4c425-b84d-4672-a7dd-f5dc6c72d967"
+      (reference "U7") (unit 1) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/b4bbd473-1aa2-444a-b731-e2e587ecd82f"
+      (reference "U7") (unit 2) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/aebddb2a-2b2e-46ec-9856-298e771a4b98"
+      (reference "U7") (unit 3) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/81008591-d12e-4734-ba18-d9b7e8f1d750"
+      (reference "U7") (unit 4) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/bdd13196-75cf-4a32-af7a-bccecb68d88e"
+      (reference "U7") (unit 5) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/475cd5fc-2b5a-4818-9b9a-247b8111970f"
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+      (reference "U8") (unit 1) (value "74HC4051D") (footprint "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060d38076"
+      (reference "U9") (unit 1) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060d3b9ca"
+      (reference "U9") (unit 2) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060d3e035"
+      (reference "U9") (unit 3) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060d40933"
+      (reference "U9") (unit 4) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060d3d122"
+      (reference "U9") (unit 5) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060dac644"
+      (reference "U10") (unit 1) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060db0317"
+      (reference "U10") (unit 2) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060db31ec"
+      (reference "U10") (unit 3) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060db6174"
+      (reference "U10") (unit 4) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000060d3aed7"
+      (reference "U10") (unit 5) (value "MCP6004") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/c35f4f51-5935-40c3-8f2b-5b5d743a75eb"
+      (reference "U11") (unit 1) (value "NCP1117-3.3_SOT223") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/4cc8bce8-fce3-4879-81d0-6d4c466ceffd"
+      (reference "U12") (unit 1) (value "PCA9622") (footprint "Package_SO:TSSOP-32_6.1x11mm_P0.65mm")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006390d276"
+      (reference "U13") (unit 1) (value "MCP6002") (footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-00006390f05a"
+      (reference "U13") (unit 2) (value "MCP6002") (footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000063910e39"
+      (reference "U13") (unit 3) (value "MCP6002") (footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/dc869c34-1ab4-42e9-a089-14c72c01117c"
+      (reference "X1") (unit 1) (value "KUSBVX") (footprint "Connector_USB:USB_A_Molex_67643_Horizontal")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000621054dc"
+      (reference "cutoff1") (unit 1) (value "50k-lin") (footprint "VesturSynthesis:9MM_SNAP-IN_POT")
+========
+    (path "/00000000-0000-0000-0000-00005fecf0c2/791c4c7f-3932-4ed2-9761-845dfbb5b6f0"
+      (reference "U13") (unit 1) (value "MCP6001-OT") (footprint "Package_TO_SOT_SMD:SOT-23-5")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/dc869c34-1ab4-42e9-a089-14c72c01117c"
+      (reference "X1") (unit 1) (value "KUSBVX") (footprint "Connector_USB:USB_A_Molex_67643_Horizontal")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061ba708d"
+      (reference "cv-cutoff1") (unit 1) (value "THONKICONNNEW") (footprint "vestursynthesis:WQP-PJ301M-12_JACK")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000063760133"
+      (reference "sw-midi1") (unit 1) (value "SW_MEC_5G") (footprint "vestursynthesis:SW_TH_Tactile_Omron_B3F-10xx")
+========
+    (path "/00000000-0000-0000-0000-00005fece969/7b663665-cc06-47e5-aa64-ecc20dea63f5"
+      (reference "d+1") (unit 1) (value "TestPoint") (footprint "Connector_Pin:Pin_D1.0mm_L10.0mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/3812db55-e1ef-4f68-9242-0e26f62d8179"
+      (reference "d-1") (unit 1) (value "TestPoint") (footprint "Connector_Pin:Pin_D1.0mm_L10.0mm")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/b4de655e-b3a3-4b62-8f8c-19cd3cb6baf5"
+      (reference "env2-o1") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000061dcd05d"
+      (reference "gate-o1") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/d413a931-28a6-4458-a8bb-b1918241ab03"
+      (reference "headphone1") (unit 1) (value "AudioJack3") (footprint "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/76b43159-e522-4dc6-bc5a-4fb7ecca53e9"
+      (reference "lfo-o1") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fece969/922067f3-6e3c-4b23-921f-ed44a5fd49e5"
+      (reference "line1") (unit 1) (value "AudioJack3") (footprint "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/7cce8bdd-33e4-430e-aaba-46282b95a96a"
+      (reference "midi-i1") (unit 1) (value "AudioJack3") (footprint "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/b29f82d5-c9ea-48b0-a849-ffb481e8536d"
+      (reference "midi-thru1") (unit 1) (value "AudioJack3") (footprint "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/6969fdb5-d65f-4ff4-be8f-c6f564500ef3"
+      (reference "mult1") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/dcacb03c-7253-4949-b8db-7531ecfd5eb5"
+      (reference "mult2") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/80904646-18e2-47dc-bddb-8496c248d6d8"
+      (reference "mult3") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/a8f3c826-2e33-4d3b-9ef7-612de158caa2"
+      (reference "mult4") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/09022c39-19ce-4006-bf9f-f4bf2ecfb33f"
+      (reference "pitch1") (unit 1) (value "THONKICONNNEW") (footprint "VesturSynthesis:WQP-PJ301M-12_JACK")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/64fa4ece-7af4-4401-9df9-f34abceca30f"
+      (reference "sw-midi1") (unit 1) (value "SW_Push") (footprint "Button_Switch_THT:SW_Tactile_SKHH_Angled")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-000062536238"
+      (reference "sw-sel1") (unit 1) (value "SW_MEC_5G") (footprint "vestursynthesis:SW_TH_Tactile_Omron_B3F-10xx")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/00000000-0000-0000-0000-0000618d449e"
+      (reference "sw-sel2") (unit 1) (value "SW_MEC_5G") (footprint "vestursynthesis:SW_TH_Tactile_Omron_B3F-10xx")
+    )
+<<<<<<<< HEAD:Hardware/fjol-daisy.kicad_sch_old
+    (path "/00000000-0000-0000-0000-00005fecf0c2/cc80be3f-9208-4bed-8556-f6d8a3b62d87"
+      (reference "sw-sel3") (unit 1) (value "SW_MEC_5G") (footprint "vestursynthesis:SW_TH_Tactile_Omron_B3F-10xx")
+    )
+    (path "/00000000-0000-0000-0000-00005fecf0c2/d9808ed9-383c-4e5e-8737-d9bbd8bb3837"
+      (reference "sw-sel4") (unit 1) (value "SW_MEC_5G") (footprint "vestursynthesis:SW_TH_Tactile_Omron_B3F-10xx")
+========
+    (path "/00000000-0000-0000-0000-00005fece969/8849c23d-34f5-4d6a-8393-952ef41a1ef5"
+      (reference "vol1") (unit 1) (value "R_Potentiometer_Dual") (footprint "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical")
+>>>>>>>> b10c0fa601ba5ec4f87fb5594a798798840687e0:Hardware/fjol-desktop.kicad_sch
+    )
+  )
+)
