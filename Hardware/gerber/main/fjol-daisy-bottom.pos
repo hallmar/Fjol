@@ -1,0 +1,7 @@
+### Module positions - created on Mon Jan 30 20:45:52 2023 ###
+### Printed by Pcbnew version (6.0.10)
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                  Package                                   PosX       PosY       Rot  Side
+J2        Conn_02x05_Odd_Even  PinHeader_2x05_P1.27mm_Vertical_SMD  -195.3250   -81.6000  -90.0000  bottom
+## End

@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name "fjol-rescue")(type "Legacy")(uri "${KIPRJMOD}/fjol-rescue.lib")(options "")(descr ""))
-)
