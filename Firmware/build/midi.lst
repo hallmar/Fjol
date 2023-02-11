@@ -1,32 +1,32 @@
-ARM GAS  /tmp/ccliKCdp.s 			page 1
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 1
 
 
    1              		.cpu cortex-m7
-   2              		.arch armv7e-m
-   3              		.fpu fpv5-d16
-   4              		.eabi_attribute 28, 1
-   5              		.eabi_attribute 20, 1
-   6              		.eabi_attribute 21, 1
-   7              		.eabi_attribute 23, 3
-   8              		.eabi_attribute 24, 1
-   9              		.eabi_attribute 25, 1
-  10              		.eabi_attribute 26, 1
-  11              		.eabi_attribute 30, 2
-  12              		.eabi_attribute 34, 1
-  13              		.eabi_attribute 18, 4
-  14              		.file	"midi.cpp"
-  15              		.text
-  16              	.Ltext0:
-  17              		.cfi_sections	.debug_frame
-  18              		.section	.text._Z17HandleMidiMessageN5daisy9MidiEventE,"ax",%progbits
-  19              		.align	1
-  20              		.p2align 2,,3
-  21              		.global	_Z17HandleMidiMessageN5daisy9MidiEventE
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"midi.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._Z17HandleMidiMessageN5daisy9MidiEventE,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_Z17HandleMidiMessageN5daisy9MidiEventE
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
   26              	_Z17HandleMidiMessageN5daisy9MidiEventE:
-  27              	.LFB4789:
+  27              	.LFB4788:
   28              		.file 1 "midi.cpp"
    1:midi.cpp      **** #include "settings.h"
    2:midi.cpp      **** #include "variables.h"
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
   10:midi.cpp      ****   if(learn_active)
   45              		.loc 1 10 1 view .LVU2
   46 0008 06AC     		add	r4, sp, #24
-ARM GAS  /tmp/ccliKCdp.s 			page 2
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 2
 
 
   47 000a 84E80F00 		stm	r4, {r0, r1, r2, r3}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
   40:midi.cpp      ****             
   41:midi.cpp      ****             voiceOFF(p.note);        
   42:midi.cpp      ****         }
-ARM GAS  /tmp/ccliKCdp.s 			page 3
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 3
 
 
   43:midi.cpp      ****       }
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
   21:midi.cpp      ****     {
   94              		.loc 1 21 14 is_stmt 0 view .LVU14
   95 002c 9DF81830 		ldrb	r3, [sp, #24]	@ zero_extendqisi2
-ARM GAS  /tmp/ccliKCdp.s 			page 4
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 4
 
 
   21:midi.cpp      ****     {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
   32:libDaisy/src/hid/MidiEvent.h **** enum SystemCommonType
   33:libDaisy/src/hid/MidiEvent.h **** {
   34:libDaisy/src/hid/MidiEvent.h ****     SystemExclusive,     /**< & */
-ARM GAS  /tmp/ccliKCdp.s 			page 5
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 5
 
 
   35:libDaisy/src/hid/MidiEvent.h ****     MTCQuarterFrame,     /**< & */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
   89:libDaisy/src/hid/MidiEvent.h ****     uint8_t velocity; /**< & */
   90:libDaisy/src/hid/MidiEvent.h **** };
   91:libDaisy/src/hid/MidiEvent.h **** /** Struct containing note, and pressure data for a given channel.
-ARM GAS  /tmp/ccliKCdp.s 			page 6
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 6
 
 
   92:libDaisy/src/hid/MidiEvent.h **** Can be made from MidiEvent
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  146:libDaisy/src/hid/MidiEvent.h **** {
  147:libDaisy/src/hid/MidiEvent.h ****     int     length;
  148:libDaisy/src/hid/MidiEvent.h ****     uint8_t data[SYSEX_BUFFER_LEN]; /**< & */
-ARM GAS  /tmp/ccliKCdp.s 			page 7
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 7
 
 
  149:libDaisy/src/hid/MidiEvent.h **** };
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  203:libDaisy/src/hid/MidiEvent.h **** /** Struct containing OmniModeOffEvent data. 
  204:libDaisy/src/hid/MidiEvent.h ****  * Can be made from MidiEvent
  205:libDaisy/src/hid/MidiEvent.h **** */
-ARM GAS  /tmp/ccliKCdp.s 			page 8
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 8
 
 
  206:libDaisy/src/hid/MidiEvent.h **** struct OmniModeOffEvent
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  120              		.loc 2 254 9 view .LVU23
  255:libDaisy/src/hid/MidiEvent.h ****         return m;
  121              		.loc 2 255 9 view .LVU24
-ARM GAS  /tmp/ccliKCdp.s 			page 9
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 9
 
 
  122              		.loc 2 255 9 is_stmt 0 view .LVU25
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  166 004a FFF7FEBF 		b	_Z8voiceOFFh
  167              	.LVL9:
  168              	.L16:
-ARM GAS  /tmp/ccliKCdp.s 			page 10
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 10
 
 
  169              		.cfi_restore_state
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  207              	.LBI30:
  256:libDaisy/src/hid/MidiEvent.h ****     }
  257:libDaisy/src/hid/MidiEvent.h **** 
-ARM GAS  /tmp/ccliKCdp.s 			page 11
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 11
 
 
  258:libDaisy/src/hid/MidiEvent.h ****     /** Returns the data within the MidiEvent as a NoteOnEvent struct */
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  210              		.loc 2 309 9 view .LVU57
  310:libDaisy/src/hid/MidiEvent.h ****         m.channel = channel;
  211              		.loc 2 310 9 view .LVU58
-ARM GAS  /tmp/ccliKCdp.s 			page 12
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 12
 
 
  311:libDaisy/src/hid/MidiEvent.h ****         m.value   = ((uint16_t)data[1] << 7) + (data[0] - 8192);
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  251              	.LBE41:
  252              	.LBE47:
  253              		.loc 1 74 1 is_stmt 0 view .LVU78
-ARM GAS  /tmp/ccliKCdp.s 			page 13
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 13
 
 
  254 0092 C7E7     		b	.L1
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  289              		.loc 2 265 9 is_stmt 0 view .LVU97
  290              	.LBE36:
  291              	.LBE35:
-ARM GAS  /tmp/ccliKCdp.s 			page 14
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 14
 
 
   30:midi.cpp      ****         }
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
   68:midi.cpp      ****         }
  335              		.loc 1 68 29 view .LVU111
  336 00b8 B7EEC77A 		vcvt.f64.f32	d7, s14
-ARM GAS  /tmp/ccliKCdp.s 			page 15
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 15
 
 
   68:midi.cpp      ****         }
@@ -858,7 +858,7 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  350              	.LBE43:
  351              	.LBE49:
  352              		.cfi_endproc
- 353              	.LFE4789:
+ 353              	.LFE4788:
  355              		.section	.text._Z9pitchbendhi,"ax",%progbits
  356              		.align	1
  357              		.p2align 2,,3
@@ -866,72 +866,74 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  359              		.syntax unified
  360              		.thumb
  361              		.thumb_func
- 363              	_Z9pitchbendhi:
- 364              	.LVL21:
- 365              	.LFB4790:
+ 362              		.fpu fpv5-d16
+ 364              	_Z9pitchbendhi:
+ 365              	.LVL21:
+ 366              	.LFB4789:
   75:midi.cpp      **** 
   76:midi.cpp      **** 
   77:midi.cpp      **** void pitchbend(uint8_t channel, int bend)
   78:midi.cpp      **** {
- 366              		.loc 1 78 1 is_stmt 1 view -0
- 367              		.cfi_startproc
- 368              		@ args = 0, pretend = 0, frame = 0
- 369              		@ frame_needed = 0, uses_anonymous_args = 0
- 370              		@ link register save eliminated.
+ 367              		.loc 1 78 1 is_stmt 1 view -0
+ 368              		.cfi_startproc
+ 369              		@ args = 0, pretend = 0, frame = 0
+ 370              		@ frame_needed = 0, uses_anonymous_args = 0
+ 371              		@ link register save eliminated.
   79:midi.cpp      ****   float bended;
- 371              		.loc 1 79 3 view .LVU114
+ 372              		.loc 1 79 3 view .LVU114
   80:midi.cpp      ****   
   81:midi.cpp      **** 
   82:midi.cpp      ****   if (channel == (midichannel))
- 372              		.loc 1 82 3 view .LVU115
+ 373              		.loc 1 82 3 view .LVU115
   83:midi.cpp      ****   {
   84:midi.cpp      ****     
   85:midi.cpp      ****   }
   86:midi.cpp      ****   //midi_read = 0;
   87:midi.cpp      **** } //pitchbend ends
- 373              		.loc 1 87 1 is_stmt 0 view .LVU116
- 374 0000 7047     		bx	lr
- 375              		.cfi_endproc
- 376              	.LFE4790:
- 378 0002 00BF     		.section	.text._Z13controlchangehhh,"ax",%progbits
- 379              		.align	1
- 380              		.p2align 2,,3
- 381              		.global	_Z13controlchangehhh
- 382              		.syntax unified
-ARM GAS  /tmp/ccliKCdp.s 			page 16
+ 374              		.loc 1 87 1 is_stmt 0 view .LVU116
+ 375 0000 7047     		bx	lr
+ 376              		.cfi_endproc
+ 377              	.LFE4789:
+ 379 0002 00BF     		.section	.text._Z13controlchangehhh,"ax",%progbits
+ 380              		.align	1
+ 381              		.p2align 2,,3
+ 382              		.global	_Z13controlchangehhh
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 16
 
 
- 383              		.thumb
- 384              		.thumb_func
- 386              	_Z13controlchangehhh:
- 387              	.LVL22:
- 388              	.LFB4791:
+ 383              		.syntax unified
+ 384              		.thumb
+ 385              		.thumb_func
+ 386              		.fpu fpv5-d16
+ 388              	_Z13controlchangehhh:
+ 389              	.LVL22:
+ 390              	.LFB4790:
   88:midi.cpp      **** 
   89:midi.cpp      **** void controlchange(uint8_t channel, uint8_t number, uint8_t value)
   90:midi.cpp      **** {
- 389              		.loc 1 90 1 is_stmt 1 view -0
- 390              		.cfi_startproc
- 391              		@ args = 0, pretend = 0, frame = 0
- 392              		@ frame_needed = 0, uses_anonymous_args = 0
- 393              		@ link register save eliminated.
+ 391              		.loc 1 90 1 is_stmt 1 view -0
+ 392              		.cfi_startproc
+ 393              		@ args = 0, pretend = 0, frame = 0
+ 394              		@ frame_needed = 0, uses_anonymous_args = 0
+ 395              		@ link register save eliminated.
   91:midi.cpp      **** 
   92:midi.cpp      ****   float fvalue = value;
- 394              		.loc 1 92 3 view .LVU118
+ 396              		.loc 1 92 3 view .LVU118
   93:midi.cpp      ****   if (channel == midichannel)
- 395              		.loc 1 93 15 is_stmt 0 view .LVU119
- 396 0000 0A4B     		ldr	r3, .L32
- 397              		.loc 1 93 3 view .LVU120
- 398 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 399              	.LVL23:
- 400              		.loc 1 93 3 is_stmt 1 view .LVU121
+ 397              		.loc 1 93 15 is_stmt 0 view .LVU119
+ 398 0000 0A4B     		ldr	r3, .L32
+ 399              		.loc 1 93 3 view .LVU120
+ 400 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 401              	.LVL23:
+ 402              		.loc 1 93 3 is_stmt 1 view .LVU121
   94:midi.cpp      ****   {
   95:midi.cpp      ****     switch (number)
- 401              		.loc 1 95 5 view .LVU122
- 402 0004 8342     		cmp	r3, r0
- 403 0006 01D1     		bne	.L23
- 404 0008 0529     		cmp	r1, #5
- 405 000a 00D0     		beq	.L31
- 406              	.L23:
+ 403              		.loc 1 95 5 view .LVU122
+ 404 0004 8342     		cmp	r3, r0
+ 405 0006 01D1     		bne	.L23
+ 406 0008 0529     		cmp	r1, #5
+ 407 000a 00D0     		beq	.L31
+ 408              	.L23:
   96:midi.cpp      ****     {
   97:midi.cpp      ****     case 5:
   98:midi.cpp      ****       glidetime = 2 * (fvalue / 127);
@@ -951,111 +953,111 @@ ARM GAS  /tmp/ccliKCdp.s 			page 1
  112:midi.cpp      ****   }
  113:midi.cpp      ****   //midi_read = 0;
  114:midi.cpp      **** }
- 407              		.loc 1 114 1 is_stmt 0 view .LVU123
- 408 000c 7047     		bx	lr
- 409              	.L31:
+ 409              		.loc 1 114 1 is_stmt 0 view .LVU123
+ 410 000c 7047     		bx	lr
+ 411              	.L31:
   97:midi.cpp      ****       glidetime = 2 * (fvalue / 127);
- 410              		.loc 1 97 5 is_stmt 1 view .LVU124
-  98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
- 411              		.loc 1 98 7 view .LVU125
-ARM GAS  /tmp/ccliKCdp.s 			page 17
+ 412              		.loc 1 97 5 is_stmt 1 view .LVU124
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 17
 
 
+  98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
+ 413              		.loc 1 98 7 view .LVU125
   92:midi.cpp      ****   if (channel == midichannel)
- 412              		.loc 1 92 9 is_stmt 0 view .LVU126
- 413 000e 07EE902A 		vmov	s15, r2	@ int
+ 414              		.loc 1 92 9 is_stmt 0 view .LVU126
+ 415 000e 07EE902A 		vmov	s15, r2	@ int
   98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
- 414              		.loc 1 98 31 view .LVU127
- 415 0012 DFED076A 		vldr.32	s13, .L32+4
+ 416              		.loc 1 98 31 view .LVU127
+ 417 0012 DFED076A 		vldr.32	s13, .L32+4
   98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
- 416              		.loc 1 98 17 view .LVU128
- 417 0016 074B     		ldr	r3, .L32+8
+ 418              		.loc 1 98 17 view .LVU128
+ 419 0016 074B     		ldr	r3, .L32+8
   92:midi.cpp      ****   if (channel == midichannel)
- 418              		.loc 1 92 9 view .LVU129
- 419 0018 F8EE677A 		vcvt.f32.u32	s15, s15
+ 420              		.loc 1 92 9 view .LVU129
+ 421 0018 F8EE677A 		vcvt.f32.u32	s15, s15
   98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
- 420              		.loc 1 98 31 view .LVU130
- 421 001c 87EEA67A 		vdiv.f32	s14, s15, s13
+ 422              		.loc 1 98 31 view .LVU130
+ 423 001c 87EEA67A 		vdiv.f32	s14, s15, s13
   98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
- 422              		.loc 1 98 21 view .LVU131
- 423 0020 37EE077A 		vadd.f32	s14, s14, s14
+ 424              		.loc 1 98 21 view .LVU131
+ 425 0020 37EE077A 		vadd.f32	s14, s14, s14
   98:midi.cpp      ****       //if(debug_midi) Serial.println(String("glidetime:") + glidetime);
- 424              		.loc 1 98 17 view .LVU132
- 425 0024 83ED007A 		vstr.32	s14, [r3]
+ 426              		.loc 1 98 17 view .LVU132
+ 427 0024 83ED007A 		vstr.32	s14, [r3]
  101:midi.cpp      ****     // case 20:
- 426              		.loc 1 101 7 is_stmt 1 view .LVU133
- 427              		.loc 1 114 1 is_stmt 0 view .LVU134
- 428 0028 7047     		bx	lr
- 429              	.L33:
- 430 002a 00BF     		.align	2
- 431              	.L32:
- 432 002c 00000000 		.word	midichannel
- 433 0030 0000FE42 		.word	1123942400
- 434 0034 00000000 		.word	glidetime
- 435              		.cfi_endproc
- 436              	.LFE4791:
- 438              		.text
- 439              	.Letext0:
- 440              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
- 441              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
- 442              		.file 5 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
- 443              		.file 6 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/inclu
- 444              		.file 7 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 445              		.file 8 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/b
- 446              		.file 9 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 447              		.file 10 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 448              		.file 11 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 449              		.file 12 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 450              		.file 13 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 451              		.file 14 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 452              		.file 15 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 453              		.file 16 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 454              		.file 17 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 455              		.file 18 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 456              		.file 19 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 457              		.file 20 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 458              		.file 21 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 459              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 460              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 461              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
-ARM GAS  /tmp/ccliKCdp.s 			page 18
+ 428              		.loc 1 101 7 is_stmt 1 view .LVU133
+ 429              		.loc 1 114 1 is_stmt 0 view .LVU134
+ 430 0028 7047     		bx	lr
+ 431              	.L33:
+ 432 002a 00BF     		.align	2
+ 433              	.L32:
+ 434 002c 00000000 		.word	midichannel
+ 435 0030 0000FE42 		.word	1123942400
+ 436 0034 00000000 		.word	glidetime
+ 437              		.cfi_endproc
+ 438              	.LFE4790:
+ 440              		.text
+ 441              	.Letext0:
+ 442              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 443              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 444              		.file 5 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 445              		.file 6 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 446              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 447              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 448              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 449              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 450              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 451              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 452              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 453              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 454              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 455              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 456              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 457              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 458              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 459              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 460              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 461              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 18
 
 
- 462              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
- 463              		.file 26 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h
- 464              		.file 27 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h"
- 465              		.file 28 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h"
- 466              		.file 29 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
- 467              		.file 30 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 468              		.file 31 "DaisySP/Source/Control/adenv.h"
- 469              		.file 32 "DaisySP/Source/Utility/dsp.h"
- 470              		.file 33 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/incl
- 471              		.file 34 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/wchar.h"
- 472              		.file 35 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/locale.h"
- 473              		.file 36 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
- 474              		.file 37 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 475              		.file 38 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
- 476              		.file 39 "libDaisy/src/daisy_core.h"
- 477              		.file 40 "libDaisy/src/util/wav_format.h"
- 478              		.file 41 "libDaisy/src/dev/max11300.h"
- 479              		.file 42 "libDaisy/src/daisy_seed.h"
- 480              		.file 43 "variables.h"
- 481              		.file 44 "settings.h"
- 482              		.file 45 "<built-in>"
- 483              		.file 46 "libDaisy/src/dev/sr_595.h"
-ARM GAS  /tmp/ccliKCdp.s 			page 19
+ 462              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 463              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 464              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 465              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 466              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 467              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 468              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 469              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 470              		.file 31 "DaisySP/Source/Control/adenv.h"
+ 471              		.file 32 "DaisySP/Source/Utility/dsp.h"
+ 472              		.file 33 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 473              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 474              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 475              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 476              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 477              		.file 38 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 478              		.file 39 "libDaisy/src/daisy_core.h"
+ 479              		.file 40 "libDaisy/src/util/wav_format.h"
+ 480              		.file 41 "libDaisy/src/dev/max11300.h"
+ 481              		.file 42 "libDaisy/src/daisy_seed.h"
+ 482              		.file 43 "variables.h"
+ 483              		.file 44 "settings.h"
+ 484              		.file 45 "<built-in>"
+ 485              		.file 46 "libDaisy/src/dev/sr_595.h"
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s 			page 19
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 midi.cpp
-     /tmp/ccliKCdp.s:19     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 $t
-     /tmp/ccliKCdp.s:26     .text._Z17HandleMidiMessageN5daisy9MidiEventE:0000000000000000 _Z17HandleMidiMessageN5daisy9MidiEventE
-     /tmp/ccliKCdp.s:345    .text._Z17HandleMidiMessageN5daisy9MidiEventE:00000000000000cc $d
-     /tmp/ccliKCdp.s:356    .text._Z9pitchbendhi:0000000000000000 $t
-     /tmp/ccliKCdp.s:363    .text._Z9pitchbendhi:0000000000000000 _Z9pitchbendhi
-     /tmp/ccliKCdp.s:379    .text._Z13controlchangehhh:0000000000000000 $t
-     /tmp/ccliKCdp.s:386    .text._Z13controlchangehhh:0000000000000000 _Z13controlchangehhh
-     /tmp/ccliKCdp.s:432    .text._Z13controlchangehhh:000000000000002c $d
+                            *ABS*:00000000 midi.cpp
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:17     .text._Z17HandleMidiMessageN5daisy9MidiEventE:00000000 $t
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:26     .text._Z17HandleMidiMessageN5daisy9MidiEventE:00000000 _Z17HandleMidiMessageN5daisy9MidiEventE
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:345    .text._Z17HandleMidiMessageN5daisy9MidiEventE:000000cc $d
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:356    .text._Z9pitchbendhi:00000000 $t
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:364    .text._Z9pitchbendhi:00000000 _Z9pitchbendhi
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:380    .text._Z13controlchangehhh:00000000 $t
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:388    .text._Z13controlchangehhh:00000000 _Z13controlchangehhh
+C:\Users\halli\AppData\Local\Temp\ccF12H1Y.s:434    .text._Z13controlchangehhh:0000002c $d
 
 UNDEFINED SYMBOLS
 _Z8voiceOFFh

@@ -1,31 +1,31 @@
-ARM GAS  /tmp/ccfk867N.s 			page 1
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 1
 
 
    1              		.cpu cortex-m7
-   2              		.arch armv7e-m
-   3              		.fpu fpv5-d16
-   4              		.eabi_attribute 28, 1
-   5              		.eabi_attribute 20, 1
-   6              		.eabi_attribute 21, 1
-   7              		.eabi_attribute 23, 3
-   8              		.eabi_attribute 24, 1
-   9              		.eabi_attribute 25, 1
-  10              		.eabi_attribute 26, 1
-  11              		.eabi_attribute 30, 2
-  12              		.eabi_attribute 34, 1
-  13              		.eabi_attribute 18, 4
-  14              		.file	"variables.cpp"
-  15              		.text
-  16              	.Ltext0:
-  17              		.cfi_sections	.debug_frame
-  18              		.section	.text.startup._GLOBAL__sub_I_calibration_val,"ax",%progbits
-  19              		.align	1
-  20              		.p2align 2,,3
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"variables.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text.startup._GLOBAL__sub_I_calibration_val,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.arch armv7e-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv5-d16
   25              	_GLOBAL__sub_I_calibration_val:
-  26              	.LFB5348:
+  26              	.LFB5347:
   27              		.file 1 "variables.cpp"
    1:variables.cpp **** #include "settings.h"
    2:variables.cpp **** #include "variables.h"
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
   29:variables.cpp **** float cv_mod[8] = {0,0,0,0,0,0,0,0};
   30:variables.cpp **** //-----constant variables------
   31:variables.cpp **** const float ratioindex[18] = { 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5,
-ARM GAS  /tmp/ccfk867N.s 			page 2
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 2
 
 
   32:variables.cpp **** const float octaveindex[5] = {0.25,0.5,1,2,3}; //might be useful
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
   33              	.LBI4:
   34              		.loc 1 80 21 view .LVU1
   35              	.LVL0:
-ARM GAS  /tmp/ccfk867N.s 			page 3
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 3
 
 
   36              		.loc 1 80 21 is_stmt 0 view .LVU2
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
   76 001e 10BD     		pop	{r4, pc}
   77              	.L5:
   78              		.align	2
-ARM GAS  /tmp/ccfk867N.s 			page 4
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 4
 
 
   79              	.L4:
@@ -189,7 +189,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
   84 0030 00000000 		.word	.LANCHOR4
   85 0034 00000000 		.word	.LANCHOR5
   86              		.cfi_endproc
-  87              	.LFE5348:
+  87              	.LFE5347:
   89              		.section	.init_array,"aw",%init_array
   90              		.align	2
   91 0000 00000000 		.word	_GLOBAL__sub_I_calibration_val(target1)
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
  134              		.global	cv_value
  135              		.global	knob_value
  136              		.global	led_takeover
-ARM GAS  /tmp/ccfk867N.s 			page 5
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 5
 
 
  137              		.global	gate_out_n
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
  206              	lastMillis:
  207 0000 00000000 		.space	4
  208              		.section	.bss.lastmillis1,"aw",%nobits
-ARM GAS  /tmp/ccfk867N.s 			page 6
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 6
 
 
  209              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
  278              	savelastMillis:
  279 0000 00000000 		.space	4
  280              		.section	.bss.voicefreq,"aw",%nobits
-ARM GAS  /tmp/ccfk867N.s 			page 7
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 7
 
 
  281              		.align	2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
  346 0000 01       		.byte	1
  347              		.section	.data.glide,"aw"
  348              		.align	2
-ARM GAS  /tmp/ccfk867N.s 			page 8
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 8
 
 
  351              	glide:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
  431 0008 0000C03F 		.word	1069547520
  432 000c 00000040 		.word	1073741824
  433 0010 00002040 		.word	1075838976
-ARM GAS  /tmp/ccfk867N.s 			page 9
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 9
 
 
  434 0014 00004040 		.word	1077936128
@@ -500,45 +500,45 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
  452 0000 B80B0000 		.word	3000
  453              		.text
  454              	.Letext0:
- 455              		.file 2 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
- 456              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
- 457              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
- 458              		.file 5 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/inclu
- 459              		.file 6 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 460              		.file 7 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/b
- 461              		.file 8 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 462              		.file 9 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 463              		.file 10 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 464              		.file 11 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 465              		.file 12 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 466              		.file 13 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 467              		.file 14 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 468              		.file 15 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 469              		.file 16 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 470              		.file 17 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 471              		.file 18 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 472              		.file 19 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 473              		.file 20 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 474              		.file 21 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 475              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 476              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 477              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
- 478              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h
- 479              		.file 26 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h"
- 480              		.file 27 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h"
- 481              		.file 28 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
- 482              		.file 29 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
+ 455              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 456              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 457              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 458              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 459              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 460              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 461              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 462              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 463              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 464              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 465              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 466              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 467              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 468              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 469              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 470              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 471              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 472              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 473              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 474              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 475              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 476              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 477              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 478              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 479              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 480              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 481              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 482              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
  483              		.file 30 "DaisySP/Source/Control/adenv.h"
  484              		.file 31 "DaisySP/Source/Utility/dsp.h"
- 485              		.file 32 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/incl
- 486              		.file 33 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/wchar.h"
- 487              		.file 34 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/locale.h"
- 488              		.file 35 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
- 489              		.file 36 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 490              		.file 37 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+ 485              		.file 32 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 486              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 487              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 488              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 489              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 490              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
  491              		.file 38 "libDaisy/src/daisy_core.h"
  492              		.file 39 "libDaisy/src/per/tim.h"
-ARM GAS  /tmp/ccfk867N.s 			page 10
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 10
 
 
  493              		.file 40 "libDaisy/src/sys/system.h"
@@ -548,106 +548,106 @@ ARM GAS  /tmp/ccfk867N.s 			page 1
  497              		.file 44 "variables.h"
  498              		.file 45 "<built-in>"
  499              		.file 46 "libDaisy/src/dev/sr_595.h"
-ARM GAS  /tmp/ccfk867N.s 			page 11
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 11
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 variables.cpp
-     /tmp/ccfk867N.s:19     .text.startup._GLOBAL__sub_I_calibration_val:0000000000000000 $t
-     /tmp/ccfk867N.s:25     .text.startup._GLOBAL__sub_I_calibration_val:0000000000000000 _GLOBAL__sub_I_calibration_val
-     /tmp/ccfk867N.s:80     .text.startup._GLOBAL__sub_I_calibration_val:0000000000000020 $d
-     /tmp/ccfk867N.s:90     .init_array:0000000000000000 $d
-     /tmp/ccfk867N.s:271    .bss.samplerate:0000000000000000 samplerate
-     /tmp/ccfk867N.s:374    .data.pwm_resolution:0000000000000000 pwm_resolution
-     /tmp/ccfk867N.s:313    .data.brightness:0000000000000000 brightness
-     /tmp/ccfk867N.s:220    .bss.lastmillis2:0000000000000000 lastmillis2
-     /tmp/ccfk867N.s:213    .bss.lastmillis1:0000000000000000 lastmillis1
-     /tmp/ccfk867N.s:145    .bss.calibration_lastmillis:0000000000000000 calibration_lastmillis
-     /tmp/ccfk867N.s:278    .bss.savelastMillis:0000000000000000 savelastMillis
-     /tmp/ccfk867N.s:206    .bss.lastMillis:0000000000000000 lastMillis
-     /tmp/ccfk867N.s:237    .bss.ledlastmillis:0000000000000000 ledlastmillis
-     /tmp/ccfk867N.s:379    .data.velocity_high:0000000000000000 velocity_high
-     /tmp/ccfk867N.s:394    .data.velocity_mid_high:0000000000000000 velocity_mid_high
-     /tmp/ccfk867N.s:389    .data.velocity_mid:0000000000000000 velocity_mid
-     /tmp/ccfk867N.s:384    .data.velocity_low:0000000000000000 velocity_low
-     /tmp/ccfk867N.s:340    .data.detunemult:0000000000000000 detunemult
-     /tmp/ccfk867N.s:307    .data.algo_select:0000000000000000 algo_select
-     /tmp/ccfk867N.s:356    .data.octave:0000000000000000 octave
-     /tmp/ccfk867N.s:368    .data.phasemod:0000000000000000 phasemod
-     /tmp/ccfk867N.s:183    .bss.incoming_channel:0000000000000000 incoming_channel
-     /tmp/ccfk867N.s:193    .bss.incoming_velocity:0000000000000000 incoming_velocity
-     /tmp/ccfk867N.s:188    .bss.incoming_note:0000000000000000 incoming_note
-     /tmp/ccfk867N.s:225    .bss.learn_active:0000000000000000 learn_active
-     /tmp/ccfk867N.s:242    .bss.midi_received:0000000000000000 midi_received
-     /tmp/ccfk867N.s:172    .bss.glideon:0000000000000000 glideon
-     /tmp/ccfk867N.s:178    .bss.glidetime:0000000000000000 glidetime
-     /tmp/ccfk867N.s:351    .data.glide:0000000000000000 glide
-     /tmp/ccfk867N.s:362    .data.pbend:0000000000000000 pbend
-     /tmp/ccfk867N.s:290    .bss.voicefreqtarget:0000000000000000 voicefreqtarget
-     /tmp/ccfk867N.s:284    .bss.voicefreq:0000000000000000 voicefreq
-     /tmp/ccfk867N.s:247    .bss.midichannel:0000000000000000 midichannel
-     /tmp/ccfk867N.s:400    .data.voicehist:0000000000000000 voicehist
-     /tmp/ccfk867N.s:162    .bss.filtenv_trig:0000000000000000 filtenv_trig
-     /tmp/ccfk867N.s:302    .bss.voicetrig:0000000000000000 voicetrig
-     /tmp/ccfk867N.s:296    .bss.voicenote:0000000000000000 voicenote
-     /tmp/ccfk867N.s:422    .rodata.pm1amp:0000000000000000 pm1amp
-     /tmp/ccfk867N.s:406    .rodata.attackmult:0000000000000000 attackmult
-     /tmp/ccfk867N.s:451    .rodata.releasemult:0000000000000000 releasemult
-     /tmp/ccfk867N.s:412    .rodata.octaveindex:0000000000000000 octaveindex
-     /tmp/ccfk867N.s:428    .rodata.ratioindex:0000000000000000 ratioindex
-     /tmp/ccfk867N.s:151    .bss.cv_mod:0000000000000000 cv_mod
-     /tmp/ccfk867N.s:265    .bss.params_changed:0000000000000000 params_changed
-     /tmp/ccfk867N.s:259    .bss.param_sum:0000000000000000 param_sum
-     /tmp/ccfk867N.s:253    .bss.param:0000000000000000 param
-     /tmp/ccfk867N.s:157    .bss.cv_value:0000000000000000 cv_value
-     /tmp/ccfk867N.s:199    .bss.knob_value:0000000000000000 knob_value
-     /tmp/ccfk867N.s:230    .bss.led_takeover:0000000000000000 led_takeover
-     /tmp/ccfk867N.s:345    .data.gate_out_n:0000000000000000 gate_out_n
-     /tmp/ccfk867N.s:167    .bss.gate_out:0000000000000000 gate_out
-     /tmp/ccfk867N.s:319    .data.calibration_val:0000000000000000 calibration_val
-     /tmp/ccfk867N.s:141    .bss.calibration_lastmillis:0000000000000000 $d
-     /tmp/ccfk867N.s:148    .bss.cv_mod:0000000000000000 $d
-     /tmp/ccfk867N.s:154    .bss.cv_value:0000000000000000 $d
-ARM GAS  /tmp/ccfk867N.s 			page 12
+                            *ABS*:00000000 variables.cpp
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:17     .text.startup._GLOBAL__sub_I_calibration_val:00000000 $t
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:25     .text.startup._GLOBAL__sub_I_calibration_val:00000000 _GLOBAL__sub_I_calibration_val
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:80     .text.startup._GLOBAL__sub_I_calibration_val:00000020 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:90     .init_array:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:271    .bss.samplerate:00000000 samplerate
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:374    .data.pwm_resolution:00000000 pwm_resolution
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:313    .data.brightness:00000000 brightness
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:220    .bss.lastmillis2:00000000 lastmillis2
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:213    .bss.lastmillis1:00000000 lastmillis1
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:145    .bss.calibration_lastmillis:00000000 calibration_lastmillis
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:278    .bss.savelastMillis:00000000 savelastMillis
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:206    .bss.lastMillis:00000000 lastMillis
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:237    .bss.ledlastmillis:00000000 ledlastmillis
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:379    .data.velocity_high:00000000 velocity_high
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:394    .data.velocity_mid_high:00000000 velocity_mid_high
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:389    .data.velocity_mid:00000000 velocity_mid
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:384    .data.velocity_low:00000000 velocity_low
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:340    .data.detunemult:00000000 detunemult
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:307    .data.algo_select:00000000 algo_select
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:356    .data.octave:00000000 octave
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:368    .data.phasemod:00000000 phasemod
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:183    .bss.incoming_channel:00000000 incoming_channel
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:193    .bss.incoming_velocity:00000000 incoming_velocity
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:188    .bss.incoming_note:00000000 incoming_note
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:225    .bss.learn_active:00000000 learn_active
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:242    .bss.midi_received:00000000 midi_received
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:172    .bss.glideon:00000000 glideon
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:178    .bss.glidetime:00000000 glidetime
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:351    .data.glide:00000000 glide
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:362    .data.pbend:00000000 pbend
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:290    .bss.voicefreqtarget:00000000 voicefreqtarget
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:284    .bss.voicefreq:00000000 voicefreq
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:247    .bss.midichannel:00000000 midichannel
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:400    .data.voicehist:00000000 voicehist
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:162    .bss.filtenv_trig:00000000 filtenv_trig
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:302    .bss.voicetrig:00000000 voicetrig
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:296    .bss.voicenote:00000000 voicenote
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:422    .rodata.pm1amp:00000000 pm1amp
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:406    .rodata.attackmult:00000000 attackmult
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:451    .rodata.releasemult:00000000 releasemult
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:412    .rodata.octaveindex:00000000 octaveindex
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:428    .rodata.ratioindex:00000000 ratioindex
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:151    .bss.cv_mod:00000000 cv_mod
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:265    .bss.params_changed:00000000 params_changed
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:259    .bss.param_sum:00000000 param_sum
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:253    .bss.param:00000000 param
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:157    .bss.cv_value:00000000 cv_value
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:199    .bss.knob_value:00000000 knob_value
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:230    .bss.led_takeover:00000000 led_takeover
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:345    .data.gate_out_n:00000000 gate_out_n
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:167    .bss.gate_out:00000000 gate_out
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:319    .data.calibration_val:00000000 calibration_val
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:141    .bss.calibration_lastmillis:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:148    .bss.cv_mod:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:154    .bss.cv_value:00000000 $d
+ARM GAS  C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s 			page 12
 
 
-     /tmp/ccfk867N.s:163    .bss.filtenv_trig:0000000000000000 $d
-     /tmp/ccfk867N.s:168    .bss.gate_out:0000000000000000 $d
-     /tmp/ccfk867N.s:173    .bss.glideon:0000000000000000 $d
-     /tmp/ccfk867N.s:175    .bss.glidetime:0000000000000000 $d
-     /tmp/ccfk867N.s:184    .bss.incoming_channel:0000000000000000 $d
-     /tmp/ccfk867N.s:189    .bss.incoming_note:0000000000000000 $d
-     /tmp/ccfk867N.s:194    .bss.incoming_velocity:0000000000000000 $d
-     /tmp/ccfk867N.s:196    .bss.knob_value:0000000000000000 $d
-     /tmp/ccfk867N.s:202    .bss.lastMillis:0000000000000000 $d
-     /tmp/ccfk867N.s:209    .bss.lastmillis1:0000000000000000 $d
-     /tmp/ccfk867N.s:216    .bss.lastmillis2:0000000000000000 $d
-     /tmp/ccfk867N.s:226    .bss.learn_active:0000000000000000 $d
-     /tmp/ccfk867N.s:231    .bss.led_takeover:0000000000000000 $d
-     /tmp/ccfk867N.s:233    .bss.ledlastmillis:0000000000000000 $d
-     /tmp/ccfk867N.s:243    .bss.midi_received:0000000000000000 $d
-     /tmp/ccfk867N.s:248    .bss.midichannel:0000000000000000 $d
-     /tmp/ccfk867N.s:250    .bss.param:0000000000000000 $d
-     /tmp/ccfk867N.s:256    .bss.param_sum:0000000000000000 $d
-     /tmp/ccfk867N.s:262    .bss.params_changed:0000000000000000 $d
-     /tmp/ccfk867N.s:268    .bss.samplerate:0000000000000000 $d
-     /tmp/ccfk867N.s:274    .bss.savelastMillis:0000000000000000 $d
-     /tmp/ccfk867N.s:281    .bss.voicefreq:0000000000000000 $d
-     /tmp/ccfk867N.s:287    .bss.voicefreqtarget:0000000000000000 $d
-     /tmp/ccfk867N.s:293    .bss.voicenote:0000000000000000 $d
-     /tmp/ccfk867N.s:299    .bss.voicetrig:0000000000000000 $d
-     /tmp/ccfk867N.s:310    .data.brightness:0000000000000000 $d
-     /tmp/ccfk867N.s:316    .data.calibration_val:0000000000000000 $d
-     /tmp/ccfk867N.s:348    .data.glide:0000000000000000 $d
-     /tmp/ccfk867N.s:359    .data.pbend:0000000000000000 $d
-     /tmp/ccfk867N.s:365    .data.phasemod:0000000000000000 $d
-     /tmp/ccfk867N.s:371    .data.pwm_resolution:0000000000000000 $d
-     /tmp/ccfk867N.s:397    .data.voicehist:0000000000000000 $d
-     /tmp/ccfk867N.s:403    .rodata.attackmult:0000000000000000 $d
-     /tmp/ccfk867N.s:409    .rodata.octaveindex:0000000000000000 $d
-     /tmp/ccfk867N.s:419    .rodata.pm1amp:0000000000000000 $d
-     /tmp/ccfk867N.s:425    .rodata.ratioindex:0000000000000000 $d
-     /tmp/ccfk867N.s:448    .rodata.releasemult:0000000000000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:163    .bss.filtenv_trig:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:168    .bss.gate_out:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:173    .bss.glideon:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:175    .bss.glidetime:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:184    .bss.incoming_channel:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:189    .bss.incoming_note:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:194    .bss.incoming_velocity:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:196    .bss.knob_value:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:202    .bss.lastMillis:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:209    .bss.lastmillis1:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:216    .bss.lastmillis2:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:226    .bss.learn_active:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:231    .bss.led_takeover:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:233    .bss.ledlastmillis:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:243    .bss.midi_received:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:248    .bss.midichannel:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:250    .bss.param:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:256    .bss.param_sum:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:262    .bss.params_changed:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:268    .bss.samplerate:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:274    .bss.savelastMillis:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:281    .bss.voicefreq:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:287    .bss.voicefreqtarget:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:293    .bss.voicenote:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:299    .bss.voicetrig:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:310    .data.brightness:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:316    .data.calibration_val:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:348    .data.glide:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:359    .data.pbend:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:365    .data.phasemod:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:371    .data.pwm_resolution:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:397    .data.voicehist:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:403    .rodata.attackmult:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:409    .rodata.octaveindex:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:419    .rodata.pm1amp:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:425    .rodata.ratioindex:00000000 $d
+C:\Users\halli\AppData\Local\Temp\ccvk34Aj.s:448    .rodata.releasemult:00000000 $d
 
 UNDEFINED SYMBOLS
 _ZN5daisy6System6GetNowEv

@@ -1,33 +1,33 @@
-ARM GAS  /tmp/ccNJiG34.s 			page 1
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 1
 
 
    1              		.cpu cortex-m7
-   2              		.arch armv7e-m
-   3              		.fpu fpv5-d16
-   4              		.eabi_attribute 28, 1
-   5              		.eabi_attribute 20, 1
-   6              		.eabi_attribute 21, 1
-   7              		.eabi_attribute 23, 3
-   8              		.eabi_attribute 24, 1
-   9              		.eabi_attribute 25, 1
-  10              		.eabi_attribute 26, 1
-  11              		.eabi_attribute 30, 2
-  12              		.eabi_attribute 34, 1
-  13              		.eabi_attribute 18, 4
-  14              		.file	"led-enc.cpp"
-  15              		.text
-  16              	.Ltext0:
-  17              		.cfi_sections	.debug_frame
-  18              		.section	.text._Z12encoder_reada,"ax",%progbits
-  19              		.align	1
-  20              		.p2align 2,,3
-  21              		.global	_Z12encoder_reada
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"led-enc.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._Z12encoder_reada,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_Z12encoder_reada
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
   26              	_Z12encoder_reada:
   27              	.LVL0:
-  28              	.LFB4789:
+  28              	.LFB4788:
   29              		.file 1 "led-enc.cpp"
    1:led-enc.cpp   **** #include "settings.h"
    2:led-enc.cpp   **** #include "variables.h"
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
   44              		.loc 1 11 3 view .LVU4
   45 0006 05D0     		beq	.L13
   12:led-enc.cpp   ****   {
-ARM GAS  /tmp/ccNJiG34.s 			page 2
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 2
 
 
   13:led-enc.cpp   ****   
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
   14:led-enc.cpp   ****       {
   62              		.loc 1 14 7 is_stmt 1 view .LVU9
   14:led-enc.cpp   ****       {
-ARM GAS  /tmp/ccNJiG34.s 			page 3
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 3
 
 
   63              		.loc 1 14 26 is_stmt 0 view .LVU10
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
   34:led-enc.cpp   ****       {
  104              		.loc 1 34 26 is_stmt 0 view .LVU25
  105 003c 154C     		ldr	r4, .L17+4
-ARM GAS  /tmp/ccNJiG34.s 			page 4
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 4
 
 
   34:led-enc.cpp   ****       {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
   38:led-enc.cpp   ****       {
  145              		.loc 1 38 12 is_stmt 1 view .LVU41
   38:led-enc.cpp   ****       {
-ARM GAS  /tmp/ccNJiG34.s 			page 5
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 5
 
 
  146              		.loc 1 38 29 is_stmt 0 view .LVU42
@@ -280,7 +280,7 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
  176 00b0 0AD7A3BC 		.word	-1130113270
  177 00b4 0AD723BC 		.word	-1138501878
  178              		.cfi_endproc
- 179              	.LFE4789:
+ 179              	.LFE4788:
  181              		.section	.rodata._Z13led_menu_stephh.str1.4,"aMS",%progbits,1
  182              		.align	2
  183              	.LC0:
@@ -294,13 +294,14 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
  189              		.syntax unified
  190              		.thumb
  191              		.thumb_func
- 193              	_Z13led_menu_stephh:
- 194              	.LVL11:
- 195              	.LFB4791:
+ 192              		.fpu fpv5-d16
+ 194              	_Z13led_menu_stephh:
+ 195              	.LVL11:
+ 196              	.LFB4790:
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 6
+
+
   51:led-enc.cpp   **** 
-ARM GAS  /tmp/ccNJiG34.s 			page 6
-
-
   52:led-enc.cpp   **** void led_update(uint8_t index)
   53:led-enc.cpp   **** {
   54:led-enc.cpp   ****     //only update one paramater led
@@ -326,50 +327,50 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
   74:led-enc.cpp   **** 
   75:led-enc.cpp   **** void led_menu_step(uint8_t number,uint8_t color)
   76:led-enc.cpp   **** {
- 196              		.loc 1 76 1 is_stmt 1 view -0
- 197              		.cfi_startproc
- 198              		@ args = 0, pretend = 0, frame = 16
- 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197              		.loc 1 76 1 is_stmt 1 view -0
+ 198              		.cfi_startproc
+ 199              		@ args = 0, pretend = 0, frame = 16
+ 200              		@ frame_needed = 0, uses_anonymous_args = 0
   77:led-enc.cpp   ****   uint8_t params_index[8] = {1,3,5,7,9,11,13,15};
- 200              		.loc 1 77 3 view .LVU50
+ 201              		.loc 1 77 3 view .LVU50
   76:led-enc.cpp   ****   uint8_t params_index[8] = {1,3,5,7,9,11,13,15};
- 201              		.loc 1 76 1 is_stmt 0 view .LVU51
- 202 0000 30B5     		push	{r4, r5, lr}
- 203              		.cfi_def_cfa_offset 12
- 204              		.cfi_offset 4, -12
- 205              		.cfi_offset 5, -8
- 206              		.cfi_offset 14, -4
- 207 0002 0A46     		mov	r2, r1
- 208              		.loc 1 77 11 view .LVU52
- 209 0004 2C4C     		ldr	r4, .L37
+ 202              		.loc 1 76 1 is_stmt 0 view .LVU51
+ 203 0000 30B5     		push	{r4, r5, lr}
+ 204              		.cfi_def_cfa_offset 12
+ 205              		.cfi_offset 4, -12
+ 206              		.cfi_offset 5, -8
+ 207              		.cfi_offset 14, -4
+ 208 0002 0A46     		mov	r2, r1
+ 209              		.loc 1 77 11 view .LVU52
+ 210 0004 2B4C     		ldr	r4, .L37
   76:led-enc.cpp   ****   uint8_t params_index[8] = {1,3,5,7,9,11,13,15};
- 210              		.loc 1 76 1 view .LVU53
- 211 0006 85B0     		sub	sp, sp, #20
- 212              		.cfi_def_cfa_offset 32
+ 211              		.loc 1 76 1 view .LVU53
+ 212 0006 85B0     		sub	sp, sp, #20
+ 213              		.cfi_def_cfa_offset 32
   76:led-enc.cpp   ****   uint8_t params_index[8] = {1,3,5,7,9,11,13,15};
- 213              		.loc 1 76 1 view .LVU54
- 214 0008 0346     		mov	r3, r0
- 215              	.LBB29:
+ 214              		.loc 1 76 1 view .LVU54
+ 215 0008 0346     		mov	r3, r0
+ 216              	.LBB29:
   78:led-enc.cpp   **** 
   79:led-enc.cpp   ****   if(color == green)
- 216              		.loc 1 79 3 view .LVU55
- 217 000a 012A     		cmp	r2, #1
- 218              	.LBE29:
+ 217              		.loc 1 79 3 view .LVU55
+ 218 000a 012A     		cmp	r2, #1
+ 219              	.LBE29:
   77:led-enc.cpp   **** 
- 219              		.loc 1 77 11 view .LVU56
- 220 000c 94E80300 		ldm	r4, {r0, r1}
-ARM GAS  /tmp/ccNJiG34.s 			page 7
+ 220              		.loc 1 77 11 view .LVU56
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 7
 
 
- 221              	.LVL12:
+ 221 000c 94E80300 		ldm	r4, {r0, r1}
+ 222              	.LVL12:
   77:led-enc.cpp   **** 
- 222              		.loc 1 77 11 view .LVU57
- 223 0010 04AC     		add	r4, sp, #16
- 224 0012 04E90300 		stmdb	r4, {r0, r1}
- 225              		.loc 1 79 3 is_stmt 1 view .LVU58
- 226              	.LBB38:
- 227 0016 2AD0     		beq	.L36
- 228              	.LBE38:
+ 223              		.loc 1 77 11 view .LVU57
+ 224 0010 04AC     		add	r4, sp, #16
+ 225 0012 04E90300 		stmdb	r4, {r0, r1}
+ 226              		.loc 1 79 3 is_stmt 1 view .LVU58
+ 227              	.LBB38:
+ 228 0016 2AD0     		beq	.L36
+ 229              	.LBE38:
   80:led-enc.cpp   ****   {
   81:led-enc.cpp   ****     for(int i = 0; i<= 15;i++)
   82:led-enc.cpp   ****     {
@@ -384,142 +385,141 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
   91:led-enc.cpp   ****     }
   92:led-enc.cpp   ****   }
   93:led-enc.cpp   ****   else if(color == red)
- 229              		.loc 1 93 8 view .LVU59
- 230              	.LBB39:
- 231              	.LBB30:
- 232 0018 022A     		cmp	r2, #2
- 233 001a 26D1     		bne	.L19
- 234              	.LBB31:
+ 230              		.loc 1 93 8 view .LVU59
+ 231              	.LBB39:
+ 232              	.LBB30:
+ 233 0018 022A     		cmp	r2, #2
+ 234 001a 26D1     		bne	.L19
+ 235              	.LBB31:
   94:led-enc.cpp   ****   {
   95:led-enc.cpp   ****     for(int i = 0; i<= 15;i++)
   96:led-enc.cpp   ****     {
   97:led-enc.cpp   ****       if(i == (params_index[number]-1))
- 235              		.loc 1 97 35 is_stmt 0 view .LVU60
- 236 001c 1033     		adds	r3, r3, #16
+ 236              		.loc 1 97 35 is_stmt 0 view .LVU60
+ 237 001c 04AA     		add	r2, sp, #16
   95:led-enc.cpp   ****     {
- 237              		.loc 1 95 13 view .LVU61
- 238 001e 0024     		movs	r4, #0
- 239              		.loc 1 97 35 view .LVU62
- 240 0020 6B44     		add	r3, sp, r3
- 241 0022 13F8085C 		ldrb	r5, [r3, #-8]	@ zero_extendqisi2
- 242              		.loc 1 97 36 view .LVU63
- 243 0026 013D     		subs	r5, r5, #1
- 244 0028 04E0     		b	.L28
- 245              	.LVL13:
- 246              	.L26:
+ 238              		.loc 1 95 13 view .LVU61
+ 239 001e 0024     		movs	r4, #0
+ 240              		.loc 1 97 35 view .LVU62
+ 241 0020 1344     		add	r3, r3, r2
+ 242 0022 13F8085C 		ldrb	r5, [r3, #-8]	@ zero_extendqisi2
+ 243              		.loc 1 97 36 view .LVU63
+ 244 0026 013D     		subs	r5, r5, #1
+ 245 0028 04E0     		b	.L28
+ 246              	.LVL13:
+ 247              	.L26:
   95:led-enc.cpp   ****     {
- 247              		.loc 1 95 5 view .LVU64
- 248 002a 0134     		adds	r4, r4, #1
- 249              	.LVL14:
+ 248              		.loc 1 95 5 view .LVU64
+ 249 002a 0134     		adds	r4, r4, #1
+ 250              	.LVL14:
   98:led-enc.cpp   ****       {
   99:led-enc.cpp   ****         setpwm(i,brightness*pwm_resolution);
  100:led-enc.cpp   ****       }
  101:led-enc.cpp   ****       else
  102:led-enc.cpp   ****       {
  103:led-enc.cpp   ****         setpwm(i,0);
- 250              		.loc 1 103 15 view .LVU65
-ARM GAS  /tmp/ccNJiG34.s 			page 8
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 8
 
 
- 251 002c FFF7FEFF 		bl	_Z6setpwmhh
- 252              	.LVL15:
+ 251              		.loc 1 103 15 view .LVU65
+ 252 002c FFF7FEFF 		bl	_Z6setpwmhh
+ 253              	.LVL15:
   95:led-enc.cpp   ****     {
- 253              		.loc 1 95 5 is_stmt 1 view .LVU66
+ 254              		.loc 1 95 5 is_stmt 1 view .LVU66
   95:led-enc.cpp   ****     {
- 254              		.loc 1 95 21 view .LVU67
- 255 0030 102C     		cmp	r4, #16
- 256 0032 1AD0     		beq	.L19
- 257              	.LVL16:
- 258              	.L28:
+ 255              		.loc 1 95 21 view .LVU67
+ 256 0030 102C     		cmp	r4, #16
+ 257 0032 1AD0     		beq	.L19
+ 258              	.LVL16:
+ 259              	.L28:
   97:led-enc.cpp   ****       {
- 259              		.loc 1 97 7 view .LVU68
- 260              		.loc 1 103 9 view .LVU69
+ 260              		.loc 1 97 7 view .LVU68
+ 261              		.loc 1 103 9 view .LVU69
   97:led-enc.cpp   ****       {
- 261              		.loc 1 97 7 is_stmt 0 view .LVU70
- 262 0034 A542     		cmp	r5, r4
- 263              		.loc 1 103 15 view .LVU71
- 264 0036 E0B2     		uxtb	r0, r4
- 265 0038 4FF00001 		mov	r1, #0
+ 262              		.loc 1 97 7 is_stmt 0 view .LVU70
+ 263 0034 A542     		cmp	r5, r4
+ 264              		.loc 1 103 15 view .LVU71
+ 265 0036 E0B2     		uxtb	r0, r4
+ 266 0038 4FF00001 		mov	r1, #0
   97:led-enc.cpp   ****       {
- 266              		.loc 1 97 7 view .LVU72
- 267 003c F5D1     		bne	.L26
+ 267              		.loc 1 97 7 view .LVU72
+ 268 003c F5D1     		bne	.L26
   99:led-enc.cpp   ****       }
- 268              		.loc 1 99 9 is_stmt 1 view .LVU73
+ 269              		.loc 1 99 9 is_stmt 1 view .LVU73
   99:led-enc.cpp   ****       }
- 269              		.loc 1 99 28 is_stmt 0 view .LVU74
- 270 003e 1F4A     		ldr	r2, .L37+4
+ 270              		.loc 1 99 28 is_stmt 0 view .LVU74
+ 271 003e 1E4A     		ldr	r2, .L37+4
   95:led-enc.cpp   ****     {
- 271              		.loc 1 95 5 view .LVU75
- 272 0040 0134     		adds	r4, r4, #1
- 273              	.LVL17:
+ 272              		.loc 1 95 5 view .LVU75
+ 273 0040 0134     		adds	r4, r4, #1
+ 274              	.LVL17:
   99:led-enc.cpp   ****       }
- 274              		.loc 1 99 28 view .LVU76
- 275 0042 1F4B     		ldr	r3, .L37+8
+ 275              		.loc 1 99 28 view .LVU76
+ 276 0042 1E4B     		ldr	r3, .L37+8
   99:led-enc.cpp   ****       }
- 276              		.loc 1 99 15 view .LVU77
- 277 0044 E8B2     		uxtb	r0, r5
+ 277              		.loc 1 99 15 view .LVU77
+ 278 0044 E8B2     		uxtb	r0, r5
   99:led-enc.cpp   ****       }
- 278              		.loc 1 99 28 view .LVU78
- 279 0046 D2ED007A 		vldr.32	s15, [r2]	@ int
- 280 004a 93ED007A 		vldr.32	s14, [r3]
- 281 004e F8EEE77A 		vcvt.f32.s32	s15, s15
- 282 0052 67EE877A 		vmul.f32	s15, s15, s14
+ 279              		.loc 1 99 28 view .LVU78
+ 280 0046 D2ED007A 		vldr.32	s15, [r2]	@ int
+ 281 004a 93ED007A 		vldr.32	s14, [r3]
+ 282 004e F8EEE77A 		vcvt.f32.s32	s15, s15
+ 283 0052 67EE877A 		vmul.f32	s15, s15, s14
   99:led-enc.cpp   ****       }
- 283              		.loc 1 99 15 view .LVU79
- 284 0056 FCEEE77A 		vcvt.u32.f32	s15, s15
- 285 005a CDED017A 		vstr.32	s15, [sp, #4]	@ int
- 286 005e 9DF80410 		ldrb	r1, [sp, #4]	@ zero_extendqisi2
- 287 0062 FFF7FEFF 		bl	_Z6setpwmhh
- 288              	.LVL18:
+ 284              		.loc 1 99 15 view .LVU79
+ 285 0056 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 286 005a CDED017A 		vstr.32	s15, [sp, #4]	@ int
+ 287 005e 9DF80410 		ldrb	r1, [sp, #4]	@ zero_extendqisi2
+ 288 0062 FFF7FEFF 		bl	_Z6setpwmhh
+ 289              	.LVL18:
   95:led-enc.cpp   ****     {
- 289              		.loc 1 95 5 is_stmt 1 view .LVU80
+ 290              		.loc 1 95 5 is_stmt 1 view .LVU80
   95:led-enc.cpp   ****     {
- 290              		.loc 1 95 21 view .LVU81
- 291 0066 102C     		cmp	r4, #16
- 292 0068 E4D1     		bne	.L28
- 293              	.LVL19:
-ARM GAS  /tmp/ccNJiG34.s 			page 9
+ 291              		.loc 1 95 21 view .LVU81
+ 292 0066 102C     		cmp	r4, #16
+ 293 0068 E4D1     		bne	.L28
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 9
 
 
- 294              	.L19:
+ 294              	.LVL19:
+ 295              	.L19:
   95:led-enc.cpp   ****     {
- 295              		.loc 1 95 21 is_stmt 0 view .LVU82
- 296              	.LBE31:
- 297              	.LBE30:
- 298              	.LBE39:
+ 296              		.loc 1 95 21 is_stmt 0 view .LVU82
+ 297              	.LBE31:
+ 298              	.LBE30:
+ 299              	.LBE39:
  104:led-enc.cpp   ****       }
  105:led-enc.cpp   ****     }
  106:led-enc.cpp   ****   }
  107:led-enc.cpp   ****   else{return;}
  108:led-enc.cpp   **** }
- 299              		.loc 1 108 1 view .LVU83
- 300 006a 05B0     		add	sp, sp, #20
- 301              		.cfi_remember_state
- 302              		.cfi_def_cfa_offset 12
- 303              		@ sp needed
- 304 006c 30BD     		pop	{r4, r5, pc}
- 305              	.L36:
- 306              		.cfi_restore_state
- 307              	.LBB40:
- 308              	.LBB34:
- 309              	.LBB32:
+ 300              		.loc 1 108 1 view .LVU83
+ 301 006a 05B0     		add	sp, sp, #20
+ 302              		.cfi_remember_state
+ 303              		.cfi_def_cfa_offset 12
+ 304              		@ sp needed
+ 305 006c 30BD     		pop	{r4, r5, pc}
+ 306              	.L36:
+ 307              		.cfi_restore_state
+ 308              	.LBB40:
+ 309              	.LBB34:
+ 310              	.LBB32:
   97:led-enc.cpp   ****       {
- 310              		.loc 1 97 35 view .LVU84
- 311 006e 1033     		adds	r3, r3, #16
- 312              	.LBE32:
- 313              	.LBE34:
- 314              	.LBB35:
+ 311              		.loc 1 97 35 view .LVU84
+ 312 006e 2344     		add	r3, r3, r4
+ 313              	.LBE32:
+ 314              	.LBE34:
+ 315              	.LBB35:
   81:led-enc.cpp   ****     {
- 315              		.loc 1 81 13 view .LVU85
- 316 0070 0024     		movs	r4, #0
- 317              	.LBE35:
- 318              	.LBB36:
- 319              	.LBB33:
+ 316              		.loc 1 81 13 view .LVU85
+ 317 0070 0024     		movs	r4, #0
+ 318              	.LBE35:
+ 319              	.LBB36:
+ 320              	.LBB33:
   97:led-enc.cpp   ****       {
- 320              		.loc 1 97 35 view .LVU86
- 321 0072 6B44     		add	r3, sp, r3
- 322 0074 13F8085C 		ldrb	r5, [r3, #-8]	@ zero_extendqisi2
- 323 0078 04E0     		b	.L24
+ 321              		.loc 1 97 35 view .LVU86
+ 322 0072 13F8085C 		ldrb	r5, [r3, #-8]	@ zero_extendqisi2
+ 323 0076 04E0     		b	.L24
  324              	.LVL20:
  325              	.L21:
   97:led-enc.cpp   ****       {
@@ -529,20 +529,20 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
  329              	.LBB37:
   89:led-enc.cpp   ****       }
  330              		.loc 1 89 15 view .LVU88
- 331 007a FFF7FEFF 		bl	_Z6setpwmhh
+ 331 0078 FFF7FEFF 		bl	_Z6setpwmhh
  332              	.LVL21:
  333              	.L22:
   81:led-enc.cpp   ****     {
  334              		.loc 1 81 5 is_stmt 1 discriminator 2 view .LVU89
- 335 007e 0134     		adds	r4, r4, #1
+ 335 007c 0134     		adds	r4, r4, #1
  336              	.LVL22:
   81:led-enc.cpp   ****     {
  337              		.loc 1 81 21 discriminator 2 view .LVU90
-ARM GAS  /tmp/ccNJiG34.s 			page 10
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 10
 
 
- 338 0080 102C     		cmp	r4, #16
- 339 0082 F2D0     		beq	.L19
+ 338 007e 102C     		cmp	r4, #16
+ 339 0080 F3D0     		beq	.L19
  340              	.LVL23:
  341              	.L24:
   83:led-enc.cpp   ****       {
@@ -551,133 +551,135 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
  343              		.loc 1 89 9 view .LVU92
   83:led-enc.cpp   ****       {
  344              		.loc 1 83 7 is_stmt 0 view .LVU93
- 345 0084 A542     		cmp	r5, r4
+ 345 0082 A542     		cmp	r5, r4
   89:led-enc.cpp   ****       }
  346              		.loc 1 89 15 view .LVU94
- 347 0086 E0B2     		uxtb	r0, r4
- 348 0088 4FF00001 		mov	r1, #0
+ 347 0084 E0B2     		uxtb	r0, r4
+ 348 0086 4FF00001 		mov	r1, #0
   83:led-enc.cpp   ****       {
  349              		.loc 1 83 7 view .LVU95
- 350 008c F5D1     		bne	.L21
+ 350 008a F5D1     		bne	.L21
   85:led-enc.cpp   ****       }
  351              		.loc 1 85 9 is_stmt 1 view .LVU96
   85:led-enc.cpp   ****       }
  352              		.loc 1 85 28 is_stmt 0 view .LVU97
- 353 008e 0B4A     		ldr	r2, .L37+4
+ 353 008c 0A4A     		ldr	r2, .L37+4
   85:led-enc.cpp   ****       }
  354              		.loc 1 85 15 view .LVU98
- 355 0090 2846     		mov	r0, r5
+ 355 008e 2846     		mov	r0, r5
   85:led-enc.cpp   ****       }
  356              		.loc 1 85 28 view .LVU99
- 357 0092 0B4B     		ldr	r3, .L37+8
- 358 0094 D2ED007A 		vldr.32	s15, [r2]	@ int
- 359 0098 93ED007A 		vldr.32	s14, [r3]
- 360 009c F8EEE77A 		vcvt.f32.s32	s15, s15
- 361 00a0 67EE877A 		vmul.f32	s15, s15, s14
+ 357 0090 0A4B     		ldr	r3, .L37+8
+ 358 0092 D2ED007A 		vldr.32	s15, [r2]	@ int
+ 359 0096 93ED007A 		vldr.32	s14, [r3]
+ 360 009a F8EEE77A 		vcvt.f32.s32	s15, s15
+ 361 009e 67EE877A 		vmul.f32	s15, s15, s14
   85:led-enc.cpp   ****       }
  362              		.loc 1 85 15 view .LVU100
- 363 00a4 FCEEE77A 		vcvt.u32.f32	s15, s15
- 364 00a8 CDED017A 		vstr.32	s15, [sp, #4]	@ int
- 365 00ac 9DF80410 		ldrb	r1, [sp, #4]	@ zero_extendqisi2
- 366 00b0 FFF7FEFF 		bl	_Z6setpwmhh
+ 363 00a2 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 364 00a6 CDED017A 		vstr.32	s15, [sp, #4]	@ int
+ 365 00aa 9DF80410 		ldrb	r1, [sp, #4]	@ zero_extendqisi2
+ 366 00ae FFF7FEFF 		bl	_Z6setpwmhh
  367              	.LVL24:
- 368 00b4 E3E7     		b	.L22
+ 368 00b2 E3E7     		b	.L22
  369              	.L38:
- 370 00b6 00BF     		.align	2
+ 370              		.align	2
  371              	.L37:
- 372 00b8 00000000 		.word	.LC0
- 373 00bc 00000000 		.word	pwm_resolution
- 374 00c0 00000000 		.word	brightness
+ 372 00b4 00000000 		.word	.LC0
+ 373 00b8 00000000 		.word	pwm_resolution
+ 374 00bc 00000000 		.word	brightness
  375              	.LBE37:
  376              	.LBE40:
  377              		.cfi_endproc
- 378              	.LFE4791:
+ 378              	.LFE4790:
  380              		.section	.text._Z3maplllll,"ax",%progbits
  381              		.align	1
  382              		.p2align 2,,3
  383              		.global	_Z3maplllll
  384              		.syntax unified
  385              		.thumb
-ARM GAS  /tmp/ccNJiG34.s 			page 11
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 11
 
 
  386              		.thumb_func
- 388              	_Z3maplllll:
- 389              	.LVL25:
- 390              	.LFB4792:
+ 387              		.fpu fpv5-d16
+ 389              	_Z3maplllll:
+ 390              	.LVL25:
+ 391              	.LFB4791:
  109:led-enc.cpp   **** 
  110:led-enc.cpp   **** long map(long x, long in_min, long in_max, long out_min, long out_max) {
- 391              		.loc 1 110 72 is_stmt 1 view -0
- 392              		.cfi_startproc
- 393              		@ args = 4, pretend = 0, frame = 0
- 394              		@ frame_needed = 0, uses_anonymous_args = 0
- 395              		@ link register save eliminated.
+ 392              		.loc 1 110 72 is_stmt 1 view -0
+ 393              		.cfi_startproc
+ 394              		@ args = 4, pretend = 0, frame = 0
+ 395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 396              		@ link register save eliminated.
  111:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 396              		.loc 1 111 3 view .LVU102
+ 397              		.loc 1 111 3 view .LVU102
  110:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 397              		.loc 1 110 72 is_stmt 0 view .LVU103
- 398 0000 10B4     		push	{r4}
- 399              		.cfi_def_cfa_offset 4
- 400              		.cfi_offset 4, -4
- 401              		.loc 1 111 34 view .LVU104
- 402 0002 019C     		ldr	r4, [sp, #4]
- 403              		.loc 1 111 13 view .LVU105
- 404 0004 401A     		subs	r0, r0, r1
- 405              	.LVL26:
- 406              		.loc 1 111 55 view .LVU106
- 407 0006 511A     		subs	r1, r2, r1
- 408              	.LVL27:
- 409              		.loc 1 111 34 view .LVU107
- 410 0008 A4EB030C 		sub	ip, r4, r3
+ 398              		.loc 1 110 72 is_stmt 0 view .LVU103
+ 399 0000 10B4     		push	{r4}
+ 400              		.cfi_def_cfa_offset 4
+ 401              		.cfi_offset 4, -4
+ 402              		.loc 1 111 34 view .LVU104
+ 403 0002 019C     		ldr	r4, [sp, #4]
+ 404              		.loc 1 111 13 view .LVU105
+ 405 0004 401A     		subs	r0, r0, r1
+ 406              	.LVL26:
+ 407              		.loc 1 111 55 view .LVU106
+ 408 0006 511A     		subs	r1, r2, r1
+ 409              	.LVL27:
+ 410              		.loc 1 111 34 view .LVU107
+ 411 0008 A4EB030C 		sub	ip, r4, r3
  112:led-enc.cpp   **** }
- 411              		.loc 1 112 1 view .LVU108
- 412 000c 5DF8044B 		ldr	r4, [sp], #4
- 413              		.cfi_restore 4
- 414              		.cfi_def_cfa_offset 0
- 415              	.LVL28:
+ 412              		.loc 1 112 1 view .LVU108
+ 413 000c 5DF8044B 		ldr	r4, [sp], #4
+ 414              		.cfi_restore 4
+ 415              		.cfi_def_cfa_offset 0
+ 416              	.LVL28:
  111:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 416              		.loc 1 111 23 view .LVU109
- 417 0010 0CFB00F0 		mul	r0, ip, r0
+ 417              		.loc 1 111 23 view .LVU109
+ 418 0010 0CFB00F0 		mul	r0, ip, r0
  111:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 418              		.loc 1 111 45 view .LVU110
- 419 0014 90FBF1F0 		sdiv	r0, r0, r1
- 420              		.loc 1 112 1 view .LVU111
- 421 0018 1844     		add	r0, r0, r3
- 422 001a 7047     		bx	lr
- 423              		.cfi_endproc
- 424              	.LFE4792:
- 426              		.section	.text._Z8led_fadefh,"ax",%progbits
- 427              		.align	1
- 428              		.p2align 2,,3
- 429              		.global	_Z8led_fadefh
- 430              		.syntax unified
- 431              		.thumb
- 432              		.thumb_func
- 434              	_Z8led_fadefh:
- 435              	.LVL29:
- 436              	.LFB4793:
+ 419              		.loc 1 111 45 view .LVU110
+ 420 0014 90FBF1F0 		sdiv	r0, r0, r1
+ 421              		.loc 1 112 1 view .LVU111
+ 422 0018 1844     		add	r0, r0, r3
+ 423 001a 7047     		bx	lr
+ 424              		.cfi_endproc
+ 425              	.LFE4791:
+ 427              		.section	.text._Z8led_fadefh,"ax",%progbits
+ 428              		.align	1
+ 429              		.p2align 2,,3
+ 430              		.global	_Z8led_fadefh
+ 431              		.syntax unified
+ 432              		.thumb
+ 433              		.thumb_func
+ 434              		.fpu fpv5-d16
+ 436              	_Z8led_fadefh:
+ 437              	.LVL29:
+ 438              	.LFB4792:
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 12
+
+
  113:led-enc.cpp   **** 
  114:led-enc.cpp   **** int led_fade (float value, uint8_t color) // 0 = grænn 1 = rauður
-ARM GAS  /tmp/ccNJiG34.s 			page 12
-
-
  115:led-enc.cpp   **** {
- 437              		.loc 1 115 1 is_stmt 1 view -0
- 438              		.cfi_startproc
- 439              		@ args = 0, pretend = 0, frame = 0
- 440              		@ frame_needed = 0, uses_anonymous_args = 0
- 441              		@ link register save eliminated.
+ 439              		.loc 1 115 1 is_stmt 1 view -0
+ 440              		.cfi_startproc
+ 441              		@ args = 0, pretend = 0, frame = 0
+ 442              		@ frame_needed = 0, uses_anonymous_args = 0
+ 443              		@ link register save eliminated.
  116:led-enc.cpp   ****   
  117:led-enc.cpp   ****   int gr;
- 442              		.loc 1 117 3 view .LVU113
+ 444              		.loc 1 117 3 view .LVU113
  118:led-enc.cpp   ****   int rd;
- 443              		.loc 1 118 3 view .LVU114
+ 445              		.loc 1 118 3 view .LVU114
  119:led-enc.cpp   ****   switch(color)
- 444              		.loc 1 119 3 view .LVU115
- 445 0000 0128     		cmp	r0, #1
- 446 0002 0FD0     		beq	.L42
- 447 0004 0228     		cmp	r0, #2
- 448 0006 15D1     		bne	.L56
+ 446              		.loc 1 119 3 view .LVU115
+ 447 0000 0128     		cmp	r0, #1
+ 448 0002 0FD0     		beq	.L42
+ 449 0004 0228     		cmp	r0, #2
+ 450 0006 15D1     		bne	.L56
  120:led-enc.cpp   ****   {
  121:led-enc.cpp   ****     case green:
  122:led-enc.cpp   ****   
@@ -697,574 +699,575 @@ ARM GAS  /tmp/ccNJiG34.s 			page 1
  136:led-enc.cpp   ****       }  
  137:led-enc.cpp   ****     break;
  138:led-enc.cpp   ****     case red:
- 449              		.loc 1 138 5 view .LVU116
+ 451              		.loc 1 138 5 view .LVU116
  139:led-enc.cpp   ****       rd = map(value, 0.3, 1, 0, pwm_resolution);
- 450              		.loc 1 139 7 view .LVU117
- 451              		.loc 1 139 15 is_stmt 0 view .LVU118
- 452 0008 BDEEC00A 		vcvt.s32.f32	s0, s0
- 453              	.LVL30:
- 454              		.loc 1 139 15 view .LVU119
- 455 000c 164B     		ldr	r3, .L59
- 456 000e 1B68     		ldr	r3, [r3]
- 457              	.LVL31:
- 458              	.LBB53:
- 459              	.LBI53:
+ 452              		.loc 1 139 7 view .LVU117
+ 453              		.loc 1 139 15 is_stmt 0 view .LVU118
+ 454 0008 BDEEC00A 		vcvt.s32.f32	s0, s0
+ 455              	.LVL30:
+ 456              		.loc 1 139 15 view .LVU119
+ 457 000c 164B     		ldr	r3, .L59
+ 458 000e 1B68     		ldr	r3, [r3]
+ 459              	.LVL31:
+ 460              	.LBB53:
+ 461              	.LBI53:
  110:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 460              		.loc 1 110 6 is_stmt 1 view .LVU120
- 461              	.LBB54:
+ 462              		.loc 1 110 6 is_stmt 1 view .LVU120
+ 463              	.LBB54:
  111:led-enc.cpp   **** }
- 462              		.loc 1 111 3 view .LVU121
+ 464              		.loc 1 111 3 view .LVU121
  111:led-enc.cpp   **** }
- 463              		.loc 1 111 3 is_stmt 0 view .LVU122
- 464              	.LBE54:
- 465              	.LBE53:
-ARM GAS  /tmp/ccNJiG34.s 			page 13
+ 465              		.loc 1 111 3 is_stmt 0 view .LVU122
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 13
 
 
+ 466              	.LBE54:
+ 467              	.LBE53:
  140:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 466              		.loc 1 140 7 is_stmt 1 view .LVU123
+ 468              		.loc 1 140 7 is_stmt 1 view .LVU123
  141:led-enc.cpp   ****       if(rd < 0) rd = 0;
- 467              		.loc 1 141 7 view .LVU124
- 468              	.LBB56:
- 469              	.LBB55:
+ 469              		.loc 1 141 7 view .LVU124
+ 470              	.LBB56:
+ 471              	.LBB55:
  111:led-enc.cpp   **** }
- 470              		.loc 1 111 23 is_stmt 0 view .LVU125
- 471 0010 10EE100A 		vmov	r0, s0	@ int
- 472              	.LVL32:
+ 472              		.loc 1 111 23 is_stmt 0 view .LVU125
+ 473 0010 10EE100A 		vmov	r0, s0	@ int
+ 474              	.LVL32:
  111:led-enc.cpp   **** }
- 473              		.loc 1 111 23 view .LVU126
- 474 0014 03FB00F0 		mul	r0, r3, r0
- 475 0018 9842     		cmp	r0, r3
- 476 001a A8BF     		it	ge
- 477 001c 1846     		movge	r0, r3
- 478 001e 20EAE070 		bic	r0, r0, r0, asr #31
- 479              	.LBE55:
- 480              	.LBE56:
- 481 0022 7047     		bx	lr
- 482              	.LVL33:
- 483              	.L42:
+ 475              		.loc 1 111 23 view .LVU126
+ 476 0014 03FB00F0 		mul	r0, r3, r0
+ 477 0018 9842     		cmp	r0, r3
+ 478 001a A8BF     		it	ge
+ 479 001c 1846     		movge	r0, r3
+ 480 001e 20EAE070 		bic	r0, r0, r0, asr #31
+ 481              	.LBE55:
+ 482              	.LBE56:
+ 483 0022 7047     		bx	lr
+ 484              	.LVL33:
+ 485              	.L42:
  121:led-enc.cpp   ****   
- 484              		.loc 1 121 5 is_stmt 1 view .LVU127
+ 486              		.loc 1 121 5 is_stmt 1 view .LVU127
  123:led-enc.cpp   ****       {
- 485              		.loc 1 123 8 view .LVU128
- 486 0024 F6EE007A 		vmov.f32	s15, #5.0e-1
- 487 0028 B4EEE70A 		vcmpe.f32	s0, s15
- 488 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 489 0030 19D9     		bls	.L57
- 490              	.LVL34:
- 491              	.LBB57:
- 492              	.LBI57:
+ 487              		.loc 1 123 8 view .LVU128
+ 488 0024 F6EE007A 		vmov.f32	s15, #5.0e-1
+ 489 0028 B4EEE70A 		vcmpe.f32	s0, s15
+ 490 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 491 0030 19D9     		bls	.L57
+ 492              	.LVL34:
+ 493              	.LBB57:
+ 494              	.LBI57:
  114:led-enc.cpp   **** {
- 493              		.loc 1 114 5 view .LVU129
- 494              	.LBB58:
+ 495              		.loc 1 114 5 view .LVU129
+ 496              	.LBB58:
  130:led-enc.cpp   ****       {
- 495              		.loc 1 130 12 view .LVU130
- 496 0032 01DC     		bgt	.L58
- 497              	.LVL35:
- 498              	.L56:
+ 497              		.loc 1 130 12 view .LVU130
+ 498 0032 01DC     		bgt	.L58
+ 499              	.LVL35:
+ 500              	.L56:
  142:led-enc.cpp   ****       return rd;
  143:led-enc.cpp   ****     break;
  144:led-enc.cpp   ****   } //switch endar
  145:led-enc.cpp   ****   return 0;
- 499              		.loc 1 145 10 is_stmt 0 view .LVU131
- 500 0034 0020     		movs	r0, #0
- 501              	.LVL36:
- 502              		.loc 1 145 10 view .LVU132
- 503              	.LBE58:
- 504              	.LBE57:
+ 501              		.loc 1 145 10 is_stmt 0 view .LVU131
+ 502 0034 0020     		movs	r0, #0
+ 503              	.LVL36:
+ 504              		.loc 1 145 10 view .LVU132
+ 505              	.LBE58:
+ 506              	.LBE57:
  146:led-enc.cpp   **** }
- 505              		.loc 1 146 1 view .LVU133
- 506 0036 7047     		bx	lr
- 507              	.LVL37:
- 508              	.L58:
- 509              	.LBB64:
-ARM GAS  /tmp/ccNJiG34.s 			page 14
+ 507              		.loc 1 146 1 view .LVU133
+ 508 0036 7047     		bx	lr
+ 509              	.LVL37:
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 14
 
 
- 510              	.LBB63:
+ 510              	.L58:
+ 511              	.LBB64:
+ 512              	.LBB63:
  130:led-enc.cpp   ****       {
- 511              		.loc 1 130 27 view .LVU134
- 512 0038 F7EE007A 		vmov.f32	s15, #1.0e+0
- 513 003c B4EEE70A 		vcmpe.f32	s0, s15
- 514 0040 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 515 0044 F6D8     		bhi	.L56
+ 513              		.loc 1 130 27 view .LVU134
+ 514 0038 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 515 003c B4EEE70A 		vcmpe.f32	s0, s15
+ 516 0040 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 517 0044 F6D8     		bhi	.L56
  132:led-enc.cpp   ****         if(gr > pwm_resolution) gr = pwm_resolution;
- 516              		.loc 1 132 9 is_stmt 1 view .LVU135
+ 518              		.loc 1 132 9 is_stmt 1 view .LVU135
  132:led-enc.cpp   ****         if(gr > pwm_resolution) gr = pwm_resolution;
- 517              		.loc 1 132 17 is_stmt 0 view .LVU136
- 518 0046 BDEEC00A 		vcvt.s32.f32	s0, s0
- 519              	.LVL38:
+ 519              		.loc 1 132 17 is_stmt 0 view .LVU136
+ 520 0046 BDEEC00A 		vcvt.s32.f32	s0, s0
+ 521              	.LVL38:
  132:led-enc.cpp   ****         if(gr > pwm_resolution) gr = pwm_resolution;
- 520              		.loc 1 132 17 view .LVU137
- 521 004a 074B     		ldr	r3, .L59
- 522 004c 1A68     		ldr	r2, [r3]
- 523              	.LVL39:
- 524              	.LBB59:
- 525              	.LBI59:
+ 522              		.loc 1 132 17 view .LVU137
+ 523 004a 074B     		ldr	r3, .L59
+ 524 004c 1A68     		ldr	r2, [r3]
+ 525              	.LVL39:
+ 526              	.LBB59:
+ 527              	.LBI59:
  110:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 526              		.loc 1 110 6 is_stmt 1 view .LVU138
- 527              	.LBB60:
+ 528              		.loc 1 110 6 is_stmt 1 view .LVU138
+ 529              	.LBB60:
  111:led-enc.cpp   **** }
- 528              		.loc 1 111 3 view .LVU139
+ 530              		.loc 1 111 3 view .LVU139
  111:led-enc.cpp   **** }
- 529              		.loc 1 111 3 is_stmt 0 view .LVU140
- 530              	.LBE60:
- 531              	.LBE59:
+ 531              		.loc 1 111 3 is_stmt 0 view .LVU140
+ 532              	.LBE60:
+ 533              	.LBE59:
  133:led-enc.cpp   ****         if(gr < 0) gr = 0;
- 532              		.loc 1 133 9 is_stmt 1 view .LVU141
- 533              	.LBB62:
- 534              	.LBB61:
+ 534              		.loc 1 133 9 is_stmt 1 view .LVU141
+ 535              	.LBB62:
+ 536              	.LBB61:
  111:led-enc.cpp   **** }
- 535              		.loc 1 111 23 is_stmt 0 view .LVU142
- 536 004e 10EE103A 		vmov	r3, s0	@ int
- 537 0052 C3F10103 		rsb	r3, r3, #1
+ 537              		.loc 1 111 23 is_stmt 0 view .LVU142
+ 538 004e 10EE103A 		vmov	r3, s0	@ int
+ 539 0052 C3F10103 		rsb	r3, r3, #1
  111:led-enc.cpp   **** }
- 538              		.loc 1 111 45 view .LVU143
- 539 0056 03FB02F0 		mul	r0, r3, r2
- 540              	.LVL40:
+ 540              		.loc 1 111 45 view .LVU143
+ 541 0056 03FB02F0 		mul	r0, r3, r2
+ 542              	.LVL40:
  111:led-enc.cpp   **** }
- 541              		.loc 1 111 45 view .LVU144
- 542 005a 9042     		cmp	r0, r2
- 543 005c A8BF     		it	ge
- 544 005e 1046     		movge	r0, r2
- 545              	.LVL41:
+ 543              		.loc 1 111 45 view .LVU144
+ 544 005a 9042     		cmp	r0, r2
+ 545 005c A8BF     		it	ge
+ 546 005e 1046     		movge	r0, r2
+ 547              	.LVL41:
  111:led-enc.cpp   **** }
- 546              		.loc 1 111 45 view .LVU145
- 547              	.LBE61:
- 548              	.LBE62:
+ 548              		.loc 1 111 45 view .LVU145
+ 549              	.LBE61:
+ 550              	.LBE62:
  134:led-enc.cpp   ****         return gr;
- 549              		.loc 1 134 9 is_stmt 1 view .LVU146
- 550 0060 20EAE070 		bic	r0, r0, r0, asr #31
- 551              	.LVL42:
- 135:led-enc.cpp   ****       }  
- 552              		.loc 1 135 9 view .LVU147
-ARM GAS  /tmp/ccNJiG34.s 			page 15
+ 551              		.loc 1 134 9 is_stmt 1 view .LVU146
+ 552 0060 20EAE070 		bic	r0, r0, r0, asr #31
+ 553              	.LVL42:
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 15
 
 
  135:led-enc.cpp   ****       }  
- 553              		.loc 1 135 16 is_stmt 0 view .LVU148
- 554 0064 7047     		bx	lr
- 555              	.LVL43:
- 556              	.L57:
+ 554              		.loc 1 135 9 view .LVU147
  135:led-enc.cpp   ****       }  
- 557              		.loc 1 135 16 view .LVU149
- 558              	.LBE63:
- 559              	.LBE64:
+ 555              		.loc 1 135 16 is_stmt 0 view .LVU148
+ 556 0064 7047     		bx	lr
+ 557              	.LVL43:
+ 558              	.L57:
+ 135:led-enc.cpp   ****       }  
+ 559              		.loc 1 135 16 view .LVU149
+ 560              	.LBE63:
+ 561              	.LBE64:
  125:led-enc.cpp   ****         if(gr > pwm_resolution) gr = pwm_resolution;
- 560              		.loc 1 125 9 is_stmt 1 view .LVU150
+ 562              		.loc 1 125 9 is_stmt 1 view .LVU150
  111:led-enc.cpp   **** }
- 561              		.loc 1 111 3 view .LVU151
- 562 0066 FFDE     		.inst	0xdeff
- 563              	.L60:
- 564              		.align	2
- 565              	.L59:
- 566 0068 00000000 		.word	pwm_resolution
- 567              		.cfi_endproc
- 568              	.LFE4793:
- 570              		.section	.text._Z10led_updateh,"ax",%progbits
- 571              		.align	1
- 572              		.p2align 2,,3
- 573              		.global	_Z10led_updateh
- 574              		.syntax unified
- 575              		.thumb
- 576              		.thumb_func
- 578              	_Z10led_updateh:
- 579              	.LVL44:
- 580              	.LFB4790:
+ 563              		.loc 1 111 3 view .LVU151
+ 564 0066 FFDE     		.inst	0xdeff
+ 565              	.L60:
+ 566              		.align	2
+ 567              	.L59:
+ 568 0068 00000000 		.word	pwm_resolution
+ 569              		.cfi_endproc
+ 570              	.LFE4792:
+ 572              		.section	.text._Z10led_updateh,"ax",%progbits
+ 573              		.align	1
+ 574              		.p2align 2,,3
+ 575              		.global	_Z10led_updateh
+ 576              		.syntax unified
+ 577              		.thumb
+ 578              		.thumb_func
+ 579              		.fpu fpv5-d16
+ 581              	_Z10led_updateh:
+ 582              	.LVL44:
+ 583              	.LFB4789:
   53:led-enc.cpp   ****     //only update one paramater led
- 581              		.loc 1 53 1 view -0
- 582              		.cfi_startproc
- 583              		@ args = 0, pretend = 0, frame = 0
- 584              		@ frame_needed = 0, uses_anonymous_args = 0
+ 584              		.loc 1 53 1 view -0
+ 585              		.cfi_startproc
+ 586              		@ args = 0, pretend = 0, frame = 0
+ 587              		@ frame_needed = 0, uses_anonymous_args = 0
   55:led-enc.cpp   ****     {
- 585              		.loc 1 55 5 view .LVU153
- 586              	.LBB65:
+ 588              		.loc 1 55 5 view .LVU153
+ 589              	.LBB65:
   55:led-enc.cpp   ****     {
- 587              		.loc 1 55 21 view .LVU154
- 588              	.LBE65:
+ 590              		.loc 1 55 21 view .LVU154
+ 591              	.LBE65:
   53:led-enc.cpp   ****     //only update one paramater led
- 589              		.loc 1 53 1 is_stmt 0 view .LVU155
- 590 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 591              		.cfi_def_cfa_offset 24
- 592              		.cfi_offset 4, -24
- 593              		.cfi_offset 5, -20
- 594              		.cfi_offset 6, -16
- 595              		.cfi_offset 7, -12
- 596              		.cfi_offset 8, -8
- 597              		.cfi_offset 14, -4
- 598 0004 2C4F     		ldr	r7, .L75
- 599              	.LBB76:
+ 592              		.loc 1 53 1 is_stmt 0 view .LVU155
+ 593 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 594              		.cfi_def_cfa_offset 24
+ 595              		.cfi_offset 4, -24
+ 596              		.cfi_offset 5, -20
+ 597              		.cfi_offset 6, -16
+ 598              		.cfi_offset 7, -12
+ 599              		.cfi_offset 8, -8
+ 600              		.cfi_offset 14, -4
+ 601 0004 2C4F     		ldr	r7, .L75
+ 602              	.LBB76:
   55:led-enc.cpp   ****     {
- 600              		.loc 1 55 13 view .LVU156
- 601 0006 0024     		movs	r4, #0
- 602              	.LBE76:
-ARM GAS  /tmp/ccNJiG34.s 			page 16
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 16
 
 
+ 603              		.loc 1 55 13 view .LVU156
+ 604 0006 0024     		movs	r4, #0
+ 605              	.LBE76:
   53:led-enc.cpp   ****     //only update one paramater led
- 603              		.loc 1 53 1 view .LVU157
- 604 0008 8046     		mov	r8, r0
- 605              	.LBB77:
+ 606              		.loc 1 53 1 view .LVU157
+ 607 0008 8046     		mov	r8, r0
+ 608              	.LBB77:
   57:led-enc.cpp   ****       {
- 606              		.loc 1 57 17 view .LVU158
- 607 000a 3D46     		mov	r5, r7
- 608 000c 03E0     		b	.L63
- 609              	.LVL45:
- 610              	.L62:
+ 609              		.loc 1 57 17 view .LVU158
+ 610 000a 3D46     		mov	r5, r7
+ 611 000c 03E0     		b	.L63
+ 612              	.LVL45:
+ 613              	.L62:
   55:led-enc.cpp   ****     {
- 611              		.loc 1 55 5 is_stmt 1 discriminator 2 view .LVU159
- 612 000e 0134     		adds	r4, r4, #1
- 613              	.LVL46:
+ 614              		.loc 1 55 5 is_stmt 1 discriminator 2 view .LVU159
+ 615 000e 0134     		adds	r4, r4, #1
+ 616              	.LVL46:
   55:led-enc.cpp   ****     {
- 614              		.loc 1 55 21 discriminator 2 view .LVU160
- 615 0010 0435     		adds	r5, r5, #4
- 616 0012 112C     		cmp	r4, #17
- 617 0014 24D0     		beq	.L73
- 618              	.LVL47:
- 619              	.L63:
+ 617              		.loc 1 55 21 discriminator 2 view .LVU160
+ 618 0010 0435     		adds	r5, r5, #4
+ 619 0012 112C     		cmp	r4, #17
+ 620 0014 24D0     		beq	.L73
+ 621              	.LVL47:
+ 622              	.L63:
   57:led-enc.cpp   ****       {
- 620              		.loc 1 57 7 view .LVU161
- 621 0016 B8EB640F 		cmp	r8, r4, asr #1
- 622 001a F8D1     		bne	.L62
+ 623              		.loc 1 57 7 view .LVU161
+ 624 0016 B8EB640F 		cmp	r8, r4, asr #1
+ 625 001a F8D1     		bne	.L62
   59:led-enc.cpp   ****         setpwm(i+1,led_fade(param[i],red));
- 623              		.loc 1 59 9 view .LVU162
- 624 001c E6B2     		uxtb	r6, r4
+ 626              		.loc 1 59 9 view .LVU162
+ 627 001c E6B2     		uxtb	r6, r4
   59:led-enc.cpp   ****         setpwm(i+1,led_fade(param[i],red));
- 625              		.loc 1 59 26 is_stmt 0 view .LVU163
- 626 001e 95ED000A 		vldr.32	s0, [r5]
- 627 0022 0120     		movs	r0, #1
+ 628              		.loc 1 59 26 is_stmt 0 view .LVU163
+ 629 001e 95ED000A 		vldr.32	s0, [r5]
+ 630 0022 0120     		movs	r0, #1
   55:led-enc.cpp   ****     {
- 628              		.loc 1 55 5 view .LVU164
- 629 0024 0134     		adds	r4, r4, #1
- 630              	.LVL48:
+ 631              		.loc 1 55 5 view .LVU164
+ 632 0024 0134     		adds	r4, r4, #1
+ 633              	.LVL48:
   59:led-enc.cpp   ****         setpwm(i+1,led_fade(param[i],red));
- 631              		.loc 1 59 26 view .LVU165
- 632 0026 FFF7FEFF 		bl	_Z8led_fadefh
- 633              	.LVL49:
+ 634              		.loc 1 59 26 view .LVU165
+ 635 0026 FFF7FEFF 		bl	_Z8led_fadefh
+ 636              	.LVL49:
   55:led-enc.cpp   ****     {
- 634              		.loc 1 55 21 view .LVU166
- 635 002a 0435     		adds	r5, r5, #4
+ 637              		.loc 1 55 21 view .LVU166
+ 638 002a 0435     		adds	r5, r5, #4
   59:led-enc.cpp   ****         setpwm(i+1,led_fade(param[i],red));
- 636              		.loc 1 59 15 view .LVU167
- 637 002c C1B2     		uxtb	r1, r0
- 638 002e 3046     		mov	r0, r6
- 639 0030 FFF7FEFF 		bl	_Z6setpwmhh
- 640              	.LVL50:
+ 639              		.loc 1 59 15 view .LVU167
+ 640 002c C1B2     		uxtb	r1, r0
+ 641 002e 3046     		mov	r0, r6
+ 642 0030 FFF7FEFF 		bl	_Z6setpwmhh
+ 643              	.LVL50:
   60:led-enc.cpp   ****       }
- 641              		.loc 1 60 9 is_stmt 1 view .LVU168
- 642              	.LBB66:
- 643              	.LBI66:
+ 644              		.loc 1 60 9 is_stmt 1 view .LVU168
+ 645              	.LBB66:
+ 646              	.LBI66:
  114:led-enc.cpp   **** {
- 644              		.loc 1 114 5 view .LVU169
- 645              	.LBB67:
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 17
+
+
+ 647              		.loc 1 114 5 view .LVU169
+ 648              	.LBB67:
  117:led-enc.cpp   ****   int rd;
-ARM GAS  /tmp/ccNJiG34.s 			page 17
-
-
- 646              		.loc 1 117 3 view .LVU170
+ 649              		.loc 1 117 3 view .LVU170
  118:led-enc.cpp   ****   switch(color)
- 647              		.loc 1 118 3 view .LVU171
+ 650              		.loc 1 118 3 view .LVU171
  119:led-enc.cpp   ****   {
- 648              		.loc 1 119 3 view .LVU172
+ 651              		.loc 1 119 3 view .LVU172
  138:led-enc.cpp   ****       rd = map(value, 0.3, 1, 0, pwm_resolution);
- 649              		.loc 1 138 5 view .LVU173
+ 652              		.loc 1 138 5 view .LVU173
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 650              		.loc 1 139 7 view .LVU174
+ 653              		.loc 1 139 7 view .LVU174
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 651              		.loc 1 139 15 is_stmt 0 view .LVU175
- 652 0034 55ED017A 		vldr.32	s15, [r5, #-4]
- 653 0038 204B     		ldr	r3, .L75+4
- 654              	.LBE67:
- 655              	.LBE66:
+ 654              		.loc 1 139 15 is_stmt 0 view .LVU175
+ 655 0034 55ED017A 		vldr.32	s15, [r5, #-4]
+ 656 0038 204B     		ldr	r3, .L75+4
+ 657              	.LBE67:
+ 658              	.LBE66:
   60:led-enc.cpp   ****       }
- 656              		.loc 1 60 15 view .LVU176
- 657 003a 0136     		adds	r6, r6, #1
- 658              	.LBB74:
- 659              	.LBB72:
+ 659              		.loc 1 60 15 view .LVU176
+ 660 003a 0136     		adds	r6, r6, #1
+ 661              	.LBB74:
+ 662              	.LBB72:
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 660              		.loc 1 139 15 view .LVU177
- 661 003c FDEEE77A 		vcvt.s32.f32	s15, s15
- 662 0040 1B68     		ldr	r3, [r3]
- 663              	.LVL51:
- 664              	.LBB68:
- 665              	.LBI68:
+ 663              		.loc 1 139 15 view .LVU177
+ 664 003c FDEEE77A 		vcvt.s32.f32	s15, s15
+ 665 0040 1B68     		ldr	r3, [r3]
+ 666              	.LVL51:
+ 667              	.LBB68:
+ 668              	.LBI68:
  110:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 666              		.loc 1 110 6 is_stmt 1 view .LVU178
- 667              	.LBB69:
+ 669              		.loc 1 110 6 is_stmt 1 view .LVU178
+ 670              	.LBB69:
  111:led-enc.cpp   **** }
- 668              		.loc 1 111 3 view .LVU179
+ 671              		.loc 1 111 3 view .LVU179
  111:led-enc.cpp   **** }
- 669              		.loc 1 111 3 is_stmt 0 view .LVU180
- 670              	.LBE69:
- 671              	.LBE68:
+ 672              		.loc 1 111 3 is_stmt 0 view .LVU180
+ 673              	.LBE69:
+ 674              	.LBE68:
  140:led-enc.cpp   ****       if(rd < 0) rd = 0;
- 672              		.loc 1 140 7 is_stmt 1 view .LVU181
+ 675              		.loc 1 140 7 is_stmt 1 view .LVU181
  141:led-enc.cpp   ****       return rd;
- 673              		.loc 1 141 7 view .LVU182
+ 676              		.loc 1 141 7 view .LVU182
  141:led-enc.cpp   ****       return rd;
- 674              		.loc 1 141 7 is_stmt 0 view .LVU183
- 675              	.LBE72:
- 676              	.LBE74:
+ 677              		.loc 1 141 7 is_stmt 0 view .LVU183
+ 678              	.LBE72:
+ 679              	.LBE74:
   60:led-enc.cpp   ****       }
- 677              		.loc 1 60 15 view .LVU184
- 678 0042 F0B2     		uxtb	r0, r6
- 679              	.LBB75:
- 680              	.LBB73:
+ 680              		.loc 1 60 15 view .LVU184
+ 681 0042 F0B2     		uxtb	r0, r6
+ 682              	.LBB75:
+ 683              	.LBB73:
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 681              		.loc 1 139 15 view .LVU185
- 682 0044 17EE901A 		vmov	r1, s15	@ int
- 683              	.LBB71:
- 684              	.LBB70:
+ 684              		.loc 1 139 15 view .LVU185
+ 685 0044 17EE901A 		vmov	r1, s15	@ int
+ 686              	.LBB71:
+ 687              	.LBB70:
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 18
+
+
  111:led-enc.cpp   **** }
- 685              		.loc 1 111 23 view .LVU186
- 686 0048 03FB01F1 		mul	r1, r3, r1
-ARM GAS  /tmp/ccNJiG34.s 			page 18
-
-
- 687              	.LBE70:
- 688              	.LBE71:
- 689              	.LBE73:
- 690              	.LBE75:
+ 688              		.loc 1 111 23 view .LVU186
+ 689 0048 03FB01F1 		mul	r1, r3, r1
+ 690              	.LBE70:
+ 691              	.LBE71:
+ 692              	.LBE73:
+ 693              	.LBE75:
   60:led-enc.cpp   ****       }
- 691              		.loc 1 60 15 view .LVU187
- 692 004c 9942     		cmp	r1, r3
- 693 004e A8BF     		it	ge
- 694 0050 1946     		movge	r1, r3
- 695 0052 21EAE171 		bic	r1, r1, r1, asr #31
- 696 0056 C9B2     		uxtb	r1, r1
- 697 0058 FFF7FEFF 		bl	_Z6setpwmhh
- 698              	.LVL52:
+ 694              		.loc 1 60 15 view .LVU187
+ 695 004c 9942     		cmp	r1, r3
+ 696 004e A8BF     		it	ge
+ 697 0050 1946     		movge	r1, r3
+ 698 0052 21EAE171 		bic	r1, r1, r1, asr #31
+ 699 0056 C9B2     		uxtb	r1, r1
+ 700 0058 FFF7FEFF 		bl	_Z6setpwmhh
+ 701              	.LVL52:
   55:led-enc.cpp   ****     {
- 699              		.loc 1 55 5 is_stmt 1 view .LVU188
+ 702              		.loc 1 55 5 is_stmt 1 view .LVU188
   55:led-enc.cpp   ****     {
- 700              		.loc 1 55 21 view .LVU189
- 701 005c 112C     		cmp	r4, #17
- 702 005e DAD1     		bne	.L63
- 703              	.L73:
+ 703              		.loc 1 55 21 view .LVU189
+ 704 005c 112C     		cmp	r4, #17
+ 705 005e DAD1     		bne	.L63
+ 706              	.L73:
   55:led-enc.cpp   ****     {
- 704              		.loc 1 55 21 is_stmt 0 view .LVU190
- 705              	.LBE77:
+ 707              		.loc 1 55 21 is_stmt 0 view .LVU190
+ 708              	.LBE77:
   64:led-enc.cpp   ****       for(int i = 0; i<17;i++)
- 706              		.loc 1 64 5 is_stmt 1 view .LVU191
- 707              	.LBB78:
- 708 0060 B8F1080F 		cmp	r8, #8
- 709 0064 01D0     		beq	.L74
- 710              	.LVL53:
- 711              	.L61:
+ 709              		.loc 1 64 5 is_stmt 1 view .LVU191
+ 710              	.LBB78:
+ 711 0060 B8F1080F 		cmp	r8, #8
+ 712 0064 01D0     		beq	.L74
+ 713              	.LVL53:
+ 714              	.L61:
   64:led-enc.cpp   ****       for(int i = 0; i<17;i++)
- 712              		.loc 1 64 5 is_stmt 0 view .LVU192
- 713              	.LBE78:
+ 715              		.loc 1 64 5 is_stmt 0 view .LVU192
+ 716              	.LBE78:
   73:led-enc.cpp   **** 
- 714              		.loc 1 73 1 view .LVU193
- 715 0066 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 716              	.LVL54:
- 717              	.L74:
- 718              	.LBB90:
- 719              	.LBB79:
+ 717              		.loc 1 73 1 view .LVU193
+ 718 0066 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 719              	.LVL54:
+ 720              	.L74:
+ 721              	.LBB90:
+ 722              	.LBB79:
   65:led-enc.cpp   ****       {
- 720              		.loc 1 65 15 view .LVU194
- 721 006a 0024     		movs	r4, #0
- 722              	.LVL55:
+ 723              		.loc 1 65 15 view .LVU194
+ 724 006a 0024     		movs	r4, #0
+ 725              	.LVL55:
   65:led-enc.cpp   ****       {
- 723              		.loc 1 65 15 view .LVU195
- 724 006c 03E0     		b	.L64
- 725              	.LVL56:
- 726              	.L65:
+ 726              		.loc 1 65 15 view .LVU195
+ 727 006c 03E0     		b	.L64
+ 728              	.LVL56:
+ 729              	.L65:
   65:led-enc.cpp   ****       {
- 727              		.loc 1 65 7 is_stmt 1 discriminator 2 view .LVU196
- 728 006e 0134     		adds	r4, r4, #1
- 729              	.LVL57:
+ 730              		.loc 1 65 7 is_stmt 1 discriminator 2 view .LVU196
+ 731 006e 0134     		adds	r4, r4, #1
+ 732              	.LVL57:
   65:led-enc.cpp   ****       {
- 730              		.loc 1 65 23 discriminator 2 view .LVU197
- 731 0070 0437     		adds	r7, r7, #4
- 732 0072 112C     		cmp	r4, #17
-ARM GAS  /tmp/ccNJiG34.s 			page 19
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 19
 
 
- 733 0074 F7D0     		beq	.L61
- 734              	.LVL58:
- 735              	.L64:
+ 733              		.loc 1 65 23 discriminator 2 view .LVU197
+ 734 0070 0437     		adds	r7, r7, #4
+ 735 0072 112C     		cmp	r4, #17
+ 736 0074 F7D0     		beq	.L61
+ 737              	.LVL58:
+ 738              	.L64:
   67:led-enc.cpp   ****         {
- 736              		.loc 1 67 9 view .LVU198
- 737 0076 E307     		lsls	r3, r4, #31
- 738 0078 F9D4     		bmi	.L65
+ 739              		.loc 1 67 9 view .LVU198
+ 740 0076 E307     		lsls	r3, r4, #31
+ 741 0078 F9D4     		bmi	.L65
   69:led-enc.cpp   ****           setpwm(i+1,led_fade(param[i],red));
- 739              		.loc 1 69 11 view .LVU199
- 740 007a E5B2     		uxtb	r5, r4
+ 742              		.loc 1 69 11 view .LVU199
+ 743 007a E5B2     		uxtb	r5, r4
   69:led-enc.cpp   ****           setpwm(i+1,led_fade(param[i],red));
- 741              		.loc 1 69 28 is_stmt 0 view .LVU200
- 742 007c 97ED000A 		vldr.32	s0, [r7]
- 743 0080 0120     		movs	r0, #1
- 744 0082 FFF7FEFF 		bl	_Z8led_fadefh
- 745              	.LVL59:
+ 744              		.loc 1 69 28 is_stmt 0 view .LVU200
+ 745 007c 97ED000A 		vldr.32	s0, [r7]
+ 746 0080 0120     		movs	r0, #1
+ 747 0082 FFF7FEFF 		bl	_Z8led_fadefh
+ 748              	.LVL59:
   69:led-enc.cpp   ****           setpwm(i+1,led_fade(param[i],red));
- 746              		.loc 1 69 17 view .LVU201
- 747 0086 C1B2     		uxtb	r1, r0
- 748 0088 2846     		mov	r0, r5
- 749 008a FFF7FEFF 		bl	_Z6setpwmhh
- 750              	.LVL60:
+ 749              		.loc 1 69 17 view .LVU201
+ 750 0086 C1B2     		uxtb	r1, r0
+ 751 0088 2846     		mov	r0, r5
+ 752 008a FFF7FEFF 		bl	_Z6setpwmhh
+ 753              	.LVL60:
   70:led-enc.cpp   ****         }
- 751              		.loc 1 70 11 is_stmt 1 view .LVU202
- 752              	.LBB80:
- 753              	.LBI80:
+ 754              		.loc 1 70 11 is_stmt 1 view .LVU202
+ 755              	.LBB80:
+ 756              	.LBI80:
  114:led-enc.cpp   **** {
- 754              		.loc 1 114 5 view .LVU203
- 755              	.LBB81:
+ 757              		.loc 1 114 5 view .LVU203
+ 758              	.LBB81:
  117:led-enc.cpp   ****   int rd;
- 756              		.loc 1 117 3 view .LVU204
+ 759              		.loc 1 117 3 view .LVU204
  118:led-enc.cpp   ****   switch(color)
- 757              		.loc 1 118 3 view .LVU205
+ 760              		.loc 1 118 3 view .LVU205
  119:led-enc.cpp   ****   {
- 758              		.loc 1 119 3 view .LVU206
+ 761              		.loc 1 119 3 view .LVU206
  138:led-enc.cpp   ****       rd = map(value, 0.3, 1, 0, pwm_resolution);
- 759              		.loc 1 138 5 view .LVU207
+ 762              		.loc 1 138 5 view .LVU207
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 760              		.loc 1 139 7 view .LVU208
+ 763              		.loc 1 139 7 view .LVU208
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 761              		.loc 1 139 15 is_stmt 0 view .LVU209
- 762 008e D7ED007A 		vldr.32	s15, [r7]
- 763 0092 0A4B     		ldr	r3, .L75+4
- 764              	.LBE81:
- 765              	.LBE80:
+ 764              		.loc 1 139 15 is_stmt 0 view .LVU209
+ 765 008e D7ED007A 		vldr.32	s15, [r7]
+ 766 0092 0A4B     		ldr	r3, .L75+4
+ 767              	.LBE81:
+ 768              	.LBE80:
   70:led-enc.cpp   ****         }
- 766              		.loc 1 70 17 view .LVU210
- 767 0094 681C     		adds	r0, r5, #1
- 768              	.LBB88:
- 769              	.LBB86:
+ 769              		.loc 1 70 17 view .LVU210
+ 770 0094 681C     		adds	r0, r5, #1
+ 771              	.LBB88:
+ 772              	.LBB86:
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 770              		.loc 1 139 15 view .LVU211
- 771 0096 FDEEE77A 		vcvt.s32.f32	s15, s15
- 772 009a 1B68     		ldr	r3, [r3]
- 773              	.LVL61:
- 774              	.LBB82:
- 775              	.LBI82:
-ARM GAS  /tmp/ccNJiG34.s 			page 20
+ 773              		.loc 1 139 15 view .LVU211
+ 774 0096 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 775 009a 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 20
 
 
+ 776              	.LVL61:
+ 777              	.LBB82:
+ 778              	.LBI82:
  110:led-enc.cpp   ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
- 776              		.loc 1 110 6 is_stmt 1 view .LVU212
- 777              	.LBB83:
+ 779              		.loc 1 110 6 is_stmt 1 view .LVU212
+ 780              	.LBB83:
  111:led-enc.cpp   **** }
- 778              		.loc 1 111 3 view .LVU213
+ 781              		.loc 1 111 3 view .LVU213
  111:led-enc.cpp   **** }
- 779              		.loc 1 111 3 is_stmt 0 view .LVU214
- 780              	.LBE83:
- 781              	.LBE82:
+ 782              		.loc 1 111 3 is_stmt 0 view .LVU214
+ 783              	.LBE83:
+ 784              	.LBE82:
  140:led-enc.cpp   ****       if(rd < 0) rd = 0;
- 782              		.loc 1 140 7 is_stmt 1 view .LVU215
+ 785              		.loc 1 140 7 is_stmt 1 view .LVU215
  141:led-enc.cpp   ****       return rd;
- 783              		.loc 1 141 7 view .LVU216
+ 786              		.loc 1 141 7 view .LVU216
  141:led-enc.cpp   ****       return rd;
- 784              		.loc 1 141 7 is_stmt 0 view .LVU217
- 785              	.LBE86:
- 786              	.LBE88:
+ 787              		.loc 1 141 7 is_stmt 0 view .LVU217
+ 788              	.LBE86:
+ 789              	.LBE88:
   70:led-enc.cpp   ****         }
- 787              		.loc 1 70 17 view .LVU218
- 788 009c C0B2     		uxtb	r0, r0
- 789              	.LBB89:
- 790              	.LBB87:
+ 790              		.loc 1 70 17 view .LVU218
+ 791 009c C0B2     		uxtb	r0, r0
+ 792              	.LBB89:
+ 793              	.LBB87:
  139:led-enc.cpp   ****       if(rd > pwm_resolution) rd = pwm_resolution;
- 791              		.loc 1 139 15 view .LVU219
- 792 009e 17EE901A 		vmov	r1, s15	@ int
- 793              	.LBB85:
- 794              	.LBB84:
+ 794              		.loc 1 139 15 view .LVU219
+ 795 009e 17EE901A 		vmov	r1, s15	@ int
+ 796              	.LBB85:
+ 797              	.LBB84:
  111:led-enc.cpp   **** }
- 795              		.loc 1 111 23 view .LVU220
- 796 00a2 03FB01F1 		mul	r1, r3, r1
- 797              	.LBE84:
- 798              	.LBE85:
- 799              	.LBE87:
- 800              	.LBE89:
+ 798              		.loc 1 111 23 view .LVU220
+ 799 00a2 03FB01F1 		mul	r1, r3, r1
+ 800              	.LBE84:
+ 801              	.LBE85:
+ 802              	.LBE87:
+ 803              	.LBE89:
   70:led-enc.cpp   ****         }
- 801              		.loc 1 70 17 view .LVU221
- 802 00a6 9942     		cmp	r1, r3
- 803 00a8 A8BF     		it	ge
- 804 00aa 1946     		movge	r1, r3
- 805 00ac 21EAE171 		bic	r1, r1, r1, asr #31
- 806 00b0 C9B2     		uxtb	r1, r1
- 807 00b2 FFF7FEFF 		bl	_Z6setpwmhh
- 808              	.LVL62:
- 809 00b6 DAE7     		b	.L65
- 810              	.L76:
- 811              		.align	2
- 812              	.L75:
- 813 00b8 00000000 		.word	param
- 814 00bc 00000000 		.word	pwm_resolution
- 815              	.LBE79:
- 816              	.LBE90:
- 817              		.cfi_endproc
- 818              	.LFE4790:
- 820              		.text
- 821              	.Letext0:
- 822              		.file 2 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_def
- 823              		.file 3 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.
-ARM GAS  /tmp/ccNJiG34.s 			page 21
+ 804              		.loc 1 70 17 view .LVU221
+ 805 00a6 9942     		cmp	r1, r3
+ 806 00a8 A8BF     		it	ge
+ 807 00aa 1946     		movge	r1, r3
+ 808 00ac 21EAE171 		bic	r1, r1, r1, asr #31
+ 809 00b0 C9B2     		uxtb	r1, r1
+ 810 00b2 FFF7FEFF 		bl	_Z6setpwmhh
+ 811              	.LVL62:
+ 812 00b6 DAE7     		b	.L65
+ 813              	.L76:
+ 814              		.align	2
+ 815              	.L75:
+ 816 00b8 00000000 		.word	param
+ 817 00bc 00000000 		.word	pwm_resolution
+ 818              	.LBE79:
+ 819              	.LBE90:
+ 820              		.cfi_endproc
+ 821              	.LFE4789:
+ 823              		.text
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 21
 
 
- 824              		.file 4 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
- 825              		.file 5 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/inclu
- 826              		.file 6 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 827              		.file 7 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/b
- 828              		.file 8 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 829              		.file 9 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/c
- 830              		.file 10 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 831              		.file 11 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 832              		.file 12 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 833              		.file 13 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 834              		.file 14 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 835              		.file 15 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 836              		.file 16 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 837              		.file 17 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 838              		.file 18 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 839              		.file 19 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 840              		.file 20 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 841              		.file 21 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 842              		.file 22 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 843              		.file 23 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 844              		.file 24 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.
- 845              		.file 25 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h
- 846              		.file 26 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h"
- 847              		.file 27 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h"
- 848              		.file 28 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
- 849              		.file 29 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 850              		.file 30 "DaisySP/Source/Control/adenv.h"
- 851              		.file 31 "DaisySP/Source/Utility/dsp.h"
- 852              		.file 32 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/incl
- 853              		.file 33 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/wchar.h"
- 854              		.file 34 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/locale.h"
- 855              		.file 35 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
- 856              		.file 36 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/
- 857              		.file 37 "/home/hallmar/Developer/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
- 858              		.file 38 "libDaisy/src/daisy_core.h"
- 859              		.file 39 "libDaisy/src/per/tim.h"
- 860              		.file 40 "libDaisy/src/sys/system.h"
- 861              		.file 41 "libDaisy/src/util/wav_format.h"
- 862              		.file 42 "libDaisy/src/dev/max11300.h"
- 863              		.file 43 "libDaisy/src/daisy_seed.h"
- 864              		.file 44 "variables.h"
- 865              		.file 45 "libDaisy/src/dev/sr_595.h"
- 866              		.file 46 "<built-in>"
- 867              		.file 47 "settings.h"
-ARM GAS  /tmp/ccNJiG34.s 			page 22
+ 824              	.Letext0:
+ 825              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 826              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 827              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 828              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 829              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 830              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 831              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 832              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 833              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 834              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 835              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 836              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 837              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 838              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 839              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 840              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 841              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 842              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\charconv.h
+ 843              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 844              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 845              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 846              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 847              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 848              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 849              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 850              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 851              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 852              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 853              		.file 30 "DaisySP/Source/Control/adenv.h"
+ 854              		.file 31 "DaisySP/Source/Utility/dsp.h"
+ 855              		.file 32 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 856              		.file 33 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 857              		.file 34 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 858              		.file 35 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 859              		.file 36 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 860              		.file 37 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 861              		.file 38 "libDaisy/src/daisy_core.h"
+ 862              		.file 39 "libDaisy/src/per/tim.h"
+ 863              		.file 40 "libDaisy/src/sys/system.h"
+ 864              		.file 41 "libDaisy/src/util/wav_format.h"
+ 865              		.file 42 "libDaisy/src/dev/max11300.h"
+ 866              		.file 43 "libDaisy/src/daisy_seed.h"
+ 867              		.file 44 "variables.h"
+ 868              		.file 45 "libDaisy/src/dev/sr_595.h"
+ 869              		.file 46 "<built-in>"
+ 870              		.file 47 "settings.h"
+ARM GAS  C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s 			page 22
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 led-enc.cpp
-     /tmp/ccNJiG34.s:19     .text._Z12encoder_reada:0000000000000000 $t
-     /tmp/ccNJiG34.s:26     .text._Z12encoder_reada:0000000000000000 _Z12encoder_reada
-     /tmp/ccNJiG34.s:168    .text._Z12encoder_reada:0000000000000090 $d
-     /tmp/ccNJiG34.s:182    .rodata._Z13led_menu_stephh.str1.4:0000000000000000 $d
-     /tmp/ccNJiG34.s:186    .text._Z13led_menu_stephh:0000000000000000 $t
-     /tmp/ccNJiG34.s:193    .text._Z13led_menu_stephh:0000000000000000 _Z13led_menu_stephh
-     /tmp/ccNJiG34.s:372    .text._Z13led_menu_stephh:00000000000000b8 $d
-     /tmp/ccNJiG34.s:381    .text._Z3maplllll:0000000000000000 $t
-     /tmp/ccNJiG34.s:388    .text._Z3maplllll:0000000000000000 _Z3maplllll
-     /tmp/ccNJiG34.s:427    .text._Z8led_fadefh:0000000000000000 $t
-     /tmp/ccNJiG34.s:434    .text._Z8led_fadefh:0000000000000000 _Z8led_fadefh
-     /tmp/ccNJiG34.s:566    .text._Z8led_fadefh:0000000000000068 $d
-     /tmp/ccNJiG34.s:571    .text._Z10led_updateh:0000000000000000 $t
-     /tmp/ccNJiG34.s:578    .text._Z10led_updateh:0000000000000000 _Z10led_updateh
-     /tmp/ccNJiG34.s:813    .text._Z10led_updateh:00000000000000b8 $d
+                            *ABS*:00000000 led-enc.cpp
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:17     .text._Z12encoder_reada:00000000 $t
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:26     .text._Z12encoder_reada:00000000 _Z12encoder_reada
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:168    .text._Z12encoder_reada:00000090 $d
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:182    .rodata._Z13led_menu_stephh.str1.4:00000000 $d
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:186    .text._Z13led_menu_stephh:00000000 $t
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:194    .text._Z13led_menu_stephh:00000000 _Z13led_menu_stephh
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:372    .text._Z13led_menu_stephh:000000b4 $d
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:381    .text._Z3maplllll:00000000 $t
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:389    .text._Z3maplllll:00000000 _Z3maplllll
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:428    .text._Z8led_fadefh:00000000 $t
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:436    .text._Z8led_fadefh:00000000 _Z8led_fadefh
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:568    .text._Z8led_fadefh:00000068 $d
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:573    .text._Z10led_updateh:00000000 $t
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:581    .text._Z10led_updateh:00000000 _Z10led_updateh
+C:\Users\halli\AppData\Local\Temp\cc45Cpr8.s:816    .text._Z10led_updateh:000000b8 $d
 
 UNDEFINED SYMBOLS
 _ZN5daisy6System6GetNowEv
