@@ -95,8 +95,14 @@ struct rotary
     uint8_t ctlcvdest = 0;
 };
 
+struct portamentostruct
+{
+  Port portamento;
+};
+
 op voice[voicecount]; 
 envStruc envelope[voicecount];
+portamentostruct glide[voicecount];
 ADStruc filtenvelope; //stereo
 filter_ stfilter[2]; //stereo
 
@@ -118,8 +124,11 @@ static void AudioCallback(AudioHandle::InterleavingInputBuffer  in,
                           AudioHandle::InterleavingOutputBuffer out,
                           size_t                                size)
 {
+  float pitch;
     for(int i = 0; i < voicecount;i++)
     {
+      glide[i].portamento.SetHtime(glidetime);
+      pitch = glide[i].portamento.Process(voicefreq[i]);
       voice[i].op1.SetFreq(voicefreq[i]);
       voice[i].op2.SetFreq(voicefreq[i]*ratioindex[(int)knob_value[1]]*(1+voice[i].op2_detune*0.2));
       voice[i].op3.SetFreq(voicefreq[i]*ratioindex[(int)knob_value[3]]*(1+voice[i].op3_detune*0.2));
@@ -251,12 +260,6 @@ int main(void)
        led_update(8); //update all leds
     } 
     
-      //---------glide-------
-    if ((System::GetNow() - lastMillis) >= glidetime)
-    {
-      lastMillis = System::GetNow(); //get ready for the next iteration
-      glideval();
-    }
   } //while ends
  hw.PrintLine("OH SHIT, WHILE ENDED!!");
 } //main ends
@@ -347,40 +350,6 @@ void getorsetsettings(bool getorset)
   }
 } //get or set ends
 
-void glideval()
-{
-  int voicenumb = 4;
-  if (glidetime > 0)
-  {
-
-    for (int i = 0; i < voicenumb; i++)
-    {
-      if (voicefreqtarget[i] > int(voicefreq[i]))
-      {
-        voicefreq[i] = voicefreq[i] + glide;
-        if (int(voicefreq[i]) > voicefreqtarget[i])
-          voicefreq[i] = voicefreqtarget[i];
-      }
-      else if (voicefreqtarget[i] < int(voicefreq[i]))
-      {
-        voicefreq[i] = voicefreq[i] - glide;
-        if (int(voicefreq[i]) < voicefreqtarget[i])
-          voicefreq[i] = voicefreqtarget[i];
-      }
-      else
-      {
-        voicefreq[i] = voicefreqtarget[i];
-      }
-    }
-  } //if glidetime > 0 ends
-  else if (glidetime == 0)
-  {
-    for (int i = 0; i < voicenumb; i++)
-    {
-      voicefreq[i] = voicefreqtarget[i];
-    }
-  }
-} //glideval() ends
 
 void midipanic()
 {
@@ -508,23 +477,15 @@ void updateadc()
 void updateSwitches()
 {
   
-  shift_sw.Debounce();
+  sw1.Debounce();
+  sw2.Debounce();
   //get encoder switches
   for(int i=0;i<2;i++)
   {
     enc[i].enc.Debounce();
-    if((shift_sw.Pressed() == false) && enc[i].enc.RisingEdge())
-    {
-      enc[i].ctldest = enc[i].ctldest+1;
-      if(enc[i].ctldest > 3 && i == 0){enc[i].ctldest = 0;}
-      if(enc[i].ctldest > 7 && i == 1){enc[i].ctldest = 0;}
-      led_takeover = 1;
-      ledlastmillis = System::GetNow();
-      led_menu_step(enc[i].ctldest,green);
-      //getorsetsettings(1,0); 
-    }
-    //ctl1 cv destination
-    if((shift_sw.Pressed() == true) && enc[i].enc.RisingEdge())
+  
+    //ctl cv destination
+    if((sw1.Pressed() == true || sw2.Pressed() == true) && enc[i].enc.RisingEdge())
     {
       enc[i].ctlcvdest = enc[i].ctlcvdest+1;
       if(enc[i].ctlcvdest > 3 && i == 0){enc[i].ctlcvdest = 0;}
@@ -535,9 +496,30 @@ void updateSwitches()
       //getorsetsettings(1,0); 
     }
   }
-  //get algorithm switch
-  algo_sw.Debounce();
-  if(algo_sw.RisingEdge() && shift_sw.Pressed() == false)
+    //encoder 1 destination
+    if(sw1.RisingEdge() && sw2.Pressed() == false)
+    {
+      enc[0].ctldest = enc[0].ctldest+1;
+      if(enc[0].ctldest > 3 && i == 0){enc[0].ctldest = 0;}
+      if(enc[0].ctldest > 7 && i == 1){enc[0].ctldest = 0;}
+      led_takeover = 1;
+      ledlastmillis = System::GetNow();
+      led_menu_step(enc[0].ctldest,green);
+      //getorsetsettings(1,0); 
+    }
+    //encoder 2 destination
+    if(sw2.RisingEdge() && sw1.Pressed() == false)
+    {
+      enc[1].ctldest = enc[1].ctldest+1;
+      if(enc[1].ctldest > 3 && i == 0){enc[1].ctldest = 0;}
+      if(enc[1].ctldest > 7 && i == 1){enc[1].ctldest = 0;}
+      led_takeover = 1;
+      ledlastmillis = System::GetNow();
+      led_menu_step(enc[1].ctldest,green);
+      //getorsetsettings(1,0); 
+    }
+    
+  if(sw2.RisingEdge() && sw1.Pressed() == true)
   {
     algo_select++;
     algo_select = DSY_CLAMP(algo_select,0,3);
@@ -549,10 +531,7 @@ void updateSwitches()
     led_menu_step(algo_select,red);
     //getorsetsettings(save); //save settings
   }
-  else if(algo_sw.RisingEdge() && shift_sw.Pressed() == true)
-  {
-    getorsetsettings(save); //save settings
-  }
+  
   midi_sw.Debounce();
   if(midi_sw.RisingEdge())
   {
@@ -588,6 +567,7 @@ void initializeaudio()
   //initialize operators and VCA envelopes
   for(int i = 0;i<voicecount;i++)
   {
+    glide[i].portamento.Init();
     voice[i].op1.Init(samplerate);
     voice[i].op2.Init(samplerate);
     voice[i].op3.Init(samplerate);
@@ -633,8 +613,8 @@ void initializecontrols()
   // gate[2].gate.Init(&(hw.GetPin(gate3_pin)));
   // gate[3].gate.Init(&(hw.GetPin(gate4_pin)));
 
-  algo_sw.Init(hw.GetPin(sw2_pin),callbackrate);
-  shift_sw.Init(hw.GetPin(sw1_pin),callbackrate);
+  sw2.Init(hw.GetPin(sw2_pin),callbackrate);
+  sw1.Init(hw.GetPin(sw1_pin),callbackrate);
   midi_sw.Init(hw.GetPin(midi_sw_pin),callbackrate);
 
   enc[0].enc.Init(hw.GetPin(ctl1_enc_a_pin),hw.GetPin(ctl1_enc_b_pin),hw.GetPin(ctl1_sw_pin),callbackrate);
@@ -727,7 +707,7 @@ void voiceON(uint8_t note)
       voicenote[i] = note;
       voicetrig[i] = 1;
       shiftvoices();
-      voicefreqtarget[i] = freq_note;
+      voicefreq[i] = freq_note;
       if(envelope[i].env.IsRunning())
       {
         envelope[i].env.Retrigger(0);
