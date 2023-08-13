@@ -64,7 +64,9 @@ OP2 -> OUT
 
 ## Where/how to order
 It's all a work in progress.
+
 ~~Hopefully I'll have some beta testing units ready before summer 2023 :)~~
+
 WELL that didn't work out. Putting this one on hiatus until I finalize the desktop version.
 It's a struggle to work a full time job and try and work on this regularily.
 
